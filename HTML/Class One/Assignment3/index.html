@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .label_name {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input[type='text'],input[type='tel'],input[type='email'],input[type='date'],input[type='number'] {
+            height: 20px;
+        }
+
+
+        div {
+            margin: 10px 0;
+        }
+
+        .shift-to-side {
+            padding-left: 120px;
+        }
+    </style>
+</head>
+
+<body style="font-family: 'Montserrat', sans-serif; padding:0px 20px">
+    <header>
+        <h1 style="font-size: 48px;">HTML Learning</h1>
+        <nav style="padding-bottom: 15px;">
+            <a href="#" style="text-decoration: none;padding-right: 25px; color: black;">
+                Home
+            </a>
+            <a href="#" style="text-decoration: none;padding-right: 25px; color: black;">
+                About Us
+            </a>
+            <a href="#" style="text-decoration: none;padding-right: 25px; color: black;">
+                Support
+            </a>
+            <a href="#" style="text-decoration: none;padding-right: 25px; color: black;">
+                Gallery
+            </a>
+            <a href="#" style="text-decoration: none;padding-right: 25px; color: black;">
+                Contact Us
+            </a>
+        </nav>
+
+        <hr>
+
+        <h1>HTML Forms</h1>
+
+        <hr>
+    </header>
+
+    <main>
+        <form style="font-family: 'Times New Roman', Times, serif;">
+            <h2>Zoo Keeper Application Form</h2>
+
+            <em>Please complete the form. Mandatory fields are marked with <span style="color: red">*</span> </em>
+            <br><br>
+
+            <fieldset>
+
+                <legend><b>CONTACT DETAILS</b></legend>
+                <div>
+                    <label for="name" class="label_name"><b>Name </b><span style="color:red">*</span></label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label for="telepphone" class="label_name"><b>Telephone</b></label>
+                    <input type="tel">
+                </div>
+
+                <div>
+                    <label for="email" class="label_name"><b>Email </b><span style="color:red">*</span></label>
+                    <input type="email">
+                </div>
+
+            </fieldset>
+            <br>
+            <fieldset>
+
+                <legend><b>PERSONAL INFORMATION</b></legend>
+                <div>
+                    <label for="age" class="label_name"> <span style="color:red">*</span> <b>Age</b></label>
+                    <input type="number">
+                </div>
+                <div>
+                    <label for="gender" class="label_name"><b>Gender</b></label>
+                    <select>
+                        <option>Female</option>
+                        <option>Male</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="question" style="vertical-align:top;" class="label_name"><b>When did you first know you
+                            wanted to be a zoo-keeper?</b></label>
+                    <textarea rows="5" col="20"></textarea>
+                </div>
+
+            </fieldset>
+
+            <br>
+            <fieldset>
+                <legend><b>PICK YOUR FAVORITE ANIMALS</b></legend>
+
+
+                <input type="checkbox" value="zebra">
+                <label for="animal" class="label_name">Zebra</label>
+
+
+
+                <input type="checkbox" value="cat">
+                <label for="animal" class="label_name">Cat</label>
+                </div>
+
+
+                <input type="checkbox" value="anaconda">
+                <label for="animal" class="label_name">Anaconda</label>
+
+                <input type="checkbox" value="human">
+                <label for="animal" class="label_name">Human</label>
+                <br><br>
+                <input type="checkbox" value="elephant">
+                <label for="animal" class="label_name">Elephant</label>
+
+                <input type="checkbox" value="wildbeest">
+                <label for="animal" class="label_name">Wildbeest</label>
+
+                <input type="checkbox" value="pigeon">
+                <label for="animal" class="label_name">Pigeon</label>
+
+                <input type="checkbox" value="crab">
+                <label for="animal" class="label_name">Crab</label>
+
+            </fieldset>
+            <br>
+            <input type="submit" value="Submit Application"
+                style="padding: 10px 20px; background-color: rgb(2, 2, 97); color: white;">
+            <br>
+        </form>
+
+        <hr>
+
+        <form>
+            <h2>Personal Details</h2>
+            <div>
+                <label for="name" class="label_name"><b>Name</b></label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label for="email" class="label_name"><b>Email</b></label>
+                <input type="email">
+            </div>
+
+            <div>
+                <label for="location" class="label_name"><b>Location</b></label>
+                <input type="text">
+            </div>
+
+            <div>
+                <label for="gender" class="label_name"><b>Gender</b></label>
+                <input type="radio" name="gender" value="male"> <span>Male</span>
+                <input type="radio" name="gender" value="female"> <span>Female</span>
+            </div>
+
+            <div>
+                <label for="birthday" class="label_name"><b>Birthday</b></label>
+                <input type="date">
+            </div>
+            <div>
+                <label for="location" class="label_name"><b>Country</b></label>
+                <select class="country_choice">
+                    <option value="">Select Country</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="China">China</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="other information" class="label_name" style="vertical-align: top;"><b>Other
+                        Information</b></label>
+                <textarea rows="8" cols="50"></textarea>
+            </div>
+
+            <div class="shift-to-side">
+
+                <input type="checkbox">
+                <label>I want to receive the newsletter</label>
+            </div>
+            <div class="shift-to-side">
+                <input type="submit" value="Submit">
+            </div>
+
+            <br>
+            <br>
+            <hr>
+
+            <footer style="padding:20px 0;">
+                <span>&copy;Copyright. End of my first project</span>
+            </footer>
+
+
+        </form>
+    </main>
+</body>
+
+</html>

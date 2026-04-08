@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 4</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        padding: 20px 20px;
+      }
+      .divider {
+        display: flex;
+        justify-content: space-between;
+      }
+      #experience > *:not(:last-child):not(:first-child) {
+        border-bottom: 1px dashed black;
+      }
+      .skills-display,
+      .language-display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .skill-box,
+      .language-box {
+        border: 1px dashed black;
+        padding: 8px 0px 8px 8px;
+      }
+      .dim {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="divider">
+        <div class="left">
+          <h1>Stephanie Ellis</h1>
+          <p>Energetic and self-directed Clinical Nursing Student</p>
+        </div>
+        <div class="right">
+          <p>163 Cliffside Drive</p>
+          <p>East Syracuse</p>
+          <p>US</p>
+          <p>Tell: 607-423-3279</p>
+          <p>stephanie@ellis.com</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="about-me">
+        <h2>About me</h2>
+        <p>
+          Dedicated, professional and committed Clinical nursing specialist with
+          5 years of experience within the Healthcare domain. Highly motivated,
+          patient-focused, dependable, flexible, sincere and devoted.
+          <br />
+          <br />
+          Excellent interpersonal and team-building skills, demonstrates
+          effective communication with individuals on all levels and builds
+          rapport easily. An employee who exhibits a high aptitued for learning
+          new skills.
+        </p>
+      </section>
+      <br />
+      <section id="experience">
+        <h2>Experience</h2>
+        <br />
+        <div>
+          <div class="divider">
+            <b class="left">Clinical Nursing Specialist</b>
+            <span class="right dim">Jul 2016 - currently employed</span>
+          </div>
+          <p class="dim">New Port Hospital - Manhattan,New York</p>
+
+          <ul>
+            <li>
+              Consulting: Provides advice, feedback and developement resources
+              to improve the effectiveness of individuals and teams. 20 nurses
+              across 2 teams.
+            </li>
+            <li>
+              Provides Expert Clinical Consultation to improve patient outcomes.
+            </li>
+            <li>
+              Quality Improvement: Systematic approach to reduction or
+              elimination of errors, work back-flow
+            </li>
+            <li>
+              Actively participates in creating and implementing imporvements to
+              achieve clinical, satisfaction and/or efficiency outcomes.
+            </li>
+            <li>
+              Nursing Process: Utilizes the nursing process to provide holistic,
+              compassionate, safe, high quality and population based care up to
+              15 patients a day.
+            </li>
+            <li>
+              Patient Safety: Demonstrates practices that support safety with
+              recognition of variations in populations served. breventing harm
+              to patients, families, employees, and themselves.
+            </li>
+          </ul>
+        </div>
+        <br />
+        <div>
+          <div class="divider">
+            <b class="left">Clinical Nursing Specialist</b>
+            <span class="right dim">Sep 2014 - Jun 2016</span>
+          </div>
+          <p class="dim">Watersprings Hospital - West Bay, Florida</p>
+
+          <ul>
+            <li>
+              Provides feedback to management on staff performance evaluations.
+            </li>
+            <li>
+              Continually evaluates quality and safety performance, identifies
+              improvement opportunities and plans and implements programs for
+              improvement.
+            </li>
+            <li>
+              As part of multidisciplinary team, acting as a change agent to
+              develop system performance standards to improve patient outcomes.
+            </li>
+            <li>
+              Assists in teh development, implementation, management, marketing,
+              and evaluation of a program specially and/or overall program.
+            </li>
+            <li>
+              Provides safety, comfort care, and treatment of patients according
+              to established legal, ethical, and institutional standards.
+            </li>
+            <li>
+              Initiates and leads performance improvement activities with a
+              focus on achieving top quartile on clinical indicators.
+            </li>
+          </ul>
+        </div>
+      </section>
+      <br />
+
+      <section id="education">
+        <h2>Education</h2>
+        <br />
+        <div class="divider">
+          <b class="left">MSc in Nursing (MSN)</b>
+          <span class="right dim">Sept 2012 - Aug 2024</span>
+        </div>
+        <p class="dim">Adelphi University - New York</p>
+      </section>
+
+      <br />
+      <section id="skills">
+        <h2>Professional Skills</h2>
+        <br />
+        <div class="skills-display">
+          <span class="skill-box">Nursing supervision</span>
+          <span class="skill-box">Care plan consulting</span>
+          <span class="skill-box">Quality assurance</span>
+          <span class="skill-box">Patient advocacy</span>
+          <span class="skill-box">RN training and mentorship</span>
+          <span class="skill-box">Clinical data analysis</span>
+          <span class="skill-box">Change management</span>
+          <span class="skill-box">Best practice development</span>
+          <span class="skill-box">Excellent communicaiton skills</span>
+        </div>
+      </section>
+      <br />
+      <section id="languages">
+        <h2>Languages</h2>
+        <div class="language-display">
+          <div class="language-box">
+            <span>English</span>
+            <span>Native</span>
+          </div>
+          <div class="language-box">
+            <span>Spanish</span>
+            <span>Conversational</span>
+          </div>
+          <div class="language-box">
+            <span>French</span>
+            <span>Conversational</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
