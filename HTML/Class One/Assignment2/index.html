@@ -79,6 +79,7 @@
     </header>
 
     <main>
+      <!-- Table 1 -->
       <table>
         <thead>
           <tr>
@@ -113,6 +114,7 @@
         </tbody>
       </table>
 
+      <!-- Table 2 -->
       <table>
         <thead>
           <tr>
@@ -144,16 +146,20 @@
           </tr>
         </tbody>
       </table>
+      <hr />
+      <button popovertarget="mypopup" style="margin: 20px 0px">
+        Click Me!
+      </button>
+
+      <dialog id="mypopup" popover>
+        <p>This is a pop up modal.</p>
+        <button popovertarget="mypopup" popovertargetaction="hide">
+          Close
+        </button>
+      </dialog>
+      <hr />
     </main>
 
-    <hr />
-    <button popovertarget="mypopup" style="margin: 20px 0px">Click Me!</button>
-
-    <dialog id="mypopup" popover>
-      <p>This is a pop up modal.</p>
-      <button popovertarget="mypopup" popovertargetaction="hide">Close</button>
-    </dialog>
-    <hr />
     <footer style="padding: 20px 0">
       <span>&copy;Copyright. End of my first project</span>
     </footer>
