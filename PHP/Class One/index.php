@@ -5,6 +5,8 @@ $age = htmlspecialchars($_POST['age']);
 $color = htmlspecialchars($_POST['color']);
 $hobbies = $_POST['hobbies'];
 
+
+// if name present give greetings
 if (!$name) {
     $message = "Name should be entered";
     echo "<script>alert(' $message ');</script>";
@@ -22,6 +24,8 @@ echo "<br><br>";
 //             exit();
 //    }
 
+
+// if age present display minor or adult.
 if ($age == "") {
 
     $message = "Age should be entered";
@@ -35,6 +39,8 @@ if ($age == "") {
         echo $name . " You are a minor.<br><br>";
     }
 }
+
+// if color given, display message accordingly
 if (!$color) {
     $message = "Color should be entered";
     echo "<script>alert(' $message ');</script>";
@@ -55,6 +61,8 @@ if (!$color) {
     };
 }
 
+
+// if hobby chosen, display hobbies
 if ($hobby == []) {
 
     echo "The hobbies you selected are:<br><br>";
@@ -69,6 +77,8 @@ if ($hobby == []) {
     exit();
 }
 
+
+// loop and show age that the user turned up until now
 echo "<br>The loop till the year you have lived is:<br><br>";
 
 for ($i = 1; $i <= $age; $i++) {
