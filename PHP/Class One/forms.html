@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .my-form{
+            padding: 30px;
+
+        }
+        .my-form-content{
+            display: flex;
+            margin: 20px;              
+        }
+        .form-label{
+            width: 200px;
+        }
+        .form-name{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        input[type=submit]{
+            padding: 8px 20px;
+            margin-left: 20px;
+            background-color: rgb(76, 18, 18);
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- that allows users to submit their name, age, hobbies(use checkbox)  and favorite color via a form.  -->
+
+    <fieldset>
+        <legend class="form-name">Fill up the form</legend>
+
+        <form action="./index.php" method="post" class="my-form">
+        <div class="my-form-content">
+            <label for="name" class="form-label">Enter your name:</label>
+            <input type="text" name="name" id="name"/>
+        </div>
+
+        <div class="my-form-content">
+            <label for="age" class="form-label">Enter your age:</label>
+            <input type="number" name="age" id="age"/>
+        </div>
+
+        <div class="my-form-content">
+            <label for="hobbies" class="form-label">Check your hobbies</label>
+            <input type="checkbox" value="reading novels" name="hobbies[]"><span>Reading novels</span>
+            <input type="checkbox" value="watching series" name="hobbies[]"><span>Watching series</span>
+            <input type="checkbox" value="dancing" name="hobbies[]"><span>Dancing</span>
+            <input type="checkbox" value="singing" name="hobbies[]"><span>singing</span>
+
+        </div>
+
+        <div class="my-form-content">
+            <label for="color" class="form-label">Enter your favorite color:</label>
+            <input type="text" name="color" id="color"/>
+
+        </div>
+        <input type="submit" value="Submit"/>
+        </form>
+
+    </fieldset>
+</body>
+</html>
