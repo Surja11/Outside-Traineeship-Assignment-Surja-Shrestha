@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+               }
         .my-form{
             padding: 30px;
 
         }
         .my-form-content{
             display: flex;
-            margin: 20px;              
+            margin: 20px;         
+            gap: 10px;     
         }
         .form-label{
             width: 200px;
@@ -21,6 +29,9 @@
             font-weight: bold;
             text-align: center;
         }
+        input{
+            padding: 8px;
+        }
         input[type=submit]{
             padding: 8px 20px;
             margin-left: 20px;
@@ -28,6 +39,12 @@
             color: white;
             cursor: pointer;
         }
+
+        input[type=submit]:hover{
+            background-color: black;
+        }
+
+        
 
     </style>
 </head>
@@ -51,10 +68,13 @@
         <div class="my-form-content">
             <label for="hobbies" class="form-label">Check your hobbies</label>
             <input type="checkbox" value="reading novels" name="hobbies[]"><span>Reading novels</span>
-            <input type="checkbox" value="watching series" name="hobbies[]"><span>Watching series</span>
-            <input type="checkbox" value="dancing" name="hobbies[]"><span>Dancing</span>
+      
+            <input type="checkbox" value="watching series" name="hobbies[]"><span>Watching series </span>
+         
+            <input type="checkbox" value="dancing" name="hobbies[]"><span>Dancing </span>
+        
             <input type="checkbox" value="singing" name="hobbies[]"><span>singing</span>
-
+        
         </div>
 
         <div class="my-form-content">
@@ -62,7 +82,9 @@
             <input type="text" name="color" id="color"/>
 
         </div>
-        <input type="submit" value="Submit"/>
+        <div class="btn">
+        <input type="submit" value="Submit" />
+        </div>
         </form>
 
     </fieldset>
