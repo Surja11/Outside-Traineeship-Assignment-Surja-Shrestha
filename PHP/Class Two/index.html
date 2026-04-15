@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer to Roman Calculator</title>
+</head>
+<style>
+
+    body{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        gap: 2rem ;
+        background-color: rgb(243, 238, 238);
+    }
+
+    form{
+        border: 1px solid dimgray;
+        border-radius: 15px;
+        padding : 2rem;
+    }
+
+    em{
+        color: maroon;
+    }
+
+    input[type='number']{
+       height: 25px; 
+       width: 100%;
+       padding: 5px;
+       font-size: 1.2rem;
+       background-color: rgb(243, 238, 238);
+       border-radius: 8px;
+       border: 1px solid black;
+    }
+    
+
+    input[type="submit"]{
+        padding: 15px 28px;
+        border: 1px solid white; 
+        border-radius: 28px;
+        background-color: maroon;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover{
+        background-color: rgb(78, 2, 2);
+        transition: background-color 0.3s ease-in;
+    }
+
+    .title{
+        color: maroon;
+        font-size: 32px
+    }
+    
+    .button{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+</style>
+<body>
+    <h2 class="title">Integer to Roman Calculator</h2>
+    <form method="post" action="./convert.php">
+        
+        <em>This calculator converts any integer you give to roman numerals</em>
+        <br><br>
+        <em>However valid number should lie from 1 to 3999</em>
+        <br><br><hr><br>
+        <div class="label-contents">
+        <div class="number-label">
+            <label for="integer">Enter any integer (from 1 to 3999): </label>
+            <br><br>
+            <input type="number" name="integer" id="integer">
+        </div>
+        <br><br>
+
+        <div class="button">
+            <input type="submit" value="Covert"/>
+        </div>
+        </div>
+    </form>
+
+</body>
+</html>
