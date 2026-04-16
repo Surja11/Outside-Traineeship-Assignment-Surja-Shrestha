@@ -1,22 +1,29 @@
 <?php
+
+// class to convert integer to roman
 class RomanConversion
 {
     private $num;
     private $converted_roman= '';
 
+    // setter function to set the integer
     public function setNumber($number)
     {
         $this->num = $number;
        
     }
+
+    // getter function to get the integer
     public function getNumber()
     {
         echo $this->num;
     }
 
+    // function to convert integer to roman
     public function convertToRoman()
     {
 
+    // checking if the integer lies between 1 and 3999, if not give alert
         if ($this->num < 1 or $this->num >= 4000) {
             $message = "The number entered should be between 1 and 3999";
             echo "<script> alert('$message'); </script>";
@@ -26,6 +33,8 @@ class RomanConversion
 
             echo ("<br><br><hr><br>");
             echo ("The converted output is:");
+
+            // logic to convert into roman numerals
             while ($this->num > 0) {
                 if ($this->num > 1000) {
                     $this->converted_roman = $this->converted_roman . 'M';
@@ -73,7 +82,9 @@ class RomanConversion
             echo ("<h3 style='color: maroon;'>$this->converted_roman</h3>");
             
             echo("<hr>");
-             echo ("The pseudocode for the algorithm goes like: ");
+
+            //Thought process for the logic 
+            echo ("The pseudocode for the algorithm goes like: ");
             echo ("<br><br>");
 
 
@@ -90,7 +101,14 @@ class RomanConversion
     }
 }
 
+// taking the integer from form 
 $number = (int)$_POST["integer"];
+
+// creating new object
 $num = new RomanConversion();
+
+// invoking setter function
 $num->setNumber($number);
+
+// invoking the method for conversion
 $num->convertToRoman();
