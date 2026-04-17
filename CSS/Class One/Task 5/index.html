@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display_box{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            display: block;
+            transition: display 0.3s ease-in-out;
+        }
+
+        .display_box:hover{
+            display: none;
+           
+        }
+
+        .visibility_box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            visibility: visible;
+            transition: visibility 0.3s ease-in-out;
+        }
+
+        .visibility_box:hover{
+            visibility: hidden;
+        }
+
+        .opacity_box{
+            width:200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .opacity_box:hover{
+            opacity: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box_container">
+
+        <div class="display_box"></div>
+        <p>This is the statement after display_box is set to none.Since there is no space above this statement it proves that display: none doesnot preserve space for the element.</p>
+        <div class="visibility_box"></div>
+        <p>This is the statement after visibility is set to hidden</p>
+        <div class="opacity_box"></div>
+        <p>This is the statement after opacity is set to 0</p>
+
+    </div>
+</body>
+</html>
