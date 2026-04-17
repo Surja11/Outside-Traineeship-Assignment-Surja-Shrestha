@@ -1,0 +1,42 @@
+h2 {
+    font-size: 28px;
+}
+
+.top {
+    padding: 26px 8px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.left {
+    float: left;
+    margin: 16px 30px 16px 16px;
+}
+
+.left p {
+    margin-bottom: 8px;
+    background-color: skyblue;
+    padding: 8px;
+    width: 200px;
+    color: white;
+}
+
+.right {
+    padding-top: 40px;
+}
+
+.right p {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.footer {
+    clear: left;
+    width: 100%;
+    padding: 20px 8px;
+    background-color: gray;
+    margin-bottom: 15px;
+    color: white;
+}

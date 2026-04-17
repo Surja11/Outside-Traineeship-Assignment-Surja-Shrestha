@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family: "Inter", sans-serif;
+}
+
+.division {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1290px;
+}
+
+.image {
+    width: 850px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+img {
+    width: 100%;
+    height: 379.19px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+.text {
+    max-width: 410px;
+    flex-shrink: 1;
+    min-width: 0;
+    padding: 24px;
+}
+
+.big-text {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 410px;
+}
+
+.small-text {
+    font-size: 20px;
+    color: #444;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .division {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .division1 {
+        flex-direction: column-reverse;
+    }
+
+    .image {
+        width: 100%;
+        /* fills screen, not fixed px */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        /* let aspect-ratio control height */
+        aspect-ratio: 16/9;
+        /* now works correctly */
+    }
+
+    .text {
+        width: 374px;
+    }
+
+    .big-text {
+        width: 308px;
+        font-size: 24px;
+    }
+
+    .small-text {
+        font-size: 18px;
+    }
+}
