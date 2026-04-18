@@ -68,15 +68,12 @@ img {
 
     .image {
         width: 100%;
-        /* fills screen, not fixed px */
     }
 
     img {
         width: 100%;
         height: auto;
-        /* let aspect-ratio control height */
         aspect-ratio: 16/9;
-        /* now works correctly */
     }
 
     .text {
