@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array manipulation with map, filter and reduce</title>
+</head>
+<body>
+     
+</body>
+<script>
+
+    const nums = [5,12,8,130,44]
+
+    // printing the array in console
+    console.log("The provided array is: "+nums);
+
+    // using reduce function to calculate the sum
+    const sum = nums.reduce(
+        (acc, num)=>{
+            return acc + num;
+    },0);
+    console.log("The sum of the numbers in array is " + sum);
+
+    // computing average with reduce function
+    const avg = nums.reduce(
+        (acc, num)=>{
+            return acc + num;
+        }
+    ,0)/nums.length;
+    console.log("The average of the numbers in the array is "+avg);
+
+    // finding largest number in the array
+    // here we first set acc to first number in array and check if it is smaller than value in current index, if so we set value of current index as acc otherwise we return the same prev acc.
+    const largestNumber = nums.reduce(
+        (acc, num)=>{
+            if (num>acc)
+                return num
+            else
+                return acc
+        },nums[0]);
+    console.log("The largest number in the array is "+largestNumber);
+
+    // finding smallest number in the array
+    // here we first set acc to first number in array and check if it is greater than value in current index, if so we set value of current index as acc otherwise we return the same prev acc.
+    const smallestNumber = nums.reduce(
+        (acc, num)=>{
+            if (num<acc)
+                return num
+            else
+                return acc
+        },nums[0]);
+    console.log("The smallest number in the array is "+smallestNumber);
+
+
+    // finding the count of even numbers in the array
+    const evenCount = nums.reduce(
+        (acc, num)=>(num%2==0)? acc+1: acc
+    ,0);
+    console.log("The count of even numbers present in array is "+evenCount); 
+
+    // finding numbers greater than average with filter method
+    const greaterThanAvg = nums.filter(
+        (num)=>{
+            if (num>avg)
+            return num
+        }
+    )
+    console.log("The numbers greater than average are: "+greaterThanAvg);
+
+
+</script>
+</html>
