@@ -26,7 +26,7 @@
 
         }
 
-        
+        /* adds checkmark before list */
         .list::before {
             content: '';
             position: absolute;
@@ -40,7 +40,7 @@
             top: 45%;
         }
 
-        
+        /* adds round circle behind the check */
         .list::after {
             content: '';
             color: white;
@@ -54,6 +54,7 @@
             top: 35%
         }
 
+        /* adds underline below text */
         span::after{
             content: '';
             border: 0.1rem solid black;
@@ -66,6 +67,7 @@
             transition: opacity 0.3s ease-in-out;
         }
 
+        /* display of underline on hover */
         .list:hover span::after{
             opacity: 1;
             
