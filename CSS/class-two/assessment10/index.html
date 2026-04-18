@@ -12,12 +12,13 @@
         rel="stylesheet">
 
     <style>
-        li {
+        .list {
             position: relative;
             padding: 20px 20px 20px 35px;
             font-size: 1.1rem;
             list-style-type: none;
             font-family: "Comic Neue", cursive;
+            cursor: pointer;
         }
 
         .listbox {
@@ -26,7 +27,7 @@
         }
 
         
-        li::before {
+        .list::before {
             content: '';
             position: absolute;
             transform: rotate(-35deg);
@@ -35,12 +36,12 @@
             left: 0px;
             border-left: 0.15rem solid white;
             border-bottom: 0.15rem solid white;
-            z-index: 10;
+            z-index: 1;
             top: 45%;
         }
 
         
-        li::after {
+        .list::after {
             content: '';
             color: white;
             border: 0.2rem solid black;
@@ -52,15 +53,34 @@
             left: -4px;
             top: 35%
         }
+
+        span::after{
+            content: '';
+            border: 0.1rem solid black;
+            position: absolute;
+            background-color: black;
+            width: 48%;
+            left: 35px;
+            bottom: 20%;   
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .list:hover span::after{
+            opacity: 1;
+            
+        }
+
+        
     </style>
 </head>
 
 <body>
     <div class="listbox">
         <ul>
-            <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li class="list">Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li class="list"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></li>
+            <li class="list"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></li>
+            <li class="list"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></li>
         </ul>
 
     </div>
