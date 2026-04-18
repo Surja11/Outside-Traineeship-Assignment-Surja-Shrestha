@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class one assignment using for loops</title>
+    
+</head>
+<body>
+    
+</body>
+<script>
+    // Given numbers
+    const nums = [5,12,8,130,44];
+
+    // print the numbers of array in console
+    console.log("The array of provided numbers look like this : " +nums);
+
+
+    // FINDING SUM OF NUMBERS IN THE ARRAY
+    // declaring sum variable and initializing it to 0
+    let sum= 0;
+  
+    // Finding the sum of numbers present in nums array
+    nums.forEach((num)=>{
+        sum+=num
+    })
+    console.log("The sum of numbers in array is "+sum);
+
+
+    // FINDING AVERAGE OF THE ARRAY
+    // initializing average variable with 0
+    let avg;
+
+    // Using sum of numbers in array that was computed earlier to find average
+    avg = sum/nums.length;
+    console.log("The average of array is "+avg);
+
+
+    // FINDING LARGEST NUMBER
+    // initializing the first number in array as largest;
+    let largestNumber = nums[0];
+
+    // Running for loop to find the largest number
+    for (let i = 1; i<nums.length; i++){
+        if(largestNumber<nums[i]){
+            largestNumber = nums[i];
+        }
+        
+    }
+    console.log("The largest number in the array is "+largestNumber);
+
+
+    // FINDING SMALLEST NUMBER IN THE ARRAY
+    // initializing the first number as the  smallest
+    let smallestNumber = nums[0];
+    
+    // Running for loop to find the smallest
+    for(let i = 1; i<nums.length; i++){
+        if(smallestNumber>nums[i]){
+            smallestNumber = nums[i];
+        }
+    }
+    console.log("The smallest number in the array is "+smallestNumber);
+
+
+    // FINDING COUNT OF EVEN NUMBERS
+    // initializing the count to zero
+    let evenCount = 0;
+
+    // looping through the array to check if the number is even and increasing the count if so
+    for(let i = 1; i<nums.length; i++){
+        if(nums[i]%2==0){
+            evenCount+=1;
+        }
+    }
+    console.log("The count of even numbers in the array is "+evenCount);
+
+    // FINDING NUMBERS GREATER THAN AVERAGE
+    console.log("The numbers greater than average are: ");
+    for(let i=0; i<nums.length; i++){
+        if(nums[i]>avg){
+            console.log(nums[i]);
+        }
+    }
+</script>
+</html>
