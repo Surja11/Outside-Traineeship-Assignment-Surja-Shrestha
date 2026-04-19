@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            background-color: #E9EDEF;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Inter", sans-serif;
+            gap: 4rem;
+        }
+
+        .plans {
+            display: flex;
+            width: 100%;
+            max-width: 812px;
+            justify-content: space-between;
+            padding: 0;
+
+        }
+
+        /* .details{
+            width: 100%;
+            max-width: 866px;
+            background-color: white;
+        } */
+
+        .plans__card {
+            width: 100%;
+            max-width: 252px;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            background-color: white;
+            padding-bottom: 20px;
+            /* margin: 10px; */
+            border-radius: 10px;
+            transition: transform 0.2s ease-in;
+            /* flex: 1; */
+            box-shadow: 5px 5px 5px lightgray;
+        }
+
+        .plans__card li {
+            list-style-type: none;
+            text-align: center;
+            font-size: 11px;
+            color: #9A9A9A;
+            margin: 8px;
+        }
+
+        .plans__card h2 {
+            background-color: #7DD0ED;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: none;
+            font-size: 32px;
+        }
+
+        .plans__card h1 {
+            color: gray;
+            margin: 20px 0;
+            font-size: 64px;
+        }
+
+        .plans__card ul {
+            padding: 20px;
+        }
+
+        .plans__card p {
+            font-size: 24px;
+        }
+
+        .details {
+            width: 100%;
+            max-width: 866px;
+            background-color: white;
+            padding: 30px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+        }
+
+        .details__project,
+        .details__storage,
+        .details__user {
+            width: 100%;
+            max-width: 798px;
+            color: #5F5F5F;
+            font-size: 30px;
+        }
+
+        .details__user--bar,
+        .details__storage--bar,
+        .details__project--bar {
+            width: 100%;
+            height: 15px;
+            background-color: #E9EDEF;
+            border-radius: 20px;
+            position: relative;
+
+        }
+
+        .details__number {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+
+        /* scaling the card on hover */
+        .plans__card:hover {
+            transform: scale(1.07);
+            cursor: pointer;
+        }
+
+        /* using before pseudo element for progress bar */
+        .details__user--bar::before {
+            content: '';
+            width: 20%;
+            height: 15px;
+            position: absolute;
+            background-color: #7DD0ED;
+            left: 0%;
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.3s steps(5);
+
+        }
+
+        /* using before pseudo element for progress bar */
+        .details__storage--bar::before {
+            content: '';
+            width: 50%;
+            height: 15px;
+            position: absolute;
+            background-color: #7DD0ED;
+            left: 0%;
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.3s steps(5);
+
+        }
+
+        /* using before pseudo element for progress bar */
+        .details__project--bar::before {
+            content: '';
+            width: 10%;
+            height: 15px;
+            position: absolute;
+            background-color: #7DD0ED;
+            left: 0%;
+            border-radius: 20px;
+            opacity: 0;
+            transition: all 0.3s steps(5);
+        }
+
+
+        /* on hover of card, making the before elements opaque and assigning different widths*/
+        main:has(.plans__basic:hover) .details__user--bar::before {
+            width: 20%;
+            opacity: 1;
+        }
+
+        main:has(.plans__basic:hover) .details__storage--bar::before {
+            width: 30%;
+            opacity: 1;
+        }
+
+        main:has(.plans__basic:hover) .details__project--bar::before {
+            width: 10%;
+            opacity: 1;
+        }
+
+        main:has(.plans__pro:hover) .details__user--bar::before {
+            width: 50%;
+            opacity: 1;
+        }
+
+        main:has(.plans__pro:hover) .details__storage--bar::before {
+            width: 20%;
+            opacity: 1;
+        }
+
+        main:has(.plans__pro:hover) .details__project--bar::before {
+            width: 30%;
+            opacity: 1;
+        }
+
+        main:has(.plans__premium:hover) .details__user--bar::before {
+            width: 80%;
+            opacity: 1;
+        }
+
+        main:has(.plans__premium:hover) .details__storage--bar::before {
+            width: 50%;
+            opacity: 1;
+        }
+
+        main:has(.plans__premium:hover) .details__project--bar::before {
+            width: 60%;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="plans">
+            <div class="plans__card plans__basic">
+                <h2 class="plans__card--basic">Basic</h2>
+                <h1>$5</h1>
+                <p>per month</p>
+                <ul>
+                    <li>All features and resources</li>
+                    <li>Additional support</li>
+                    <li>50 Audio and video calls</li>
+                </ul>
+                </p>
+            </div>
+            <div class="plans__card plans__pro">
+                <h2>Pro</h2>
+                <h1>$10</h1>
+                <p>per month</p>
+                <ul>
+                    <li>Vat Features</li>
+                    <li>Mailing Address</li>
+                    <li>150 Audio and video calls</li>
+                    <li>Additional security Features</li>
+                </ul>
+                </p>
+            </div>
+            <div class="plans__card plans__premium">
+                <h2>Basic</h2>
+                <h1>$5</h1>
+                <p>per month</p>
+                <ul>
+                    <li>All features and resources</li>
+                    <li>Additional support</li>
+                    <li>50 Audio and video calls</li>
+                </ul>
+                </p>
+            </div>
+        </section>
+        <section class="details">
+            <div class="details__user">
+                <div class="details__number details__user--number">
+                    <span>5 Users</span>
+                    <span>100 Users</span>
+                </div>
+                <div class="details__user--bar"></div>
+            </div>
+
+
+            <div class="details__storage">
+                <div class="details__number details__storage--number">
+                    <span>20 GB</span>
+                    <span>200 GB</span>
+                </div>
+                <div class="details__storage--bar"></div>
+            </div>
+
+            <div class="details__project">
+                <div class="details__number details__project--number">
+                    <span>1 Project</span>
+                    <span>50 Projects</span>
+                </div>
+                <div class="details__project--bar"></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
