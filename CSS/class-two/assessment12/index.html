@@ -17,8 +17,18 @@
             box-sizing: border-box;
         }
 
+        /* declaring variables for colors */
+        :root{
+            --bg-color: #E9EDEF;
+            --highlight-color: #7DD0ED; 
+            --cardtext-color: #5F5F5F;
+            --cardlist-color: #9A9A9A;
+            --cardbg-color: #ffffff;
+
+        }
+
         main {
-            background-color: #E9EDEF;
+            background-color: var(--bg-color);
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -50,26 +60,26 @@
             flex-direction: column;
             /* justify-content: center; */
             align-items: center;
-            background-color: white;
+            background-color: var(--cardbg-color);
             padding-bottom: 20px;
             /* margin: 10px; */
             border-radius: 10px;
             transition: transform 0.2s ease-in;
             /* flex: 1; */
-            box-shadow: 5px 5px 5px lightgray;
+            box-shadow: 5px 5px 5px  var(--cardlist-color);
         }
 
         .plans__card li {
             list-style-type: none;
             text-align: center;
             font-size: 11px;
-            color: #9A9A9A;
+            color: var(--cardlist-color);
             margin: 8px;
         }
 
         .plans__card h2 {
-            background-color: #7DD0ED;
-            color: white;
+            background-color: var(--highlight-color);
+            color: var(--cardbg-color);
             width: 100%;
             text-align: center;
             padding: 20px;
@@ -80,7 +90,7 @@
         }
 
         .plans__card h1 {
-            color: gray;
+            color: var(--cardtext-color);
             margin: 20px 0;
             font-size: 64px;
         }
@@ -91,12 +101,13 @@
 
         .plans__card p {
             font-size: 24px;
+            color: var(--cardtext-color);
         }
 
         .details {
             width: 100%;
             max-width: 866px;
-            background-color: white;
+            background-color: var(--cardbg-color);
             padding: 30px 10px;
             display: flex;
             flex-direction: column;
@@ -110,7 +121,7 @@
         .details__user {
             width: 100%;
             max-width: 798px;
-            color: #5F5F5F;
+            color: var(--cardtext-color);
             font-size: 30px;
         }
 
@@ -119,7 +130,7 @@
         .details__project--bar {
             width: 100%;
             height: 15px;
-            background-color: #E9EDEF;
+            background-color: var(--bg-color);
             border-radius: 20px;
             position: relative;
 
@@ -144,7 +155,7 @@
             width: 20%;
             height: 15px;
             position: absolute;
-            background-color: #7DD0ED;
+            background-color: var(--highlight-color);
             left: 0%;
             border-radius: 20px;
             opacity: 0;
@@ -158,7 +169,7 @@
             width: 50%;
             height: 15px;
             position: absolute;
-            background-color: #7DD0ED;
+            background-color: var(--highlight-color);
             left: 0%;
             border-radius: 20px;
             opacity: 0;
@@ -172,7 +183,7 @@
             width: 10%;
             height: 15px;
             position: absolute;
-            background-color: #7DD0ED;
+            background-color: var(--highlight-color);
             left: 0%;
             border-radius: 20px;
             opacity: 0;
