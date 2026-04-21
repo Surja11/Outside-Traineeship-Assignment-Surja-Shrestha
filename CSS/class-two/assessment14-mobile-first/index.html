@@ -13,25 +13,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             padding: 2% 5%;
             font-family: "Inter", sans-serif;
-            
+
 
         }
 
-        nav {
+        /* nav {
             display: flex;
             text-decoration: none;
             justify-content: space-between;
             width: 100%;
             max-width: 401px;
+        } */
+
+        nav {
+            display: none;
         }
 
         nav a {
             text-decoration: none;
             color: #5E607A;
-
         }
 
         header {
@@ -41,29 +50,29 @@
             padding: 30px 0px 30px 0px;
         }
 
+        /* 
         main {
             display: grid;
             grid-template-rows: 1fr 0.5fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
             row-gap: 40px;
             column-gap: 30px;
+        } */
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
 
-        label {
-            display: none;
-        }
 
         .logo {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 64px;
         }
 
-        .img-container {
-            grid-row: 1/2;
-            grid-column: 1/3;
 
-        }
 
         .img-container img {
             width: 100%;
@@ -72,26 +81,28 @@
         }
 
         .main-content {
-            grid-row: 2/3;
-            grid-column: 1/3;
+
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 20px;
+            /* justify-content: space-between; */
 
         }
 
         .main-content h1 {
             padding-right: 10px;
-            font-size: 56px;
+            font-size: 40px;
         }
 
         .main-content div {
-            padding-left: 110px;
+            /* padding-left: 110px; */
             font-size: 15px;
             line-height: 24px;
             color: #5E607A;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            gap: 20px;
         }
 
         .main-content button {
@@ -104,8 +115,7 @@
         }
 
         .infos {
-            grid-row: 1/3;
-            grid-column: 3/4;
+
             background-color: #00001A;
             color: #C5C6CE;
             padding: 25px;
@@ -113,8 +123,12 @@
 
         }
 
+
+
         .infos__card {
-            padding-bottom: 20%;
+            padding-bottom: 10%;
+            margin-bottom: 5%;
+
         }
 
         .infos__title {
@@ -122,21 +136,40 @@
             font-size: 40px;
         }
 
-          .blogs {
-            grid-column: 1/4;
-            grid-row: 3/4;
+        .blogs {
+
             display: flex;
+            flex-direction: column;
             gap: 20px;
 
         }
 
         .blogs__card {
             display: flex;
+            align-items: flex-start;
+            /* flex-direction: column; */
             gap: 10px;
+            flex: 1;
         }
 
         .blogs__num {
             color: #C5C6CE;
+        }
+
+        .blogs__text {
+            color: #5E607A;
+        }
+
+        .blogs__heading:hover {
+            color: #E9AB53;
+        }
+
+
+        .blogs__card img {
+            width: 100px;
+
+            object-fit: cover;
+            flex-shrink: 0;
         }
 
         .infos__heading {
@@ -148,20 +181,17 @@
             color: #E9AB53;
         }
 
-
-        .blogs__text {
-            color: #5E607A;
-        }
-
-        .blogs__heading:hover {
-            color: #E9AB53;
+        .infos__title {
+            margin-bottom: 5%;
         }
 
         .infos__card:not(:first-child, :last-child) {
             border-bottom: 1px solid #5E607A;
         }
 
-        
+
+
+
         .main-content button:hover {
             background-color: rgb(97, 97, 203);
         }
@@ -176,91 +206,188 @@
             display: none;
         }
 
-        #toggle 
-        {
+        #toggle {
             justify-self: flex-end;
         }
 
 
+        label {
+            display: block;
+            padding-right: 10px;
+        }
 
-        @media (max-width:480px) {
-            body {
-                width: 100vw;
+        #toggle+label .menu {
+            display: block;
+        }
+
+        #toggle+label .nav-cross {
+            display: none;
+        }
+
+        #toggle:checked+label .menu {
+            display: none;
+        }
+
+        #toggle:checked+label .nav-cross {
+            display: block;
+            position: absolute;
+            right: 10%;
+            z-index: 999;
+        }
+
+        header:has(#toggle:checked) nav {
+            display: block;
+            gap: 20px;
+        }
+
+        header:has(#toggle:checked) nav {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            padding: 120px 20px 20px 20px;
+            z-index: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body:has(#toggle:checked) {
+            overflow: hidden;
+        }
+
+        .back-to-top{
+            background-color: #E9AB53;
+            color: #FFEBCC;
+            position: fixed;
+            bottom: 20px;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        @media (min-width: 768px) {
+            nav {
+                display: flex;
+                text-decoration: none;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 401px;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #5E607A;
+
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 30px 0px 30px 0px;
             }
 
             main {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-rows: 1fr 0.2fr 1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 60px;
+                column-gap: 30px;
+            }
+
+
+            label {
+                display: none;
+            }
+
+            .img-container {
+                grid-row: 1/2;
+                grid-column: 1/3;
+
             }
 
             .main-content {
-                flex-direction: column;
+                grid-row: 2/3;
+                grid-column: 1/3;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+
             }
+
+
+            .main-content div {
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            .main-content button {
+                max-width: 185px;
+                width: 100%;
+                color: #FFEBCC;
+                background-color: #F15E50;
+                height: 48px;
+                border: none;
+            }
+
+            .infos {
+                grid-row: 1/3;
+                grid-column: 3/4;
+                background-color: #00001A;
+                color: #C5C6CE;
+                padding: 25px;
+
+
+            }
+
 
             .blogs {
-                flex-direction: column;
+                grid-column: 1/4;
+                grid-row: 3/4;
+                flex-direction: row;
+                gap: 20px;
+                flex: 1;
+
             }
 
-            nav {
-                /* flex-direction: column;
-            gap: 20px; */
-                display: none;
+            .blogs__card {
+                display: flex;
+                gap: 10px;
+            }
+
+            .blogs__card img {
+                width: 100px;
+
+                aspect-ratio: 9/16;
+                object-fit: cover;
+                flex-shrink: 0;
             }
 
             .menu {
-                display: block;
+                display: none;
+
             }
 
-            .main-content div {
-                padding: 0px;
-            }
-
-            label {
-                display: block;
-                padding-right: 10px;
-            }
-
-            #toggle+label .menu {
-                display: block;
-            }
-
-            #toggle+label .nav-cross {
+            .nav-cross {
                 display: none;
             }
 
-            #toggle:checked+label .menu {
-                display: none;
+            .blogs__card img {
+                width: 100%;
+                aspect-ratio: 9/16;
             }
-
-            #toggle:checked+label .nav-cross {
-                display: block;
-                position: absolute;
-                right: -20px;
-                z-index: 999;
-            }
-
-            header:has(#toggle:checked) nav {
-                display: block;
-                gap: 20px;
-            }
-
-            header:has(#toggle:checked) nav {
-                display: flex;
-                justify-content: flex-start;
-                flex-direction: column;
-                gap: 20px;
-                position: absolute;
-                top: 0px;
-                left: 50%;
-                width: 50%;
-                height: 100%;
-                background-color: white;
-                padding: 120px 20px 20px 20px;
-                z-index: 1;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            }
-
 
         }
     </style>
@@ -268,7 +395,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="head">
         <span class="logo">W.</span>
         <nav>
 
@@ -354,6 +481,9 @@
                 </p>
             </div>
         </article>
+        <div class="back-to-top">
+            <a href="#head"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
 
     </main>
 
