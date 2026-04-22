@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+// creating an empty array
+const flowers=[];
+
+// pushing seven flowers to the array
+flowers.push("Lily");
+flowers.push("Rose");
+flowers.push("Daisy");
+flowers.push("Lotus");
+flowers.push("Marigold");
+flowers.push("Pansy");
+flowers.push("Sunflower");
+flowers.push("Hydrangea");
+
+// printing the initial flowers array
+console.log("The flowers array is:");
+console.log(flowers);
+
+// removing 3 flowers from index 4 and adding 5 more: using splice for this.
+flowers.splice(4,3,"Chrysanthemum","Jasmine","Lavendar","Rhododendron","Iris");
+
+// printing the array after operation
+console.log("The flowers array after removal of 3 elements from index 4 and further addition of 5 are: ")
+console.log(flowers);
+</script>
+</html>
