@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+
+    <style>
+
+        :root{
+             --primary-color: rgba(1, 20, 35, 0.877);
+            --secondary-color:rgb(203, 218, 243);
+        }
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        main{
+            padding: 20%;
+        }
+
+        form{
+            padding: 20%;
+            border: 1px solid gray;
+            border-radius: 5%;
+            box-shadow: 5px 5px 10px var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            
+        }
+
+        input{
+        
+            height: 40px;
+            margin-top: 10px;
+            font-size: 18px;
+            background-color: var(--secondary-color);
+            border-radius: 5px;
+        }
+
+        input:not([type="submit"]){
+            padding-left: 5px;
+        }
+
+
+        .title{
+            color: var(--primary-color);
+            text-align: center;
+
+        }
+
+        input[type="submit"]{
+        padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color:var(--secondary-color);
+            border-color: var(--primary-color);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        input[type="submit"]:hover{
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1 class="title">Registration Form</h1>
+        <form class="form">
+            <div class="form__label">
+                <label for="username">Enter your Username: </label>
+                <input type="text" id="username">
+            </div>
+            <div class="form__label">
+                <label for="password">Enter your Password: </label>
+                <input type="password" id="password">
+            </div>
+            <div class="form__label">
+                <label for="password">Retype Password: </label>
+                <input type="password" id="password2">
+            </div>
+            <div class="form__label">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
