@@ -35,6 +35,11 @@ export class User {
        
     }
 
+    // creating a promise that will be resolved after 5 secon
+    wait(){
+    return new Promise(resolve => setTimeout(resolve, 5000));
+    };
+
 }
 
 // creating instance of User which is user1
@@ -42,10 +47,6 @@ export const user1 = new User({ name: "Harry", age: 24, address: "Jhamsikhel", c
 
 // creating instance of User which is user2
 export const user2 = new User({ name: "Ram", address: "Boudha", city: "Kathmandu" });
-
-// creating a promise that will be resolved after 5 secon
-export const wait = (sec) => new Promise(resolve => setTimeout(resolve, sec));
-
 
 // asynchronous function to run the countdown and timeout to display user accordingly
 export async function displayUser() {
@@ -55,7 +56,7 @@ export async function displayUser() {
     user1.showUser();
 
     // wait for timeout of 5seconds
-    await wait(5000);
+    await user2.wait();
     // dispaly details of user2 after 5 seconds
     user2.showUser();
 }

@@ -1,3 +1,5 @@
+
+
 export const user1 = { name: "Harry", age: 24, address: "Jhamsikhel", city: "Lalitpur" };
 export const user2 = { name: "Ram", address: "Boudha", city: "Kathmandu" };
 
@@ -29,21 +31,33 @@ export function countdown(sec = 1000) {
 }
 
 // return a promise so that we can show user2 after 5 seconds
-export const wait = ()=>new Promise((resolve)=>setTimeout(resolve, 5000));
+export function wait()
+{ return new Promise((resolve)=>setTimeout(resolve, 5000))};
 
 // asynchronous function that runs coundown and timeout operations
 // using object destructuring
-export async function displayUser({user1, user2}) {
+// export async function displayUser({user1, user2}) {
 
-    // call the countdown function
-    await countdown();
-    // after countdown display the details of user1
+//     // call the countdown function
+//     await countdown();
+//     // after countdown display the details of user1
+//     showUser(user1);
+
+//     // wait for 5 seconds
+//     await wait();
+//     // display the details of user2
+//     showUser(user2)
+// }
+
+// displayUser({user1,user2});
+
+
+// using promise chaining, call the countdown and after it resolves show user1 and then call wait,and only after wait resolves show user2 
+countdown().then( ()=>{ 
     showUser(user1);
-
-    // wait for 5 seconds
-    await wait();
-    // display the details of user2
-    showUser(user2)
-}
-
-displayUser({user1,user2});
+    return wait();})
+    .then(()=>{
+    showUser(user2);})
+    .catch((err)=>{
+    console.log("Something went wrong"+err);
+    });
