@@ -56,7 +56,7 @@ export async function displayUser() {
     user1.showUser();
 
     // wait for timeout of 5seconds
-    await user2.wait();
+    await user1.wait();
     // dispaly details of user2 after 5 seconds
     user2.showUser();
 }
