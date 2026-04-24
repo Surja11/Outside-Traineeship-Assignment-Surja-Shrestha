@@ -1,7 +1,7 @@
 // creating a User class that contains constructor and functions
 export class User {
     // constructor for initializing variables at the time of object creation
-    // /using object destructuring and rest operator here to make sure values get assigned to right variables.
+    // using object destructuring and rest operator here to make sure values get assigned to right variables.
     constructor({age,...user}) {
         this.name = user.name;
         this.age = age;
@@ -43,7 +43,6 @@ export class User {
 
 }
 
-// creating instance of User which is user1
 
 // asynchronous function to run the countdown and timeout to display user accordingly
 export async function displayUser(users) {
@@ -61,4 +60,3 @@ export async function displayUser(users) {
     // dispaly details of user2 after 5 seconds
     user2.showUser();
 }
-// call the asynchronous function
