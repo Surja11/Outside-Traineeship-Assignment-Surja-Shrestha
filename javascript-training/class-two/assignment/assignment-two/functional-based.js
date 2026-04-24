@@ -1,4 +1,4 @@
-// showUser(user1) spread operator;
+// showUser(user1) using object destructuring;
 export function showUser({name,age,address,city}) {
     // using template string to display user details
     console.log(`name:${name} age:${age} address:${address} city:${city}`);
@@ -48,12 +48,12 @@ export function wait()
 
 
 export function displayFunctionalUser(user1,user2){
-// using promise chaining, call the countdown and after it resolves show user1 and then call wait,and only after wait resolves show user2 
+// using promise chaining, call the countdown and after it resolves show user1 and then call wait,and only after wait resolves show user2 otherwise show error.
     countdown().then( ()=>{ 
     showUser(user1);
     return wait();})
     .then(()=>{
-    showUser(user2);})
+    showUser({...user2});})
     .catch((err)=>{
     console.log("Something went wrong"+err);
     });

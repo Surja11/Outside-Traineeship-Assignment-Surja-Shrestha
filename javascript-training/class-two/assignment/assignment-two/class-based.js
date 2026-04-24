@@ -1,7 +1,7 @@
 // creating a User class that contains constructor and functions
 export class User {
     // constructor for initializing variables at the time of object creation
-    // /using object destructuring here to make sure values get assigned to right variables.
+    // /using object destructuring and rest operator here to make sure values get assigned to right variables.
     constructor({age,...user}) {
         this.name = user.name;
         this.age = age;
@@ -23,6 +23,7 @@ export class User {
         // returning promise so that the info of user1 gets displayed after counter when promise gets resolved.
         return new Promise((resolve)=>{
             let count = 10;
+            // storing intervalId so that setInterval can be cleared after count reaches 0
             let intervalId = setInterval(() => {
             console.log(count);
             count--;
@@ -47,7 +48,7 @@ export class User {
 // asynchronous function to run the countdown and timeout to display user accordingly
 export async function displayUser(users) {
   
-    // using spread operator for initializing user1 and user2
+    // using object destructuring for initializing user1 and user2
     const {user1, user2} = users;
 
       // run the countdown for user1
