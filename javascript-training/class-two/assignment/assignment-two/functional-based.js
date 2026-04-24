@@ -1,13 +1,7 @@
-
-
-export const user1 = { name: "Harry", age: 24, address: "Jhamsikhel", city: "Lalitpur" };
-export const user2 = { name: "Ram", address: "Boudha", city: "Kathmandu" };
-
-// showUser(user1) using object destructuring and rest operator;
-export function showUser(userdata) {
-    let user = {...userdata}
+// showUser(user1) spread operator;
+export function showUser({name,age,address,city}) {
     // using template string to display user details
-    console.log(`name:${user.name} age:${user.age} address:${user.address} city:${user.city}`);
+    console.log(`name:${name} age:${age} address:${address} city:${city}`);
 }
 
 // countdown from 10 to 0
@@ -53,8 +47,9 @@ export function wait()
 // displayUser({user1,user2});
 
 
+export function displayFunctionalUser(user1,user2){
 // using promise chaining, call the countdown and after it resolves show user1 and then call wait,and only after wait resolves show user2 
-countdown().then( ()=>{ 
+    countdown().then( ()=>{ 
     showUser(user1);
     return wait();})
     .then(()=>{
@@ -62,3 +57,4 @@ countdown().then( ()=>{
     .catch((err)=>{
     console.log("Something went wrong"+err);
     });
+}

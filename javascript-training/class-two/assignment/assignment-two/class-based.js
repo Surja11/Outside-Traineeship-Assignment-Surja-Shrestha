@@ -43,14 +43,14 @@ export class User {
 }
 
 // creating instance of User which is user1
-export const user1 = new User({ name: "Harry", age: 24, address: "Jhamsikhel", city: "Lalitpur" });
-
-// creating instance of User which is user2
-export const user2 = new User({ name: "Ram", address: "Boudha", city: "Kathmandu" });
 
 // asynchronous function to run the countdown and timeout to display user accordingly
-export async function displayUser() {
-    // run the countdown for user1
+export async function displayUser(users) {
+  
+    // using spread operator for initializing user1 and user2
+    const {user1, user2} = users;
+
+      // run the countdown for user1
     await user1.countdown();
     // show details of user1
     user1.showUser();
@@ -61,4 +61,3 @@ export async function displayUser() {
     user2.showUser();
 }
 // call the asynchronous function
-displayUser();
