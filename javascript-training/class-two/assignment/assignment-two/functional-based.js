@@ -3,10 +3,11 @@
 export const user1 = { name: "Harry", age: 24, address: "Jhamsikhel", city: "Lalitpur" };
 export const user2 = { name: "Ram", address: "Boudha", city: "Kathmandu" };
 
-// showUser(user1) using rest operator;
-export function showUser({age,...user }) {
+// showUser(user1) using object destructuring and rest operator;
+export function showUser(userdata) {
+    let user = {...userdata}
     // using template string to display user details
-    console.log(`name:${user.name} age:${age} address:${user.address} city:${user.city}`);
+    console.log(`name:${user.name} age:${user.age} address:${user.address} city:${user.city}`);
 }
 
 // countdown from 10 to 0

@@ -2,11 +2,11 @@
 export class User {
     // constructor for initializing variables at the time of object creation
     // /using object destructuring here to make sure values get assigned to right variables.
-    constructor({name, age, address, city}) {
-        this.name = name;
+    constructor({age,...user}) {
+        this.name = user.name;
         this.age = age;
-        this.address = address;
-        this.city = city;
+        this.address = user.address;
+        this.city = user.city;
     }
 
     // method to show User details
