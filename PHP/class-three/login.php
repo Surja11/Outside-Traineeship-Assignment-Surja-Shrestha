@@ -47,9 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             echo ("<script>alert('wrong username or password')</script>");
             echo ("<script>window.location.href='./login.html'</script>");
         }
-    }
-    else{
-                 echo ("<script>alert('wrong username or password')</script>");
-            echo ("<script>window.location.href='./login.html'</script>");   
+    } else {
+        echo ("<script>alert('wrong username or password')</script>");
+        echo ("<script>window.location.href='./login.html'</script>");
     }
 };

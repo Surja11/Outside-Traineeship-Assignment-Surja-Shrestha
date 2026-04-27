@@ -1,7 +1,6 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-
     header('Location: ./login.html');
 }
 ?>
@@ -32,7 +31,6 @@ if (!isset($_SESSION['username'])) {
             font-size: 22px;
             text-decoration: none;
             margin-right: 20px;
-        
         }
 
         button{
@@ -43,22 +41,21 @@ if (!isset($_SESSION['username'])) {
             cursor: pointer;
             font-size: 16px;
         }
+
         .greeting{
             font-size: 24px;
             color:purple;
         }
+
         .welcome{
             font-size: 28px;
             text-align: center;
         }
 
         #home,#about{
-            /* padding: 40px; 
-            */
+            /* padding: 40px;    */
             font-size: 22px;
         }
-
-
     
     </style>
 </head>
@@ -75,6 +72,7 @@ if (!isset($_SESSION['username'])) {
         </div>
     </header>
     <main>
+        
         <h3 class="greeting">Hello, <?php echo $_SESSION['username']; ?></h3>
         <h1 class="welcome">Welcome to Digital Library!!</h1>
 
