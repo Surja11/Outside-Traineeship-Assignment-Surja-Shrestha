@@ -18,20 +18,30 @@ if (!isset($_SESSION['username'])) {
             background-color: rgb(203, 218, 243);
             display: flex;
             flex-direction: column;
-            gap:40px; 
+            gap:50px; 
         }
         header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            width: 100%;
         }
 
         nav a {
             font-size: 22px;
             text-decoration: none;
-            margin: 0px 20px;
+            margin-right: 20px;
         
+        }
+
+        button{
+            padding: 14px 22px;
+            color: white;
+            background-color: purple;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
         }
         .greeting{
             font-size: 24px;
@@ -48,6 +58,7 @@ if (!isset($_SESSION['username'])) {
             font-size: 22px;
         }
 
+
     
     </style>
 </head>
@@ -57,8 +68,11 @@ if (!isset($_SESSION['username'])) {
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
-            <a href="#" id="logout">Logout</a>
         </nav>
+
+        <div>
+             <button id="logout">Logout</button>
+        </div>
     </header>
     <main>
         <h3 class="greeting">Hello, <?php echo $_SESSION['username']; ?></h3>
