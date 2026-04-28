@@ -50,11 +50,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else {
 
         // if password length is less than 8 show alert
-        if(strlen($password)<8){
-            echo("<script>alert('Password should be at least of length 8')</script>");
+        if (strlen($password) < 8) {
+            echo ("<script>alert('Password should be at least of length 8')</script>");
             echo ("<script>window.location.href='./registration.html'</script>");
             exit();
-
         }
 
         // if password and retype password do not match, show error
@@ -66,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
         // hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        
+
         // create insert query
         $query_two = "INSERT INTO user_details(username, password) VALUES(?,?)";
         // prepare the query
