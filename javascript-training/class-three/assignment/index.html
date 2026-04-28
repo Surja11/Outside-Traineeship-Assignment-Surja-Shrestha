@@ -152,6 +152,18 @@
             transform: translate(-50%,-50%);
             border: 0.5px solid gray;
         }
+
+        #toast{
+            position: absolute;
+            right: 5%;
+            width: 20%;
+            padding: 20px;
+            background-color: gray;
+            top: 5%;
+            border-radius: 10px;
+            color: white;
+            display: none;
+        }
     </style>
 </head>
 
@@ -189,6 +201,7 @@
                     <span>Welcome to our</span> <span>List Manager</span></span>
             </div>
             <div id="toast"> </div>
+        </div>
     </main>
 </body>
 <script>
@@ -206,9 +219,15 @@
         }, 1000);
    
     })
-   
+
+    function timeout(action,sec){
+        setTimeout(()=>{
+            action.style.display = "none";
+        },sec)
+    }
     const crossIcon = document.getElementsByClassName('cross')[0];
     const clearBtn = document.getElementsByClassName('btn--clear')[0];
+    const toast = document.getElementById('toast');
 
     crossIcon.addEventListener('click',()=>{
         document.getElementById("modal").style.display = "none";
@@ -266,6 +285,10 @@
             
             itemsCount++;
                 document.getElementsByClassName('count')[0].textContent = itemsCount;
+         
+                toast.style.display = "block";
+                toast.textContent = "Item Added!";
+                timeout(toast, 2000);
         }
 
         const taskList = document.getElementsByClassName('list-card');
@@ -288,6 +311,8 @@
 
     clearBtn.addEventListener('click',()=>{
         listBox.innerHTML = '';
+        toast.textContent= "All Items Cleared!";
+        timeout(toast, 2000);
         clearBtn.setAttribute('disabled',true);
     })
 </script>
