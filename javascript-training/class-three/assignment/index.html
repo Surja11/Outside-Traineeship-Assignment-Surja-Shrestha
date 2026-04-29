@@ -10,7 +10,7 @@
     <style>
         :root {
             --primary-color: rgb(233, 231, 231);
-            --secondary-color:  rgb(168, 168, 168);
+            --secondary-color: rgb(168, 168, 168);
         }
 
         * {
@@ -23,7 +23,7 @@
             background-color: var(--primary-color);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             width: 100vw;
-       
+
         }
 
         header {
@@ -40,6 +40,16 @@
             width: 100%;
 
         }
+
+        /* .overlay{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0);
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 1;
+        } */
 
 
         .card {
@@ -89,7 +99,7 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .btn:hover{
+        .btn:hover {
             transform: scale(1.03);
         }
 
@@ -107,7 +117,7 @@
             display: none;
         }
 
-        .welcome{
+        .welcome {
             font-size: 32px;
             padding: 30px;
             display: flex;
@@ -118,16 +128,31 @@
             /* position: relative; */
         }
 
-        .cross{
+        .cross {
             position: absolute;
             /* top: ; */
             /* left: 50%; */
-            bottom:85%;
+            bottom: 85%;
             left: 85%;
             font-size: 20px;
             color: gray;
             cursor: pointer;
 
+        }
+
+        .overlay {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* semi-transparent black */
+            position: fixed;
+            inset: 0;
+            display: none;
+            z-index: 99;
+        }
+
+        .found-items{
+            display: none;
         }
 
         #search {
@@ -140,20 +165,20 @@
             width: 79%;
         }
 
-        #modal{
+        #modal {
             position: absolute;
-            width:350px;
+            width: 350px;
             height: 350px;
             z-index: 100;
             background-color: white;
             display: none;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             border: 0.5px solid gray;
         }
 
-        #toast{
+        #toast {
             position: absolute;
             right: 5%;
             width: 20%;
@@ -168,12 +193,15 @@
 </head>
 
 <body>
+
+
+    <div class="overlay"></div>
     <header>
         <h1>'List Manager'</h1>
     </header>
 
     <main>
-        <p >Total Items: <span class="count"></span></p>
+        <p>Total Items: <span class="count"></span></p>
         <div class="card">
             <div class="card__input">
                 <div class="card__icon">
@@ -184,17 +212,17 @@
                 <input type="text" name="" id="search" placeholder="Search Items...">
             </div>
             <div class="card__input">
-                <input type="text" name="" id="add-items">
+                <input type="text" name="" id="add-items" placeholder="Enter new item..">
                 <button class="btn btn--add">ADD ITEM</button>
             </div>
             </card>
-
+            <div class="found-items"></div>
             <div class="list">
 
             </div>
 
             <button class="btn btn--clear" disabled>CLEAR ALL ITEMS</button>
-            <div id="modal"> 
+            <div id="modal">
 
                 <span class="welcome">
                     <i class="fa-solid fa-x cross"></i>
@@ -202,8 +230,12 @@
             </div>
             <div id="toast"> </div>
         </div>
+
+
     </main>
+
 </body>
+
 <script>
     let itemsCount = 0;
     console.log(itemsCount);
@@ -211,37 +243,75 @@
 
 
 
-    window.addEventListener("load",()=>{
-        
+    window.addEventListener("load", () => {
+
         document.getElementById("modal").style.display = "block";
+        document.getElementsByClassName("overlay")[0].style.display = "block";
         setTimeout(() => {
             document.getElementById("modal").style.display = "none";
+            document.getElementsByClassName("overlay")[0].style.display = "none";
         }, 1000);
-   
+
     })
 
-    function timeout(action,sec){
-        setTimeout(()=>{
+    function timeout(action, sec) {
+        setTimeout(() => {
             action.style.display = "none";
-        },sec)
+        }, sec)
     }
     const crossIcon = document.getElementsByClassName('cross')[0];
     const clearBtn = document.getElementsByClassName('btn--clear')[0];
     const toast = document.getElementById('toast');
+    const searchBox = document.getElementById('search');
 
-    crossIcon.addEventListener('click',()=>{
+
+    let intervalId;
+ 
+    const foundItems = document.getElementsByClassName('found-items')[0];
+    function debounce() {
+    clearTimeout(intervalId);
+
+    intervalId = setTimeout(() => {
+        const searchValue = searchBox.value.trim().toLowerCase();
+        const arrayItems = Array.from(document.getElementsByClassName('list-items'));
+
+        let matchCount = 0;
+
+        arrayItems.forEach((item) => {
+            const card = item.closest('.list-card');
+            if (item.textContent.toLowerCase().includes(searchValue)) {
+                card.style.display = 'flex';
+                matchCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // after forEach, check if anything matched
+        if (matchCount === 0 && arrayItems.length > 0) {
+            foundItems.textContent = 'No items found!';
+            foundItems.style.display = 'block';
+        } else {
+            foundItems.style.display = 'none';
+        }
+
+    }, 500);
+}
+
+    searchBox.addEventListener("input",debounce);
+    crossIcon.addEventListener('click', () => {
         document.getElementById("modal").style.display = "none";
     })
-  
-        const listBox = document.getElementsByClassName('list')[0];
-   
+
+    const listBox = document.getElementsByClassName('list')[0];
+        const unorderedList = document.createElement('ul');
+
 
     document.getElementsByClassName('count')[0].textContent = itemsCount;
     const addBtn = document.getElementsByClassName('btn--add')[0];
     addBtn.addEventListener('click', () => {
         const addItem = document.getElementById('add-items');
         const item = addItem.value.trim();
-        const unorderedList = document.createElement('ul');
         listBox.appendChild(unorderedList);
 
 
@@ -273,6 +343,7 @@
             listItem.textContent = `${prefix}${item}${prefix}`;
             listItem.style.listStyleType = "none";
             listItem.style.fontSize = "20px";
+            listItem.classList.add('list-items');
 
 
             unorderedList.appendChild(listCard);
@@ -282,38 +353,56 @@
             clearBtn.removeAttribute('disabled');
             console.log('hi');
             console.log(itemsCount);
-            
+
             itemsCount++;
-                document.getElementsByClassName('count')[0].textContent = itemsCount;
-         
-                toast.style.display = "block";
-                toast.textContent = "Item Added!";
-                timeout(toast, 2000);
+            document.getElementsByClassName('count')[0].textContent = itemsCount;
+            toast.style.display = "block";
+            toast.textContent = "Item Added!";
+            timeout(toast, 2000);
         }
 
         const taskList = document.getElementsByClassName('list-card');
         const taskArray = Array.from(taskList);
         console.log(taskArray);
-        taskArray.forEach((task)=>{
-            task.addEventListener("mouseenter",()=>{
+        taskArray.forEach((task) => {
+            task.addEventListener("mouseenter", () => {
                 console.log("mouseenter worked");
                 task.style.backgroundColor = "gray";
                 task.style.cursor = "pointer";
             });
-            task.addEventListener("mouseleave",()=>{
+            task.addEventListener("mouseleave", () => {
                 console.log("mouseleave happened");
                 task.style.backgroundColor = "rgb(233, 231, 231)";
             })
         })
 
-
     })
+    unorderedList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('btn') && e.target.textContent === 'Remove') {
+        e.target.parentElement.remove();
 
-    clearBtn.addEventListener('click',()=>{
-        listBox.innerHTML = '';
-        toast.textContent= "All Items Cleared!";
+        itemsCount--;
+        document.getElementsByClassName('count')[0].textContent = itemsCount;
+        toast.style.display = "block";
+        toast.textContent = "Item Removed!";
         timeout(toast, 2000);
-        clearBtn.setAttribute('disabled',true);
+
+        if (unorderedList.children.length === 0) {
+            listBox.style.display = "none";
+            clearBtn.setAttribute('disabled', true);
+        }
+    }
+})
+
+
+
+    clearBtn.addEventListener('click', () => {
+        listBox.innerHTML = '';
+        toast.textContent = "All Items Cleared!";
+        timeout(toast, 2000);
+        itemsCount = 0;
+        document.getElementsByClassName('count')[0].textContent = itemsCount;
+        clearBtn.setAttribute('disabled', true);
     })
 </script>
 
