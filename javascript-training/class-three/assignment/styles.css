@@ -1,7 +1,9 @@
- :root {
+/* declaring color variables */
+        :root {
             --primary-color: rgb(233, 231, 231);
             --secondary-color: rgb(168, 168, 168);
         }
+
 
         * {
             padding: 0px;
@@ -9,11 +11,11 @@
             box-sizing: border-box;
         }
 
+
         body {
             background-color: var(--primary-color);
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             width: 100vw;
-
         }
 
         header {
@@ -31,7 +33,9 @@
 
         }
 
-    
+        .items-count, .count{
+            font-size: 20px;
+        }
 
         .card {
             width: 100%;
@@ -44,12 +48,14 @@
         .card__input {
             background-color: var(--secondary-color);
             padding: 8px;
+               /* padding: 0 8px 0 0; */
             margin: 8px;
             border-radius: 4px;
             display: flex;
             justify-content: space-between;
             height: 60px;
             width: 50%;
+            overflow: hidden;
             /* border-radius: 10px; */
         }
 
@@ -57,6 +63,8 @@
             border-radius: 10px;
             font-size: 20px;
             padding: 8px;
+             outline: none;  
+    border: none;   
         }
 
 
@@ -125,7 +133,6 @@
             width: 100vw;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.5);
-            /* semi-transparent black */
             position: fixed;
             inset: 0;
             display: none;
@@ -136,6 +143,7 @@
             display: none;
         }
 
+    
         #search {
             width: 100%;
             border-top-left-radius: 0;
@@ -143,7 +151,10 @@
         }
 
         #add-items {
-            width: 79%;
+            width: 74%;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -1%;
         }
 
         #modal {

@@ -5,46 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
     <title>Lists Manager</title>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
 
-
+    <!-- overlay layer to make background brightness low when welcome modal pops up -->
     <div class="overlay"></div>
+
+    <!-- header for List manager -->
     <header>
         <h1>'List Manager'</h1>
     </header>
 
     <main>
-        <p>Total Items: <span class="count"></span></p>
+        <!-- Total Items Count -->
+        <p class="items-count">Total Items: <span class="count"></span></p>
+
+        <!-- div for holding inputs -->
         <div class="card">
+
             <div class="card__input">
                 <div class="card__icon">
                     <i class="fa-brands fa-sistrix"></i>
-
                 </div>
 
+                <!-- input to search items -->
                 <input type="text" name="" id="search" placeholder="Search Items...">
             </div>
+
             <div class="card__input">
+                <!-- input to enter new items -->
+
+                <div class="card__icon">
+                    <i class="fa-solid fa-table-list"></i>
+                </div>
                 <input type="text" name="" id="add-items" placeholder="Enter new item..">
+
                 <button class="btn btn--add">ADD ITEM</button>
             </div>
             </card>
+
+            <!-- div that gets displayed if no items are found -->
             <div class="found-items"></div>
+
+            <!-- div that holds all the added items -->
             <div class="list">
 
             </div>
 
+            <!-- button to clear all the items -->
             <button class="btn btn--clear" disabled>CLEAR ALL ITEMS</button>
+            <!-- modal that gets popped when window first loads-->
             <div id="modal">
-
                 <span class="welcome">
                     <i class="fa-solid fa-x cross"></i>
                     <span>Welcome to our</span> <span>List Manager</span></span>
             </div>
+
+            <!-- toast to display items added,removed and cleared -->
             <div id="toast"> </div>
         </div>
 
@@ -52,4 +72,7 @@
     </main>
 
 </body>
+
+<script src="./script.js"></script>
+
 </html>
