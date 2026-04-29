@@ -8,13 +8,15 @@ let intervalId;
 // eventListener that pops up the welcome modal 1 second after the window loads
 window.addEventListener("load", () => {
 
- 
+
     // after 1 sec, make both modal and overlay display to none.
     setTimeout(() => {
         document.getElementById("modal").style.display = "block";
         document.getElementsByClassName("overlay")[0].style.display = "block";
     }, 1000);
 
+},{
+    once: true
 })
 
 // getting elements from dom
@@ -43,7 +45,7 @@ function debounce() {
     clearTimeout(intervalId);
 
     intervalId = setTimeout(() => {
-// taking the searchbox's value
+        // taking the searchbox's value
         const searchValue = searchBox.value.trim().toLowerCase();
         // making an array from all the items of the list present
         const arrayItems = Array.from(document.getElementsByClassName('list-items'));
@@ -67,7 +69,7 @@ function debounce() {
         // if matchCount is equal to 0, show no items found
         if (matchCount === 0 && arrayItems.length > 0) {
             foundItems.textContent = 'No items found!';
-            foundItems.style.borderWidth="1px";
+            foundItems.style.borderWidth = "1px";
             foundItems.style.borderColor = "gray";
             foundItems.style.borderStyle = "dashed";
             foundItems.style.padding = "12px";
@@ -75,7 +77,7 @@ function debounce() {
             foundItems.style.width = "48%";
             foundItems.style.textAlign = "center";
             foundItems.style.display = 'block';
-            
+
 
         } else {
             foundItems.style.display = 'none';
@@ -103,7 +105,7 @@ addBtn.addEventListener('click', () => {
     // set value of the add item element to constant item
     const item = addItem.value.trim();
 
-// if item is present, create li and button element and style them and place it in another div container
+    // if item is present, create li and button element and style them and place it in another div container
     if (item) {
         // set display of listBlock to block
         listBox.style.display = "block";
@@ -112,7 +114,7 @@ addBtn.addEventListener('click', () => {
         const removeBtn = document.createElement('button');
         const prefix = '--';
 
-// setting css
+        // setting css
         listCard.style.width = "100%";
         listCard.style.borderStyle = "dashed";
         listCard.style.borderWidth = "1px";
@@ -135,7 +137,7 @@ addBtn.addEventListener('click', () => {
         listItem.style.fontSize = "20px";
         listItem.classList.add('list-items');
 
-// add the created elements as child
+        // add the created elements as child
         unorderedList.appendChild(listCard);
         listCard.appendChild(listItem);
         listCard.appendChild(removeBtn);
