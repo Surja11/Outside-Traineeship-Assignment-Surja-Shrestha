@@ -11,476 +11,105 @@
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            padding: 2% 5%;
-            font-family: "Inter", sans-serif;
-
-
-        }
-
-        /* nav {
-            display: flex;
-            text-decoration: none;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 401px;
-        } */
-
-        nav {
-            display: none;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #5E607A;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 30px 0px 30px 0px;
-        }
-
-        /* 
-        main {
-            display: grid;
-            grid-template-rows: 1fr 0.5fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-            row-gap: 40px;
-            column-gap: 30px;
-        } */
-
-        main {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-
-
-        .logo {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 64px;
-        }
-
-
-
-        .img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .main-content {
-
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            /* justify-content: space-between; */
-
-        }
-
-        .main-content h1 {
-            padding-right: 10px;
-            font-size: 40px;
-        }
-
-        .main-content div {
-            /* padding-left: 110px; */
-            font-size: 15px;
-            line-height: 24px;
-            color: #5E607A;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            gap: 20px;
-        }
-
-        .main-content button {
-            max-width: 185px;
-            width: 100%;
-            color: #FFEBCC;
-            background-color: #F15E50;
-            height: 48px;
-            border: none;
-        }
-
-        .infos {
-
-            background-color: #00001A;
-            color: #C5C6CE;
-            padding: 25px;
-
-
-        }
-
-
-
-        .infos__card {
-            padding-bottom: 10%;
-            margin-bottom: 5%;
-
-        }
-
-        .infos__title {
-            color: #E9AB53;
-            font-size: 40px;
-        }
-
-        .blogs {
-
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-        }
-
-        .blogs__card {
-            display: flex;
-            align-items: flex-start;
-            /* flex-direction: column; */
-            gap: 10px;
-            flex: 1;
-        }
-
-        .blogs__num {
-            color: #C5C6CE;
-        }
-
-        .blogs__text {
-            color: #5E607A;
-        }
-
-        .blogs__heading:hover {
-            color: #E9AB53;
-        }
-
-
-        .blogs__card img {
-            width: 100px;
-
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-
-        .infos__heading {
-            color: #FFFDFA;
-            font-size: 20px;
-        }
-
-        .infos__heading:hover {
-            color: #E9AB53;
-        }
-
-        .infos__title {
-            margin-bottom: 5%;
-        }
-
-        .infos__card:not(:first-child, :last-child) {
-            border-bottom: 1px solid #5E607A;
-        }
-
-
-
-
-        .main-content button:hover {
-            background-color: rgb(97, 97, 203);
-        }
-
-
-        .menu {
-            display: none;
-
-        }
-
-        .nav-cross {
-            display: none;
-        }
-
-        #toggle {
-            justify-self: flex-end;
-        }
-
-
-        label {
-            display: block;
-            padding-right: 10px;
-        }
-
-        #toggle+label .menu {
-            display: block;
-        }
-
-        #toggle+label .nav-cross {
-            display: none;
-        }
-
-        #toggle:checked+label .menu {
-            display: none;
-        }
-
-        #toggle:checked+label .nav-cross {
-            display: block;
-            position: absolute;
-            right: 10%;
-            z-index: 999;
-        }
-
-        header:has(#toggle:checked) nav {
-            display: block;
-            gap: 20px;
-        }
-
-        header:has(#toggle:checked) nav {
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-            gap: 20px;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            width: 50%;
-            height: 100%;
-            background-color: white;
-            padding: 120px 20px 20px 20px;
-            z-index: 1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        body:has(#toggle:checked) {
-            overflow: hidden;
-        }
-
-        .back-to-top{
-            background-color: #E9AB53;
-            color: #FFEBCC;
-            position: fixed;
-            bottom: 20px;
-            right: 5%;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-
-        @media (min-width: 768px) {
-            nav {
-                display: flex;
-                text-decoration: none;
-                justify-content: space-between;
-                width: 100%;
-                max-width: 401px;
-            }
-
-            nav a {
-                text-decoration: none;
-                color: #5E607A;
-
-            }
-
-            header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 30px 0px 30px 0px;
-            }
-
-            main {
-                display: grid;
-                grid-template-rows: 1fr 0.2fr 1fr;
-                grid-template-columns: 1fr 1fr 1fr;
-                row-gap: 60px;
-                column-gap: 30px;
-            }
-
-
-            label {
-                display: none;
-            }
-
-            .img-container {
-                grid-row: 1/2;
-                grid-column: 1/3;
-
-            }
-
-            .main-content {
-                grid-row: 2/3;
-                grid-column: 1/3;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-end;
-
-            }
-
-
-            .main-content div {
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-            }
-
-            .main-content button {
-                max-width: 185px;
-                width: 100%;
-                color: #FFEBCC;
-                background-color: #F15E50;
-                height: 48px;
-                border: none;
-            }
-
-            .infos {
-                grid-row: 1/3;
-                grid-column: 3/4;
-                background-color: #00001A;
-                color: #C5C6CE;
-                padding: 25px;
-
-
-            }
-
-
-            .blogs {
-                grid-column: 1/4;
-                grid-row: 3/4;
-                flex-direction: row;
-                gap: 20px;
-                flex: 1;
-
-            }
-
-            .blogs__card {
-                display: flex;
-                gap: 10px;
-            }
-
-            .blogs__card img {
-                width: 100px;
-
-                aspect-ratio: 9/16;
-                object-fit: cover;
-                flex-shrink: 0;
-            }
-
-            .menu {
-                display: none;
-
-            }
-
-            .nav-cross {
-                display: none;
-            }
-
-            .blogs__card img {
-                width: 100%;
-                aspect-ratio: 9/16;
-            }
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="./styles.css"/>
 </head>
 
 <body>
-    <header id="head">
-        <span class="logo">W.</span>
-        <nav>
+    <header class="header">
+        <span class="header__logo">W.</span>
+        <nav class="header__nav">
 
-            <a href="#">Home</a>
-            <a href="#">New</a>
-            <a href="#">Popular</a>
-            <a href="#">Trending</a>
-            <a href="#">Categories</a>
+            <a href="#home" class="header__nav-link">Home</a>
+            <a href="#" class="header__nav-link">New</a>
+            <a href="#" class="header__nav-link">Popular</a>
+            <a href="#" class="header__nav-link">Trending</a>
+            <a href="#" class="header__nav-link">Categories</a>
         </nav>
-        <input type="checkbox" id="toggle" hidden />
-        <label for="toggle"> <i class="fa-solid fa-bars menu"></i>
-            <i class="fa-solid fa-xmark nav-cross"></i>
-        </label>
 
+        <input type="checkbox" id="toggle" class="header__toggle-input" hidden />
+        <label for="toggle" class="header__menu-toggle"> 
+            <i class="fa-solid fa-bars header__menu-icon"></i>
+            <i class="fa-solid fa-xmark header__cross-icon"></i>
+        </label>
     </header>
-    <main>
-        <section class="img-container">
-            <img src="./hero.jpg" alt="hero image" />
-        </section>
-        <article class="main-content">
-            <h1>The Bright Future of Web 3.0?</h1>
-            <div>
-                <p>We dive into the next evolution of the web that claims to put the power of the platforms back into
+
+    
+    <main class="main">
+        <article class="featured-article">
+        <img src="./hero.jpg" alt="hero image" class="featured-article__image" />
+        
+        <div class="featured-article__body">
+            <h1 class="featured-article__title">The Bright Future of Web 3.0?</h1>
+            <div class="featured-article__content">
+                <p class="featured-article__text">We dive into the next evolution of the web that claims to put the power of the platforms back into
                     the hands of the people. But is it really fulfilling its promise?</p>
-                <button>READ MORE</button>
+                <button class="btn btn--primary">READ MORE</button>
             </div>
+        </div>
 
         </article>
-        <article class="blogs">
-            <div class="blogs__card">
-                <div>
-                    <img src="./blog1.jpg">
+        <section class="blog-container">
+            <div class="blog-card">
+                <div class="blog-card__image-container">
+                    <img src="./blog1.jpg" alt="blog1 image" class="blog-card__image">
                 </div>
-                <div>
-                    <h1 class="blogs__num">01</h1>
-                    <h2 class="blogs__heading">Reviving Retro PCs</h2>
-                    <p class="blogs__text">
+                <div class="blog-card__body">
+                    <h1 class="blog-card__num">01</h1>
+                    <h2 class="blog-card__heading">Reviving Retro PCs</h2>
+                    <p class="blog-card__text">
                         What happens when old PCs are given modern upgrades?
                     </p>
                 </div>
             </div>
 
-            <div class="blogs__card">
-                <div>
-                    <img src="./blog2.jpg">
+            <div class="blog-card">
+                <div class="blog-card__image-container">
+                    <img src="./blog2.jpg" alt="blog2 image" class="blog-card__image">
                 </div>
-                <div>
-                    <h1 class="blogs__num">02</h1>
-                    <h2 class="blogs__heading">Top 10 Laptops of 2022</h2>
-                    <p class="blogs__text">Our best picks for various needs and budgets.</p>
-                </div>
-            </div>
-
-            <div class="blogs__card">
-                <div class="blogs__image">
-                    <img src="./blog3.jpg">
-                </div>
-                <div>
-                    <h1 class="blogs__num">03</h1>
-                    <h2 class="blogs__heading">The Growth of Gaming</h2>
-                    <p class="blogs__text">How the pandemic has sparked fresh opportunities.</p>
+                <div class="blog-card__body">
+                    <h1 class="blog-card__num">02</h1>
+                    <h2 class="blog-card__heading">Top 10 Laptops of 2022</h2>
+                    <p class="blog-card__text">Our best picks for various needs and budgets.</p>
                 </div>
             </div>
 
-        </article>
-        <article class="infos">
-            <h1 class="infos__title">New</h1>
-            <div class="infos__card">
-                <h2 class="infos__heading">Hydrogen VS Electric Cars</h2>
-                <p>Will hydrogen-fueled cars ever catch up to EVs?
+            <div class="blog-card">
+                <div class="blog-card__image-container">
+                    <img src="./blog3.jpg" class="blog-card__image">
+                </div>
+                <div class="blog-card__body">
+                    <h1 class="blog-card__num">03</h1>
+                    <h2 class="blog-card__heading">The Growth of Gaming</h2>
+                    <p class="blog-card__text">How the pandemic has sparked fresh opportunities.</p>
+                </div>
+            </div>
+
+        </section>
+        <section class="latest-article">
+            <h1 class="latest-article__title">New</h1>
+            <div class="article-card">
+                <h2 class="article-card__heading">Hydrogen VS Electric Cars</h2>
+                <p class="article-card__content">Will hydrogen-fueled cars ever catch up to EVs?
                 </p>
+                <button class="btn btn--blog">READ MORE</button>
             </div>
 
-            <div class="infos__card">
-                <h2 class="infos__heading">The Downsides of AI Artistry</h2>
-                <p>What are the possible adverse effects of on-demand AI image generation?
+            <div class="article-card">
+                <h2 class="article-card__heading">The Downsides of AI Artistry</h2>
+                <p class="article-card__content">What are the possible adverse effects of on-demand AI image generation?
                 </p>
+                <button class="btn btn--blog">READ MORE</button>
+
             </div>
 
-            <div class="infos__card">
-                <h2 class="infos__heading">Is VC Funding Drying Up?</h2>
-                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            <div class="article-card">
+                <h2 class="article-card__heading">Is VC Funding Drying Up?</h2>
+                <p class="article-card__content">Private funding by VC firms is down 50% YOY. We take a look at what that means.
                 </p>
+                <button class="btn btn--blog">READ MORE</button>
+
             </div>
-        </article>
+        </section>
         <div class="back-to-top">
             <a href="#head"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
