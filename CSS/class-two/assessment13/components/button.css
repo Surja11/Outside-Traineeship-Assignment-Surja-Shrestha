@@ -1,55 +1,70 @@
+/* Since buttons defined in the webpage is reusuable, we define it in components directory */
+
+
 /* profile buttons */
+/* using modern nested media queries for better readability and easy modification*/
+/* using oocss, to separate structure and skin */
+
+
+/* for oocss, defining the button structure that sets its width,radius, margin, font, transition etc */
 .button {
   width: 100%;
   max-width: 356px;
   border: 4px solid var(--primary-color);
   border-radius: 50px;
-  /* font-weight: 600; */
   padding: 10px;
   margin: 10px;
   font-size: 36px;
-  color: var(--primary-color);
   transition:
     background-color 0.2s ease-in,
     color 0.2s ease-in;
   cursor: pointer;
 
-
+/* defining smaller button for tablet views */
   @media (max-width: 768px){
-    .button {
-    font-size: 22px;
+    font-size: 18px;
     padding: 8px;
     margin: 6px;
     border-width: 3px;
+    max-width: 70%;
   }
-}
 
-
+/* defining even smaller button for mobile view */
 @media (max-width: 480px){
-    .button {
-    font-size: 18px;
-    padding: 8px 16px;
+    font-size: 14px;
+    padding: 6px;
     margin: 6px;
     border-width: 2px;
     flex: 1;
-    max-width: 160px;
-  }
+    width: 100%;
+    max-width: 100px;
+  
 }
 }
 
-.button:hover {
+/* defining button skin for oocss, this sets the color */
+.button--primary{
+  color: var(--primary-color);
+}
+
+/* changing the button color and background on hover */
+.button--primary:hover {
   background-color: var(--primary-color);
   color: var(--bg-color);
 }
 
+
+/* defining a variant of button (button--dark). Since it is a variant of already existing button, we use modifier for it. */
 .button--dark {
   background-color: var(--primary-color);
   color: var(--bg-color);
 }
 
+/* changing the color and background of modifier on hover */
 .button--dark:hover {
   background-color: var(--bg-color);
   color: var(--primary-color);
+
 }
 
 

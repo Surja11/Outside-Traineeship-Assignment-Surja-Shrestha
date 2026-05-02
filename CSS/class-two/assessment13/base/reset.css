@@ -1,11 +1,15 @@
+/* reset.css for resetting the orginal browser styles and defining what the body looks like */
+/* using base folder to target elements directly. Not using any id or class selectors */
 
+
+/* removes the original padding, margin and sets box-sizing to border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
+/* making body a flex and setting it's background. */
 body {
   height: 100vh;
   overflow: hidden;

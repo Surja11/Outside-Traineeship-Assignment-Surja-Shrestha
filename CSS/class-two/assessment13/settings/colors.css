@@ -1,4 +1,6 @@
-/* declaring the variables */
+/* using settings folder to store the colors to be used throughout the project */
+
+/* declaring the color variables that are to be used in the project */
 :root {
   --gradient-color1: #fbfd94;
   --gradient-color2: #c8802c;

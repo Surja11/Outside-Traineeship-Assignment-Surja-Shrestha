@@ -22,15 +22,20 @@
         <!-- The section acts as an element inside the block, which is why named profile-card__info -->
         <section class="profile-card__info">
 
-        
+            <!-- since image-container is an element of block, named profile-card__image-container -->
             <div class="profile-card__image-container">
+                <!-- since image only makes sense in the profile, it is also an element -->
                 <img src="./profile.png" alt="profile" class="profile-card__image" />
             </div>
 
+            <!-- Profile name and designation make sense in the block so considered a modifier -->
             <h2 class="profile-card__title">Jessica Potter</h2>
             <span class="profile-card__subtitle">Visual Artist</span>
+
             <div class="profile-card__button-container">
-                <button class="button">Follow</button>
+                <!-- Buttons is a standalone component and can be used anywhere, so considered a block -->
+                <button class="button button--primary">Follow</button>
+                <!-- button--dark is a variant of button itself so named as modifier -->
                 <button class="button button--dark">Message</button>
             </div>
 
@@ -38,14 +43,16 @@
 
         <!-- This is another section acting as a element inside block -->
         <section class="profile-card__statistic">
-        <button class="profidle-card__statistic-button">
+        <!-- statistic-button make sense only inside the profile (it tells whose statistics it is), so used as element -->
+        <button class="profile-card__statistic-button">
             <h1 class="profile-card__statistic-count">523</h1>
             <span class="profile-card__statistic-type">Posts</span>
         </button>
         
+        <!-- This button is slighly different in terms of color than rest so used modifier for it -->
         <button class="profile-card__statistic-button profile-card__statistic-button--dark">
-            <h1 class="profile-card__statistic-count">1387</h1>
-            <span class="profile-card__statistic-type">Likes</span>
+            <h1 class="profile-card__statistic-count profile-card__statistic-count--hightlight">1387</h1>
+            <span class="profile-card__statistic-type profile-card__statistic-type--highlight">Likes</span>
         </button>
 
         <button class="profile-card__statistic-button">

@@ -1,4 +1,8 @@
+/* Since statistic buttons are reused, we place them inside component folder */
+/* using BEM and not oocss becuase statistic-button only makes sense inside profile-card */
+
 /*profile-statistic button  */
+/* nesting media queries for easy modification */
 .profile-card__statistic-button {
     background-color: var(--profile-button);
     width: 100%;
@@ -13,25 +17,74 @@
         background-color 0.3s ease-out,
         transform 0.3s ease-in;
     cursor: pointer;
+
+    /* changing padding for tablets */
+    @media (max-width: 768px) {
+        padding: 50px 20px;
+    }
+
+    /* changing padding for mobile view */
+    @media (max-width: 480px) {
+        padding: 20px 10px;
+    }
 }
+
 
 /* if the profile buttons is not last child then putting the margin bottom */
 .profile-card__statistic-button:not(:last-child) {
     margin-bottom: 4px;
 }
 
+
+/* styling the count statistics inside the statistic-button */
 .profile-card__statistic-count {
     font-size: 56px;
     color: var(--primary-color);
+
+    @media (max-width: 768px) {
+        font-size: 36px;
+    }
+
+    @media (max-width: 480px) {
+
+        font-size: 26px;
+
+    }
 }
 
+
+/* styling the color of variant of statistic-count */
+.profile-card__statistic-count--hightlight {
+    color: var(--bg-color);
+}
+
+/* styling the statistic type inside the statistic button */
 .profile-card__statistic-type {
     font-size: 32px;
     color: var(--secondary-color);
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 16px;
+    }
+
 }
 
+
+/* styling the color of variant of statistic-type */
+.profile-card__statistic-type--highlight {
+    color: var(--bg-color);
+}
+
+
+
+/* changing background color of statistic button on hover */
 .profile-card__statistic-button:hover {
     background-color: var(--statistic-button);
+
 }
 
 
@@ -40,6 +93,7 @@
     background-color: var(--statistic-button);
 }
 
+/* changing background color of statistic-button--dark, on hover */
 .profile-card__statistic-button--dark:hover {
     background-color: var(--profile-button);
 }

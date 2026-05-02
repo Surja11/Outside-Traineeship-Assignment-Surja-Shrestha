@@ -1,5 +1,8 @@
+/* defining typography (font-family and font-size) for main elements of the webpage */
+/* using this folder to target elements like body, h1 and h2 directly. */
 body{
   font-family: "Open Sans", sans-serif;
+  font-size: 48px;
 }
 
 h1{

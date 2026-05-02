@@ -1,14 +1,23 @@
+/* putting a standalone module and the components linked to it in module folder */
+
 /* information section that holds user's profile information */
 .profile-card__info {
   grid-column: 1/2;
   color: var(--primary-color);
-  font-size: 48px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
   padding: 60px;
+
+  @media (max-width: 768px) {
+    padding: 30px;
+  }
+
+   @media (max-width: 480px) {
+    padding: 20px;
+  }
 }
 
 /*section that holds user's profile statistics */
@@ -16,6 +25,25 @@
   grid-column: 2/3;
   display: flex;
   flex-direction: column;
+}
+
+
+/* setting size of image(Profile picture) */
+.profile-card__image {
+  width: 206px;
+  height: 206px;
+  border-radius: 50%;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 140px;
+    height: 140px;
+  }
+
+  @media (max-width: 480px) {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* creating semicircle over profile picture */
@@ -34,22 +62,16 @@
   transform: translate(-50%, -50%);
   transform-origin: center;
 
-
-
-@media (max-width: 768px){
-  .profile-card__image-container::before {
+  @media (max-width: 768px) {
     width: 155px;
     height: 155px;
   }
-}
 
-
-@media (max-width: 480px){
-    .profile-card__image-container::before {
+  @media (max-width: 480px) {
     width: 83px;
     height: 83px;
+    top: 23%;
   }
-}
 }
 
 /* creating semicircle over profile picture */
@@ -68,22 +90,19 @@
   transform: translate(-50%, -50%);
   transform-origin: center;
 
-
-@media (max-width: 768px){  .profile-card__image-container::after {
+  @media (max-width: 768px) {
     width: 170px;
     height: 170px;
   }
 
-}
-
-
-@media (max-width: 480px){
- .profile-card__image-container::after {
+  @media (max-width: 480px) {
     width: 90px;
     height: 90px;
+    top:23%;
   }
 }
-}
+
+
 
 /* invoking animation of rotating the semicircle on hover */
 .profile-card__image-container:hover::before {
@@ -94,6 +113,8 @@
 .profile-card__image-container:hover::after {
   animation: rotateouter 2s linear infinite;
 }
+
+
 
 /* animation */
 @keyframes rotateinner {
@@ -112,24 +133,43 @@
   }
 
   to {
-    transform: translate(-50%, -50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
 
 
 /* user's name */
 .profile-card__title {
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
+
 }
+
 
 /*user's designation  */
 .profile-card__subtitle {
   font-size: 30px;
   color: var(--secondary-color);
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 16px;
+  
+  }
 }
 
-/* designing of profile buttons */
+
+/* profile button container for holding buttons*/
 .profile-card__button-container {
   width: 100%;
   max-width: 356px;
@@ -137,6 +177,3 @@
   flex-direction: column;
   align-items: center;
 }
-
-
-
