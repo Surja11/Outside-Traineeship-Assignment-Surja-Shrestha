@@ -1,0 +1,26 @@
+/* creating grid for profile */
+.profile-card {
+  display: grid;
+  width: 100%;
+  max-width: 940px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: var(--bg-color);
+  /* padding: 20px 0px; */
+}
+
+@media (max-width: 768px) {
+
+  /* Scaling down card*/
+  .profile-card {
+    max-width: 100%;
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 100%;
+  }
+}

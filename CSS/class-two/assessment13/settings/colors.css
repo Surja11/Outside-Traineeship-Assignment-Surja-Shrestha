@@ -1,0 +1,10 @@
+/* declaring the variables */
+:root {
+  --gradient-color1: #fbfd94;
+  --gradient-color2: #c8802c;
+  --bg-color: #ffffff;
+  --primary-color: #7c6957;
+  --secondary-color: #8e7e6d;
+  --profile-button: #f5e8df;
+  --statistic-button: #cbbfb6;
+}

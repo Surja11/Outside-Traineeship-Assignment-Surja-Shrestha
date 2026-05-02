@@ -1,0 +1,45 @@
+/*profile-statistic button  */
+.profile-card__statistic-button {
+    background-color: var(--profile-button);
+    width: 100%;
+    max-width: 348px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 70px;
+    flex-shrink: 1;
+    transition:
+        background-color 0.3s ease-out,
+        transform 0.3s ease-in;
+    cursor: pointer;
+}
+
+/* if the profile buttons is not last child then putting the margin bottom */
+.profile-card__statistic-button:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.profile-card__statistic-count {
+    font-size: 56px;
+    color: var(--primary-color);
+}
+
+.profile-card__statistic-type {
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+.profile-card__statistic-button:hover {
+    background-color: var(--statistic-button);
+}
+
+
+/* styling the variant of statistic-button, which is statistic-button--dark */
+.profile-card__statistic-button--dark {
+    background-color: var(--statistic-button);
+}
+
+.profile-card__statistic-button--dark:hover {
+    background-color: var(--profile-button);
+}
