@@ -1,0 +1,19 @@
+.btn {
+    max-width: 185px;
+    border: none;
+}
+
+.btn--primary {
+    color: var(--button-text);
+    background-color: var(--button-bg);
+    padding: 20px 40px;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.btn--blog {
+    color: var(--button-text);
+    background-color: var(--section-color);
+    margin: 30px 0px 0px 0px;
+
+}

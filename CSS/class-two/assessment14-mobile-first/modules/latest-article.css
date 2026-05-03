@@ -1,0 +1,34 @@
+
+.latest-article {
+    background-color: var(--section-color);
+    color: var(--article-color);
+    padding: 25px;
+
+     @media (max-width: 768px) {
+        background-color: var(--section-color);
+        color: var(--article-color);
+        padding: 25px;
+    }
+}
+
+.article-card {
+    padding-bottom: 10%;
+    margin-bottom: 5%;
+
+}
+
+.latest-article__title {
+    color: var(--highlight-color);
+    font-size: 40px;
+}
+
+.article-card__heading:hover {
+    color:var(--highlight-color);
+}
+
+
+
+.article-card:not(:first-child, :last-child) {
+    border-bottom: 1px solid var(--text-color);
+}
+
