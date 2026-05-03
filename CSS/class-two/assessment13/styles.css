@@ -4,7 +4,7 @@ Since settings has lowest specificity, importing colors.css from it
 */
 @import "settings/colors.css";
 
-/* These files to have lower specificity and should be overridden when required so placing files from base after settings */
+/* These files ave lower specificity and should be overridden when required so placing files from base after settings */
 @import "base/reset.css";
 @import "base/typography.css";
 

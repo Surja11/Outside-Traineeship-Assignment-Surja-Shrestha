@@ -1,9 +1,12 @@
+/* reseting the original margin and padding provided by the browser and setting the box sizing to borderbox */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* setting padding and position of body. Position kept relative to give navbar absolute positioning */
 body {
     padding: 2% 5%;
     position: relative;

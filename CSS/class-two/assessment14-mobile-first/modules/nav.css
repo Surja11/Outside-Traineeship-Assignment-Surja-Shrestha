@@ -1,6 +1,10 @@
+/* nav is also an independent block and can exist in different formats, kept in components folder */
+
 .header__nav {
+    /* in small screens, let the nav not be displayed. It should be displayed only when menu icon is clicked */
     display: none;
 
+    /* in larger screens, let the nav be displayed */
     @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -9,18 +13,26 @@
     }
 }
 
+/* defining the logo of our site */
+.header__logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 64px;
+}
 
 
+/* menu icon which opens nav on click */
 .header__menu-icon {
+    /* in small screen display the icon */
     display: block;
 
+    /* in large screens, do not display the icon */
     @media (min-width:768px) {
         display: none;
 
     }
 }
 
-
+/* cross icon that gets displayed on screen in small screen, only when the menu is open */
 .header__cross-icon {
     display: none;
 
@@ -29,12 +41,13 @@
     }
 }
 
-
+ /* checkbox-input that toggles the menu */
 .header__toggle-input {
     justify-self: flex-end;
 }
 
 
+/* labe for menu-toggle  */
 .header__menu-toggle {
     display: block;
     padding-right: 10px;
@@ -44,11 +57,12 @@
     }
 }
 
-
+/* when the input gets checked, remove the menu icon in small screens */
 .header__toggle-input:checked+.header__menu-toggle .header__menu-icon {
     display: none;
 }
 
+/* when input gets checked, show the cross icon in small screen */
 .header__toggle-input:checked+.header__menu-toggle .header__cross-icon {
     display: block;
     position: absolute;
@@ -57,6 +71,7 @@
     z-index: 999;
 }
 
+/* if input is checked, show the nav */
 .header:has(.header__toggle-input:checked) .header__nav {
     display: flex;
     justify-content: flex-start;

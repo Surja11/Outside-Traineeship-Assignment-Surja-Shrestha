@@ -15,10 +15,17 @@
 </head>
 
 <body>
-    <header class="header">
+    <!-- header-section -->
+    <header class="header u-flex">
+        <!-- span for logo -->
+         <!-- since logo is a component in header, we consider it as element and give it class header__logo. -->
         <span class="header__logo">W.</span>
+
+        <!-- navbar -->
+         <!-- since navbar is also related to header, we make it an element -->
         <nav class="header__nav">
 
+            <!-- links in navbar -->
             <a href="#home" class="header__nav-link">Home</a>
             <a href="#" class="header__nav-link">New</a>
             <a href="#" class="header__nav-link">Popular</a>
@@ -26,18 +33,27 @@
             <a href="#" class="header__nav-link">Categories</a>
         </nav>
 
-        <input type="checkbox" id="toggle" class="header__toggle-input" hidden />
+        <!-- using a checkbox type input for toggline of menu in small screen -->
+         <!-- the input is also a component that is related to the header block, so header__toggle-input -->
+          <!-- The input here is in hidden state, so we put is-hidden as a class for it -->
+        <input type="checkbox" id="toggle" class="header__toggle-input is-hidden" />
+
         <label for="toggle" class="header__menu-toggle"> 
+            <!-- menu and cross icons for toggling of navbar -->
             <i class="fa-solid fa-bars header__menu-icon"></i>
             <i class="fa-solid fa-xmark header__cross-icon"></i>
         </label>
     </header>
 
-    
+    <!-- main content -->
     <main class="main">
+
+        <!-- article showing featured content -->
         <article class="l-featured featured-article">
+            <!-- hero image -->
         <img src="./hero.jpg" alt="hero image" class="featured-article__image" />
         
+        <!-- text that describes the featured content -->
         <div class="featured-article__body u-flex">
             <h1 class="featured-article__title">The Bright Future of Web 3.0?</h1>
             <div class="featured-article__content u-flex">
@@ -48,8 +64,11 @@
         </div>
 
         </article>
+
+        <!-- section that shows top blogs/articles -->
         <section class="l-blog blog-container">
-            <div class="blog-card">
+            <!-- blog card -->
+            <div class="blog-card u-flex">
                 <div class="blog-card__image-container">
                     <img src="./blog1.jpg" alt="blog1 image" class="blog-card__image">
                 </div>
@@ -62,7 +81,9 @@
                 </div>
             </div>
 
-            <div class="blog-card">
+
+            <!-- blog-card -->
+            <div class="blog-card u-flex">
                 <div class="blog-card__image-container">
                     <img src="./blog2.jpg" alt="blog2 image" class="blog-card__image">
                 </div>
@@ -73,7 +94,9 @@
                 </div>
             </div>
 
-            <div class="blog-card">
+
+            <!-- blog-card -->
+            <div class="blog-card u-flex">
                 <div class="blog-card__image-container">
                     <img src="./blog3.jpg" class="blog-card__image">
                 </div>
@@ -85,8 +108,12 @@
             </div>
 
         </section>
+
+        <!-- section that shows latest articles -->
         <section class="l-latest latest-article">
             <h1 class="latest-article__title">New</h1>
+
+            <!-- article-card -->
             <div class="article-card">
                 <h2 class="article-card__heading">Hydrogen VS Electric Cars</h2>
                 <p class="article-card__content">Will hydrogen-fueled cars ever catch up to EVs?
@@ -94,23 +121,25 @@
                 <button class="btn btn--blog">READ MORE</button>
             </div>
 
+            <!-- article-card -->
             <div class="article-card">
                 <h2 class="article-card__heading">The Downsides of AI Artistry</h2>
                 <p class="article-card__content">What are the possible adverse effects of on-demand AI image generation?
                 </p>
                 <button class="btn btn--blog">READ MORE</button>
-
             </div>
 
+            <!-- article-card -->
             <div class="article-card">
                 <h2 class="article-card__heading">Is VC Funding Drying Up?</h2>
                 <p class="article-card__content">Private funding by VC firms is down 50% YOY. We take a look at what that means.
                 </p>
                 <button class="btn btn--blog">READ MORE</button>
-
             </div>
         </section>
-        <div class="back-to-top">
+
+        <!-- back-to-top button -->
+        <div class="back-to-top u-flex">
             <a href="#head"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
 

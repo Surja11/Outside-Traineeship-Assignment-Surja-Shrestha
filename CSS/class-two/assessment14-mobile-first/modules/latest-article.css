@@ -1,4 +1,5 @@
-
+/* latest section is a self-contained unit but it's semantically tied to a concept, which is latest-articles, so we place it in modules folder   */
+/* deifnes what the container holding latest-article looks like */
 .latest-article {
     background-color: var(--section-color);
     color: var(--article-color);
@@ -11,23 +12,26 @@
     }
 }
 
+/* defines the title of latest-article section */
+.latest-article__title {
+    color: var(--highlight-color);
+    font-size: 40px;
+    padding-bottom: 15px;
+}
+
+/* defines what the article-card looks like */
 .article-card {
     padding-bottom: 10%;
     margin-bottom: 5%;
 
 }
 
-.latest-article__title {
-    color: var(--highlight-color);
-    font-size: 40px;
-}
-
+/* defines the change of style of article title on hover*/
 .article-card__heading:hover {
     color:var(--highlight-color);
 }
 
-
-
+/* if article card is not first child or last child add border-bottom */
 .article-card:not(:first-child, :last-child) {
     border-bottom: 1px solid var(--text-color);
 }

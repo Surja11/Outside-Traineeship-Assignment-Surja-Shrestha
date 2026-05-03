@@ -1,3 +1,4 @@
+/* since main is a part that defines the layout, we keep it in layout folder */
 main {
     display: flex;
     flex-direction: column;
@@ -5,7 +6,7 @@ main {
 }
 
 
-
+/* if the screen is big, we make main a grid that fits in it sections like l-featured, l-latest, l-blog */
 @media (min-width: 768px){
     main{
         display: grid;
@@ -30,9 +31,6 @@ main {
           grid-column: 1/4;
         grid-row: 2/3;
     }
-
-
-
 
 }
 

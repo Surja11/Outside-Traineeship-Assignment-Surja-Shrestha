@@ -1,3 +1,4 @@
+/* made a utility so that the styles need not be defined everytime*/
 .u-flex{
     display: flex;
 }

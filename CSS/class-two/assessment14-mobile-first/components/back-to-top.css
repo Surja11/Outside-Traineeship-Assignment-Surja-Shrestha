@@ -1,4 +1,6 @@
 
+/* back to top component that scrolls the screen to top. */
+/* since it is an independent component and can exist anywhere or in different versions; kept in components */
 .back-to-top {
     background-color: var(--highlight-color);
     color: var(--button-text);
@@ -8,7 +10,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    display: flex;
     justify-content: center;
     align-items: center;
 }

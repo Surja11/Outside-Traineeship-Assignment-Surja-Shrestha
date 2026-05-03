@@ -1,19 +1,31 @@
+
+/* button is also an independent block and can exist in different formats anywhere, so kept in components folder */
+/* defining the structure of button by giving padding, borders etc */
 .btn {
     max-width: 185px;
+    padding: 20px 40px;
     border: none;
+    cursor: pointer;
 }
 
+/* defining the skin of btn by giving it color and bg-color */
 .btn--primary {
     color: var(--button-text);
     background-color: var(--button-bg);
-    padding: 20px 40px;
     transition: background-color 0.3s ease-in-out;
 
 }
 
+/* changing the bg-color on hover */
+.btn--primary:hover{
+    background-color: var(--section-color);
+}
+
+/* defining another skin of btn by giving it separate color and bg-color */
 .btn--blog {
     color: var(--button-text);
     background-color: var(--section-color);
+    padding: 0px;
     margin: 30px 0px 0px 0px;
 
 }

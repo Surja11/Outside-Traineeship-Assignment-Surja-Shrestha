@@ -1,4 +1,6 @@
+/* featured-article section is a self-contained unit but it's semantically tied to a concept, which is featured article, so we place it in modules folder   */
 
+/* defines style of featured-article image */
 .featured-article__image {
     width: 100%;
     height: 100%;
@@ -11,6 +13,7 @@
     }
 }
 
+/* defines style of body part of article */
 .featured-article__body {
     flex-direction: column;
     gap: 20px;
@@ -22,6 +25,7 @@
     }
 }
 
+/* defines what the title of featured-article looks like */
 .featured-article__title {
     padding-right: 10px;
     font-size: 40px;
@@ -32,6 +36,7 @@
 }
 }
 
+/* defines style of text-content */
 .featured-article__content {
     font-size: 15px;
     line-height: 24px;
@@ -50,6 +55,7 @@
 
 }
 
+/* defines what the featured article looks like in big screens */
 @media (min-width: 768px) {
      
     .featured-article__text {

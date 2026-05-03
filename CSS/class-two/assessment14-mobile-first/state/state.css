@@ -1,0 +1,5 @@
+
+/* if the state is hidden, then make the display none */
+.is-hidden{
+    display: none;
+}

@@ -1,39 +1,41 @@
+/* blog section is a self-contained unit but it's semantically tied to a concept, which is blogs, so we place it in modules folder   */
 
+/* blog container defines structure of the container that holds blog cards */
 .blog-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    @media (min-width: 768px) {
-    
-      
+    @media (min-width: 768px) {   
         display: flex;
         flex-direction: row;
         gap: 20px;
         }
 }
 
+/* blog-card represents each blog */
 .blog-card {
-    display: flex;
     align-items: flex-start;
     gap: 10px;
     flex: 1;
 
        @media (min-width: 768px) {
-        display: flex;
         gap: 10px;
         flex: 1;
     }
 }
 
+/* This is styling for blog numbering */
 .blog-card__num {
     color: var(--article-color);
 }
 
+/* This defines the style of text in blog card */
 .blog-card__text {
     color: var(--text-color);
 }
 
+/* This defines style of image in blog card */
 .blogs-card__image {
     width: 100px;
     object-fit: cover;
@@ -47,6 +49,7 @@
     }
 }
 
+/* this defines style of title of blog */
 .blog-card__heading {
     color: var(--section-color);
     color: var(--section-color);
@@ -55,6 +58,7 @@
 
 }
 
+/* changes in style of blog title on hover */
 .blog-card:hover .blog-card__heading{
     color:var(--highlight-color);
 }
