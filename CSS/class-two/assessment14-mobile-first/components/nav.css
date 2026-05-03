@@ -14,19 +14,21 @@
 .header__menu-icon {
     display: block;
 
-    @media (max-width:768px) {
+    @media (min-width:768px) {
         display: none;
 
     }
 }
+
 
 .header__cross-icon {
     display: none;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         display: none;
     }
 }
+
 
 .header__toggle-input {
     justify-self: flex-end;
@@ -37,7 +39,7 @@
     display: block;
     padding-right: 10px;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
         display: none;
     }
 }
@@ -54,7 +56,6 @@
     top: 3.5%;
     z-index: 999;
 }
-
 
 .header:has(.header__toggle-input:checked) .header__nav {
     display: flex;
