@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.is-hidden{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.expanded-menu{
+    width: 40%;
+    position: fixed;
+    inset: 0;
+    background-color: gray;
+    z-index: -2;
+
+}
