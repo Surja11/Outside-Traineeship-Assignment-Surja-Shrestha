@@ -13,12 +13,17 @@
 }
 
 /* defines the title of latest-article section */
+/* defines structure of title for oocss*/
 .latest-article__title {
-    color: var(--highlight-color);
+    
     font-size: 40px;
     padding-bottom: 15px;
 }
 
+/* defines the skin of title for oocss */
+.latest-article__title--highlight{
+    color: var(--highlight-color);
+}
 /* defines what the article-card looks like */
 .article-card {
     padding-bottom: 10%;

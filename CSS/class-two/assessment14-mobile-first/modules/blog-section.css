@@ -14,6 +14,7 @@
 }
 
 /* blog-card represents each blog */
+
 .blog-card {
     align-items: flex-start;
     gap: 10px;
@@ -24,6 +25,8 @@
         flex: 1;
     }
 }
+
+
 
 /* This is styling for blog numbering */
 .blog-card__num {
@@ -50,14 +53,19 @@
 }
 
 /* this defines style of title of blog */
+/* for oocss, this is also a structure, it defines structure of the card */
 .blog-card__heading {
-    color: var(--section-color);
-    color: var(--section-color);
+    
     font-size: 20px;
     transition: color 0.3s ease-in-out;
 
 }
 
+/* this defines the skin */
+.blog-card__heading--highlight{
+color: var(--section-color);
+    color: var(--section-color);
+}
 /* changes in style of blog title on hover */
 .blog-card:hover .blog-card__heading{
     color:var(--highlight-color);
