@@ -22,6 +22,7 @@ Since settings has lowest specificity, importing colors.css from it
 /* Components could be placed inside modules so importing them after modules */
 @import "components/back-to-top.css";
 @import "components/button.css";
+@import "components/overlay.css";
 
 /* the states should override module and component so placing it after them*/
 @import "state/state.css";

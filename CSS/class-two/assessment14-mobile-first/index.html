@@ -11,18 +11,20 @@
         href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
+    <!-- adding overlay that showsup when navbar is open -->
+    <div class="overlay"></div>
     <!-- header-section -->
     <header class="header u-flex">
         <!-- span for logo -->
-         <!-- since logo is a component in header, we consider it as element and give it class header__logo. -->
+        <!-- since logo is a component in header, we consider it as element and give it class header__logo. -->
         <span class="header__logo">W.</span>
 
         <!-- navbar -->
-         <!-- since navbar is also related to header, we make it an element -->
+        <!-- since navbar is also related to header, we make it an element -->
         <nav class="header__nav">
 
             <!-- links in navbar -->
@@ -34,11 +36,11 @@
         </nav>
 
         <!-- using a checkbox type input for toggline of menu in small screen -->
-         <!-- the input is also a component that is related to the header block, so header__toggle-input -->
-          <!-- The input here is in hidden state, so we put is-hidden as a class for it -->
+        <!-- the input is also a component that is related to the header block, so header__toggle-input -->
+        <!-- The input here is in hidden state, so we put is-hidden as a class for it -->
         <input type="checkbox" id="toggle" class="header__toggle-input is-hidden" />
 
-        <label for="toggle" class="header__menu-toggle"> 
+        <label for="toggle" class="header__menu-toggle">
             <!-- menu and cross icons for toggling of navbar -->
             <i class="fa-solid fa-bars header__menu-icon"></i>
             <i class="fa-solid fa-xmark header__cross-icon"></i>
@@ -49,21 +51,22 @@
     <main class="main">
 
         <!-- article showing featured content -->
-         <!-- since article also has a structure as we have to decide how many grid-items it spans over, we give it l-featured class to use it inside layout folder -->
+        <!-- since article also has a structure as we have to decide how many grid-items it spans over, we give it l-featured class to use it inside layout folder -->
         <!-- featured article is an independent component that can have elements in it so we consider it a block-->
         <article class="l-featured featured-article">
             <!-- hero image -->
-        <img src="./hero.jpg" alt="hero image" class="featured-article__image" />
-        
-        <!-- text that describes the featured content -->
-        <div class="featured-article__body u-flex">
-            <h1 class="featured-article__title">The Bright Future of Web 3.0?</h1>
-            <div class="featured-article__content u-flex">
-                <p class="featured-article__text">We dive into the next evolution of the web that claims to put the power of the platforms back into
-                    the hands of the people. But is it really fulfilling its promise?</p>
-                <button class="btn btn--primary">READ MORE</button>
+            <img src="./hero.jpg" alt="hero image" class="featured-article__image" />
+
+            <!-- text that describes the featured content -->
+            <div class="featured-article__body u-flex">
+                <h1 class="featured-article__title">The Bright Future of Web 3.0?</h1>
+                <div class="featured-article__content u-flex">
+                    <p class="featured-article__text">We dive into the next evolution of the web that claims to put the
+                        power of the platforms back into
+                        the hands of the people. But is it really fulfilling its promise?</p>
+                    <button class="btn btn--primary">READ MORE</button>
+                </div>
             </div>
-        </div>
 
         </article>
 
@@ -134,7 +137,8 @@
             <!-- article-card -->
             <div class="article-card">
                 <h2 class="article-card__heading">Is VC Funding Drying Up?</h2>
-                <p class="article-card__content">Private funding by VC firms is down 50% YOY. We take a look at what that means.
+                <p class="article-card__content">Private funding by VC firms is down 50% YOY. We take a look at what
+                    that means.
                 </p>
                 <button class="btn btn--blog">READ MORE</button>
             </div>

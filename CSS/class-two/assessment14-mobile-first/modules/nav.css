@@ -41,7 +41,7 @@
     }
 }
 
- /* checkbox-input that toggles the menu */
+/* checkbox-input that toggles the menu */
 .header__toggle-input {
     justify-self: flex-end;
 }
@@ -87,4 +87,13 @@
     z-index: 2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+
+    @media (min-width: 768px) {
+        position: static;
+        justify-content: space-between;
+        padding: 0;
+        box-shadow: none;
+        flex-direction: row;
+        z-index: auto;
+    }
 }

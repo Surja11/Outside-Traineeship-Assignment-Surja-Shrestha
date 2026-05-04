@@ -1,0 +1,22 @@
+/* overlay is also an independent block, so kept in components folder */
+/* default — overlay hidden */
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;                        
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;                      
+    transition: background-color 0.3s ease;
+    @media (min-width: 768px) {
+
+        display: none !important;
+    }
+
+}
+
+/* displaying overlay when the navbar is open */
+body:has(.header__toggle-input:checked) .overlay {
+    display: block;
+}
+
