@@ -1,7 +1,7 @@
 /* putting a standalone module and the components linked to it in module folder */
 
 /* information section that holds user's profile information */
-.profile-card__info {
+.profile-card__userinfo {
   grid-column: 1/2;
   color: var(--primary-color);
   display: flex;

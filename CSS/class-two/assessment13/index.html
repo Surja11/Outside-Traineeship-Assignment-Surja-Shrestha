@@ -16,11 +16,11 @@
 
 <body>
 
-    <!-- considering main as a block -->
+    <!-- considering main as a block as it is a standalone component that makes sense on its own-->
     <main class="profile-card">
 
-        <!-- The section acts as an element inside the block, which is why named profile-card__info -->
-        <section class="profile-card__info">
+        <!-- The section acts as an element inside the block (something that makes sense in the block such as user's profile picture, name, designation), which is why named profile-card__userinfo -->
+        <section class="profile-card__userinfo">
 
             <!-- since image-container is an element of block, named profile-card__image-container -->
             <div class="profile-card__image-container">
@@ -49,7 +49,7 @@
             <span class="profile-card__statistic-type">Posts</span>
         </button>
         
-        <!-- This button is slighly different in terms of color than rest so used modifier for it -->
+        <!-- This button is slighly different in terms of color than rest so used modifier for it, the same holds true for count and type of statistic -->
         <button class="profile-card__statistic-button profile-card__statistic-button--dark">
             <h1 class="profile-card__statistic-count profile-card__statistic-count--hightlight">1387</h1>
             <span class="profile-card__statistic-type profile-card__statistic-type--highlight">Likes</span>
