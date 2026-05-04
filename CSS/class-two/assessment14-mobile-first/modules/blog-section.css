@@ -54,8 +54,8 @@
 
 /* this defines style of title of blog */
 /* for oocss, this is also a structure, it defines structure of the card */
+/* Used oocss here because, heading has fixed font, its color can be considered as skin that changes on hover */
 .blog-card__heading {
-    
     font-size: 20px;
     transition: color 0.3s ease-in-out;
 
