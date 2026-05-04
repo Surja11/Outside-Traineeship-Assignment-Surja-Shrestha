@@ -1,0 +1,39 @@
+
+/* styling the box container such that it takes enough height to be scrollable, making it a flex and styling so that the boxes appear at the end */
+.box-container{
+    height: 200vh;
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+}
+
+/* styling the boxes so that they have 400 by 400 size, assigning them color, making them transparent. Setting the transition. */
+#box1{
+    width: 400px;
+    height: 400px;
+    background-color: greenyellow;
+    margin: 0px 200px 0px 400px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: opacity 0.4s ease-in-out,transform 1s ease-in-out;
+}
+
+#box2{
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition:opacity 0.4s ease-in-out, transform 1s ease-in-out;
+}
+
+
+#gap{
+    height: 120vh;
+}
