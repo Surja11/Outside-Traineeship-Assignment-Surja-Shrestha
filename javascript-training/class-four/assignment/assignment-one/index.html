@@ -8,19 +8,27 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <!-- header consisting of logo and menu icons -->
         <header id="header">
             <div class="logo">
                 LOGO
             </div>
-            <div class="menu">
-                <i class="fa-solid fa-bars active"></i>
-                <i class="fa-solid fa-xmark is-hidden"></i>
-
+        
+            <!-- div consisting of menu-icons -->
+            <div class="menu-icons">
+                <!-- added menu and cross id to the icon so that it can be selected and manipulated by  script-->
+            <i class="fa-solid fa-bars " id="menu"></i>
+                <i class="fa-solid fa-xmark is-hidden" id="cross"></i>
+ 
             </div>
+            
         </header>
-        <main>
-            <div class="expanded-menu"></div>
-        </main>
+
+        <!-- navbar that expands when clicked the menu icon -->
+        <nav class="expanded-menu is-closed" id="nav">
+                
+            </nav>
+       
 
         <script src="./script.js"></script>
     </body>

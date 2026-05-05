@@ -1,10 +1,11 @@
+/* resetting the margin and padding provided by the browser */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* styling the header to make it flex and assinging box-shadow to it */
 #header{
     padding: 30px;
     display: flex;
@@ -14,19 +15,26 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* hides the menu-icons when not needed */
 .is-hidden{
     display: none;
 }
 
-.active{
-    display: block;
+/* makes the opacity of navbar 0 */
+.is-closed{
+    opacity: 0;
 }
 
+.menu-icons{
+    cursor: pointer;
+}
+/* styling of navbar */
 .expanded-menu{
     width: 40%;
+    height: 100vh;
     position: fixed;
     inset: 0;
     background-color: gray;
     z-index: -2;
-
+    transition: opacity 0.1s linear;
 }
