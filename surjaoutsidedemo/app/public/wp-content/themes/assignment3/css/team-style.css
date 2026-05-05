@@ -1,0 +1,90 @@
+
+.dept-container {
+
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: sans-serif;
+    height: 70vh;
+
+}
+
+.dept-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 30px;
+
+}
+
+.dept-tabs__block {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    border: 2px solid black;
+    transition: background-color 0.5s ease;
+}
+
+.dept-tabs__block:hover {
+    color: white;
+    background: rgb(84, 171, 230);
+    border: none;
+}
+
+.dept-tabs__block.is-active {
+    color: white;
+    background: rgb(84, 171, 230);
+    margin-bottom: -2px;
+}
+
+.dept-panel {
+    display: none;
+}
+
+.dept-panel.is-active {
+    display: block;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
+}
+
+.member-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid rgb(84, 171, 230);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.member-card:hover {
+   transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.member-card__details {
+    padding: 22px;
+}
+
+.member-card__name {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+}
+
+.member-card__position {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.member-card__meta {
+    text-align: center;
+    font-size: 1.1rem;
+    color: black;
+    margin: 4px 0;
+}

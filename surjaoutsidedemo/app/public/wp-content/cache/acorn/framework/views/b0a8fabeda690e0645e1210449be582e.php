@@ -1,0 +1,2 @@
+<?php (dynamic_sidebar('sidebar-primary')); ?>
+<?php /**PATH /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship-sage/resources/views/sections/sidebar.blade.php ENDPATH**/ ?>

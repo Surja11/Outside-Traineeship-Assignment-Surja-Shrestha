@@ -1,0 +1,82 @@
+[29-Apr-2026 11:45:32 UTC] PHP Parse error:  syntax error, unexpected token "*", expecting end of file in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 40
+[29-Apr-2026 11:45:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 367
+[29-Apr-2026 11:45:32 UTC] PHP Warning:  Trying to access array offset on value of type bool in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-includes/class-wp-recovery-mode-email-service.php on line 368
+[29-Apr-2026 11:51:37 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:27) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:52:50 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:30) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:52:52 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:30) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:52:52 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:30) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:52:52 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:30) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:11 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:11 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:12 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:18 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:18 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:19 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:19 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:20 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:20 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:20 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:20 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:26 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 11:53:26 UTC] PHP Fatal error:  Cannot redeclare mytheme_save_team_metabox() (previously declared in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php:29) in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/template-functions.php on line 42
+[29-Apr-2026 12:06:47 UTC] PHP Warning:  Array to string conversion in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php on line 44
+[29-Apr-2026 12:07:03 UTC] PHP Warning:  Array to string conversion in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/create/inc/custom-metabox.php on line 44
+[30-Apr-2026 07:04:09 UTC] PHP Warning:  require(/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php): Failed to open stream: No such file or directory in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php:176
+Stack trace:
+#0 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-settings.php(710): include()
+#1 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-config.php(103): require_once('/home/surja/Loc...')
+#2 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-load.php(50): require_once('/home/surja/Loc...')
+#3 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-admin/admin-ajax.php(22): require_once('/home/surja/Loc...')
+#4 {main}
+  thrown in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:11 UTC] PHP Warning:  require(/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php): Failed to open stream: No such file or directory in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php:176
+Stack trace:
+#0 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-settings.php(710): include()
+#1 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-config.php(103): require_once('/home/surja/Loc...')
+#2 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-load.php(50): require_once('/home/surja/Loc...')
+#3 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-admin/admin.php(35): require_once('/home/surja/Loc...')
+#4 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-admin/theme-install.php(10): require_once('/home/surja/Loc...')
+#5 {main}
+  thrown in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:11 UTC] PHP Warning:  require(/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php): Failed to open stream: No such file or directory in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php:176
+Stack trace:
+#0 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-settings.php(710): include()
+#1 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-config.php(103): require_once('/home/surja/Loc...')
+#2 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-load.php(50): require_once('/home/surja/Loc...')
+#3 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-blog-header.php(13): require_once('/home/surja/Loc...')
+#4 /home/surja/Local Sites/surjaoutsidedemo/app/public/index.php(17): require('/home/surja/Loc...')
+#5 {main}
+  thrown in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:12 UTC] PHP Warning:  require(/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php): Failed to open stream: No such file or directory in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php:176
+Stack trace:
+#0 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-settings.php(710): include()
+#1 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-config.php(103): require_once('/home/surja/Loc...')
+#2 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-load.php(50): require_once('/home/surja/Loc...')
+#3 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-admin/admin.php(35): require_once('/home/surja/Loc...')
+#4 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-admin/theme-install.php(10): require_once('/home/surja/Loc...')
+#5 {main}
+  thrown in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:12 UTC] PHP Warning:  require(/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php): Failed to open stream: No such file or directory in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 07:04:12 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/inc/custom_post_type.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php:176
+Stack trace:
+#0 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-settings.php(710): include()
+#1 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-config.php(103): require_once('/home/surja/Loc...')
+#2 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-load.php(50): require_once('/home/surja/Loc...')
+#3 /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-blog-header.php(13): require_once('/home/surja/Loc...')
+#4 /home/surja/Local Sites/surjaoutsidedemo/app/public/index.php(17): require('/home/surja/Loc...')
+#5 {main}
+  thrown in /home/surja/Local Sites/surjaoutsidedemo/app/public/wp-content/themes/web-traineeship/functions.php on line 176
+[30-Apr-2026 14:56:48 UTC] PHP Warning:  PHP Startup: imagick: Unable to initialize module
+Module compiled with module API=20220829
+PHP    compiled with module API=20230831
+These options need to match
+ in Unknown on line 0
