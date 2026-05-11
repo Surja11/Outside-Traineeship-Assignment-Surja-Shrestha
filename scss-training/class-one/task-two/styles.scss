@@ -1,0 +1,41 @@
+@use 'sass:list';
+
+$spacing-scale: (4px, 8px, 16px, 24px, 32px, 48px);
+$breakpoint: 768px;
+
+@each $scale in $spacing-scale{
+ $i : list.index($spacing-scale, $scale);
+ .m-#{$i}{
+    margin: $scale;
+ }
+}
+
+
+@mixin responsive-padding($mobile, $desktop){
+
+    padding: $mobile;
+
+    @media (min-width: $breakpoint) {
+        padding: $desktop
+    }
+}
+
+
+.section{
+    background-color: pink;
+    color: white;
+    text-align: center;
+    @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
+}
+
+.card-container{
+    display: flex;
+}
+
+.card{
+ background-color: white;
+    color: black;
+
+ 
+  @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
+}

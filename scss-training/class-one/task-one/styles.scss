@@ -1,0 +1,83 @@
+@use 'sass:map';
+
+$btn-variants: (
+    "primary":(
+        'bg': deepskyblue,
+        'color': white,
+        'border':2px solid deepskyblue
+
+),
+    "danger":(
+        'bg': rgb(184, 25, 25),
+        'color': white,
+        'border':2px solid rgb(184, 25, 25)
+
+),
+
+ "ghost":(
+        'bg': white,
+        'color': black,
+        'border':2px solid black
+
+),
+);
+
+
+
+$btn-sizes:(
+    'sm':(
+        'font-size': 18px,
+        'padding': 10px 15px
+    ),
+     'md':(
+        'font-size': 24px,
+        'padding': 15px 20px
+    ), 
+    'lg':(
+        'font-size': 28px,
+        'padding': 20px 30px
+    )
+
+);
+
+@mixin button-variant($variant){
+
+$values : map.get($btn-variants, $variant);
+background-color: map.get($values, bg);
+color: map.get($values, color);
+border: map.get($values, border);
+}
+
+.btn{
+
+    transition: transform 0.3s ease-in;
+    margin: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    @each $key,$value in $btn-variants{
+    &--#{$key}{
+        @include button-variant($key);
+    }
+}
+
+@each $key,$value in $btn-sizes{
+    &--#{$key}{
+        font-size: map.get($value, 'font-size');
+        padding: map.get($value, 'padding');
+    }
+}
+
+&:hover{
+    transform: scale(1.05);   
+}
+
+&:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+}
+
+
+
