@@ -14,9 +14,8 @@ $breakpoint: 768px;
 @mixin responsive-padding($mobile, $desktop){
 
     padding: $mobile;
-
     @media (min-width: $breakpoint) {
-        padding: $desktop
+        padding: $desktop;
     }
 }
 
@@ -30,12 +29,12 @@ $breakpoint: 768px;
 
 .card-container{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
  background-color: white;
     color: black;
-
  
   @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
 }

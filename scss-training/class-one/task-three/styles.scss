@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$breakpoint: 768px;
+
+ @mixin responsive($mobile-padding, $mobile-font, $desktop-padding, $desktop-font){
+        font-size: $mobile-font;
+        padding: $mobile-padding;
+
+        @media (min-width: $breakpoint){
+            font-size: $desktop-font;
+            padding: $desktop-padding;
+        }
+    }
+
+@mixin responsive-gap($mobile-gap, $desktop-gap){
+    gap: $mobile-gap;
+    @media (min-width: $breakpoint){
+        gap: $desktop-gap;
+    }
+}
+
+.navbar {
+    $nav-bg: beige;
+    $nav-links: #422424;
+    $logo-color: #471919;
+
+    @include responsive(1rem, 1rem, 1.5rem, 1.3rem);
+    background-color: $nav-bg;
+    color: $nav-links;
+  
+
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        @include responsive-gap(1rem, 3.5rem);
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                padding: 5px;
+
+
+                &:hover{
+                    color: deepskyblue;
+                }
+                &:focus{
+                    color: rgb(218, 124, 229);
+                }
+                &:active{
+                    outline: 1px solid maroon;
+
+                }
+            }
+
+        }
+    }
+  
+
+}
