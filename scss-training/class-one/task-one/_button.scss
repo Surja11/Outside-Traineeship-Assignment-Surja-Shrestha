@@ -1,0 +1,37 @@
+@use 'sass:map';
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.btn{
+
+    transition: transform 0.3s ease-in;
+    margin: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    @each $key,$value in $btn-variants{
+    &--#{$key}{
+        @include button-variant($key);
+    }
+}
+
+@each $key,$value in $btn-sizes{
+    &--#{$key}{
+        font-size: map.get($value, 'font-size');
+        padding: map.get($value, 'padding');
+    }
+}
+
+&:hover{
+    transform: scale(1.05);   
+}
+
+&:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+}
+
+
+

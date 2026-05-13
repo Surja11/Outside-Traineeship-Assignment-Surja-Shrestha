@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin button-variant($variant){
+
+$values : map.get($btn-variants, $variant);
+background-color: map.get($values, bg);
+color: map.get($values, color);
+border: map.get($values, border);
+}

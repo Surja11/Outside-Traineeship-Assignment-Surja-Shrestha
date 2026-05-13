@@ -1,0 +1,41 @@
+
+
+$btn-variants: (
+    "primary":(
+        'bg': deepskyblue,
+        'color': white,
+        'border':2px solid deepskyblue
+
+),
+    "danger":(
+        'bg': rgb(184, 25, 25),
+        'color': white,
+        'border':2px solid rgb(184, 25, 25)
+
+),
+
+ "ghost":(
+        'bg': white,
+        'color': black,
+        'border':2px solid black
+
+),
+);
+
+
+
+$btn-sizes:(
+    'sm':(
+        'font-size': 18px,
+        'padding': 10px 15px
+    ),
+     'md':(
+        'font-size': 24px,
+        'padding': 15px 20px
+    ), 
+    'lg':(
+        'font-size': 28px,
+        'padding': 20px 30px
+    )
+
+);
