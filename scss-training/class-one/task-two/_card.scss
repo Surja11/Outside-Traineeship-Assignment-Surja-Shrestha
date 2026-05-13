@@ -1,0 +1,16 @@
+@use 'sass:list';
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    
+    background-color: $section-color;
+    color: $card-color;
+    @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
+}

@@ -1,0 +1,10 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+@use 'sass:list';
+
+.section{
+    background-color: $section-bg;
+    color: $section-color;
+    text-align: center;
+    @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
+}

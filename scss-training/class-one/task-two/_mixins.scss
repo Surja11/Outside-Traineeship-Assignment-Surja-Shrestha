@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@mixin responsive-padding($mobile, $desktop){
+
+    padding: $mobile;
+    @media (min-width: $breakpoint) {
+        padding: $desktop;
+    }
+}
