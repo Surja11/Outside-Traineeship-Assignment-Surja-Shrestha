@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+@mixin responsive($mobile-padding, $mobile-font, $desktop-padding, $desktop-font){
+        font-size: $mobile-font;
+        padding: $mobile-padding;
+
+        @media (min-width: $breakpoint){
+            font-size: $desktop-font;
+            padding: $desktop-padding;
+        }
+    }
+
+
+@mixin responsive-gap($mobile-gap, $desktop-gap){
+    gap: $mobile-gap;
+    @media (min-width: $breakpoint){
+        gap: $desktop-gap;
+    }
+}

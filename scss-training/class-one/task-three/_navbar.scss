@@ -1,0 +1,49 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+
+.navbar {
+    $nav-bg: beige;
+    $nav-links: #422424;
+    $logo-color: #471919;
+    $hover-color: deepskyblue;
+    $focus-color:rgb(218, 124, 229);
+    $active-color: maroon;
+
+    @include responsive(1rem, 1rem, 1.5rem, 1.3rem);
+    background-color: $nav-bg;
+    color: $nav-links;
+  
+
+    display: flex;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+        @include responsive-gap(1rem, 3.5rem);
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                padding: 5px;
+
+
+                &:hover{
+                    color: $hover-color;
+                }
+                &:focus{
+                    color: $focus-color;
+                }
+                &:active{
+                    outline: 1px solid $active-color;
+
+                }
+            }
+
+        }
+    }
+  
+
+}
