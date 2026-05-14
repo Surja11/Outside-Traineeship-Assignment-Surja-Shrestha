@@ -1,12 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-@function pxTorem($px){
-    @return $px/16;
-}
-
-
+@use 'reset';
+@use 'body';
+@use 'header';
+@use 'main';
+@use 'card';
+@use 'footer';
+@use 'button';

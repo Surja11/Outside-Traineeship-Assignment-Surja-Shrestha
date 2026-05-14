@@ -1,0 +1,8 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body{
+    @include padding($body-padding-tb, $body-padding-lr);
+    background-color: $body-bg;
+    font-family: $body-font;
+}

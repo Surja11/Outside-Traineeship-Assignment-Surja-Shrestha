@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 1</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-<body>
-</body>
+<body class="body">
     <header>
-        <h1>Latest Insights</h1>
+        <h1 class="h1">Latest Insights </h1>
     </header>
+
     <main>
        <div class="card">
         <div class="card__img-container">
-            <img src="./scssimg1.png" alt="" class="card__image">
+            <div class="card__tag">Expertise</div>
+            <img src="images/scssimg1.png" alt="" class="card__image">
         </div>
         <div class="card__body">
             <h2 class="card__title">Signs Your Ex Is Spying On You</h2>
@@ -23,23 +29,33 @@
 
        <div class="card">
         <div class="card__img-container">
-            <img src="./scssimg2.png" alt="" class="card__image">
+            <div class="card__tag">Guides</div>
+            <img src="images/scssimg2.png" alt="" class="card__image">
         </div>
         <div class="card__body">
             <h2 class="card__title">How to Remove a Hacker from Your Samsung Phone</h2>
-            <p class="card__content">Samsung is the second most popular manufacturer of smartphones in the world, with a market share of 28.19% compared to Apple’s 28.43% as...n an ideal world, after a relationship ends both you and your ex will move on. But what if they can’t let go, and start spying on your...</p>
+            <p class="card__content">Samsung is the second most popular manufacturer of smartphones in the world, with a market share of 28.19% compared to Apple’s 28.43% as...</p>
         </div>
        </div>
 
        <div class="card">
         <div class="card__img-container">
-            <img src="./scssimg3.png" alt="" class="card__image">
+            <div class="card__tag">
+                Expertise
+            </div>
+            <img src="images/scssimg3.png" alt="" class="card__image">
         </div>
         <div class="card__body">
             <h2 class="card__title">Is Your Cell Phone Under Surveillance?</h2>
             <p class="card__content">In today’s surveillance state, it can feel like your every move is being watched. Although your mind may be conjuring up images of CCTV...</p>
+            
         </div>
        </div>
+
     </main>
+    <footer>
+       <button class="btn">
+        <span>View all insights </span><i class="fa-solid fa-arrow-right-long"></i></button>
+        </footer>
 </body>
 </html>

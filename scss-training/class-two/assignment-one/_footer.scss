@@ -1,0 +1,6 @@
+@use 'mixins' as *;
+footer{
+    @include flex-row; 
+    width: 100%;
+
+}
