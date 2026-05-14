@@ -1,31 +1,43 @@
+// scss for buttons
+
+// importing 'sass:map' to use and access maps.
 @use 'sass:map';
+
+// importing custom made mixins and variables in order to use them.
 @use 'mixins' as *;
 @use 'variables' as *;
 
+// styling of the btn class
 .btn{
-
-    transition: transform 0.3s ease-in;
     margin: 8px;
     border-radius: 20px;
+    transition: transform 0.3s ease-in;
     cursor: pointer;
 
+    // looping over the map
     @each $key,$value in $btn-variants{
+    // assigning respective styles to the button using mixin
     &--#{$key}{
         @include button-variant($key);
     }
 }
 
+// looping over btn-sizes map
 @each $key,$value in $btn-sizes{
+    
+    // assigning font-size and padding respectively.
     &--#{$key}{
         font-size: map.get($value, 'font-size');
         padding: map.get($value, 'padding');
     }
 }
 
+// scaling the button on hover
 &:hover{
     transform: scale(1.05);   
 }
 
+// reducing opacity, changing cursor and stopping of scaling if button is disabled.
 &:disabled{
     opacity: 0.5;
     cursor: not-allowed;

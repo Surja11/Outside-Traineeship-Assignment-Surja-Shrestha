@@ -1,7 +1,7 @@
 .btn {
-  transition: transform 0.3s ease-in;
   margin: 8px;
   border-radius: 20px;
+  transition: transform 0.3s ease-in;
   cursor: pointer;
 }
 .btn--primary {

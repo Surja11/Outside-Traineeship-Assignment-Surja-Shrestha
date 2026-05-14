@@ -1,5 +1,9 @@
 
+// creating btn-variant map.
 
+// this map consists of primary, danger and ghost as keys that denotes variants of button and has another map as their values.
+
+// the map of values contain backgroundcolor,color and border as key value pairs.
 $btn-variants: (
     "primary":(
         'bg': deepskyblue,
@@ -23,7 +27,7 @@ $btn-variants: (
 );
 
 
-
+// btn-sizes is a map consisting of sm, md and lg as keys denoting sizes of buttons. They have another map as their values that denotes the font size andn padding with respect to those sizes.
 $btn-sizes:(
     'sm':(
         'font-size': 18px,

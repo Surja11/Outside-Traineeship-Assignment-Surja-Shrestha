@@ -1,6 +1,12 @@
 @use 'sass:map';
 @use 'variables' as *;
 
+
+// This mixin takes variant as argument and gets the value of that variant. 
+
+//Here the variant could be primary, danger or ghost. 
+
+//It gets the value, which is map denoting backgroundcolor, color and border and applies them to the button variant.
 @mixin button-variant($variant){
 
 $values : map.get($btn-variants, $variant);
