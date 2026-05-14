@@ -2,6 +2,8 @@
 @use 'mixins' as *;
 @use 'variables' as *;
 
+
+// styling fo card container and card
 .card-container{
     display: flex;
     justify-content: center;
@@ -12,5 +14,6 @@
     
     background-color: $section-color;
     color: $card-color;
+    // uses mixins to apply padding differently to diffrent devices for respoinsiveness
     @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
 }

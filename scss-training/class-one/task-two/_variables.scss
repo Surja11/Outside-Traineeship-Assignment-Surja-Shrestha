@@ -1,11 +1,13 @@
 @use 'sass:list';
 
+// variables denoting spacing scale list, breakpoints and colors that are to be used
 $spacing-scale: (4px, 8px, 16px, 24px, 32px, 48px);
 $breakpoint: 768px;
 $section-bg: pink;
 $section-color: white;
 $card-color: black;
 
+// looping over each scale in spacing scale and assigning them as margins.
 @each $scale in $spacing-scale{
  $i : list.index($spacing-scale, $scale);
  .m-#{$i}{

@@ -2,9 +2,14 @@
 @use 'variables' as *;
 @use 'sass:list';
 
+
+// styling of section
 .section{
+
     background-color: $section-bg;
     color: $section-color;
     text-align: center;
+    
+    // using mixing to specify padding for mobile and desktop
     @include responsive-padding(list.nth($spacing-scale,3),list.nth($spacing-scale, 5));
 }

@@ -1,4 +1,7 @@
 @use 'variables' as *;
+
+// assigning padding for responsive design. 
+// Takes the padding in mobile and desktop as arguments and assigns them respectively by checking the breakipoint.
 @mixin responsive-padding($mobile, $desktop){
 
     padding: $mobile;
