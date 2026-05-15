@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.purchase-container {
+  padding: 6.4375rem 10.9375rem 10.75rem 11.5625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: #F6F7FB;
+  font-family: "Inter", sans-serif;
+  max-height: 40.125rem;
+}
+.purchase-container__header {
+  text-align: center;
+}
+.purchase-container__get-started {
+  color: #00A599;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.09375rem;
+  font-weight: 400;
+}
+.purchase-container__title {
+  color: #202020;
+  font-size: 2.375rem;
+  line-height: 3rem;
+  font-weight: 400;
+}
+.purchase-container__channels {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.purchase-container__individual-channel {
+  max-width: 339px;
+  background-color: #FFFFFF;
+}
+.purchase-container__individual-channel img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=styles.css.map */
