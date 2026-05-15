@@ -1,9 +1,0 @@
-@use 'variables' as *;
-@use 'mixins' as *;
-
-
-main{
-    @include flex-row;
-    flex-wrap: wrap;
-    gap: $card-gap;
-}
