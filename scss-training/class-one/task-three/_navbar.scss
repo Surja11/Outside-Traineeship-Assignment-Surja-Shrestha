@@ -3,6 +3,8 @@
 
 
 .navbar {
+
+    // declaring color variables for navbar
     $nav-bg: beige;
     $nav-links: #422424;
     $logo-color: #471919;
@@ -18,24 +20,30 @@
     display: flex;
     justify-content: space-between;
 
+    // nesting ul inside navbar
     ul {
         display: flex;
+        // calling mixin for flex gap
         @include responsive-gap(1rem, 3.5rem);
 
+        // nesting li inside ul
         li {
             list-style-type: none;
 
+            // nesting a inside li
             a {
                 text-decoration: none;
                 padding: 5px;
 
-
+                // defining color when hovered
                 &:hover{
                     color: $hover-color;
                 }
+                // defining color when focused
                 &:focus{
                     color: $focus-color;
                 }
+                // defining outline when active
                 &:active{
                     outline: 1px solid $active-color;
 

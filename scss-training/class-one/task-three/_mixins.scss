@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+// mixing for making font-size and padding responsive
 @mixin responsive($mobile-padding, $mobile-font, $desktop-padding, $desktop-font){
         font-size: $mobile-font;
         padding: $mobile-padding;
@@ -11,6 +12,7 @@
     }
 
 
+// gives responsive flex gap
 @mixin responsive-gap($mobile-gap, $desktop-gap){
     gap: $mobile-gap;
     @media (min-width: $breakpoint){
