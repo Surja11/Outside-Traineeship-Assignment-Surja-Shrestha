@@ -9,7 +9,9 @@
 }
 
 .purchase-container{
-    @include padding(px-to-rem(103),px-to-rem(175),px-to-rem(172),px-to-rem(185));
+    @include padding(clamp(px-to-rem(51), 8vw, px-to-rem(103)),             clamp(px-to-rem(87), 13vw, px-to-rem(175)), 
+             clamp(px-to-rem(86), 12vw, px-to-rem(172)) , 
+             clamp(px-to-rem(92), 14vw, px-to-rem(185)));
     @include flex-center(column,px-to-rem(64));
     background-color: $color-body;
     font-family: "Inter", sans-serif;

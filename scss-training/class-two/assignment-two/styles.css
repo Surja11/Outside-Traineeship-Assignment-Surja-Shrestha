@@ -6,7 +6,7 @@
 }
 
 .purchase-container {
-  padding: 6.4375rem 10.9375rem 10.75rem 11.5625rem;
+  padding: clamp(3.1875rem, 8vw, 6.4375rem) clamp(5.4375rem, 13vw, 10.9375rem) clamp(5.375rem, 12vw, 10.75rem) clamp(5.75rem, 14vw, 11.5625rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
