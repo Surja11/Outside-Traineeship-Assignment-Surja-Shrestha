@@ -4,47 +4,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-@function px-to-rem($px){
+@function px-to-rem($px) {
     @return $px/16*1rem;
 }
-body{
-    @include flex-center($align:flex-start);
+
+body {
+    @include flex-center($align: flex-start);
     background-color: $color-body;
-    font-family: Inter,sans-serif;
-    padding: px-to-rem(162) px-to-rem(103.7) px-to-rem(157) px-to-rem(145);
-    min-height: 100vh;
-   
+    font-family: Inter, sans-serif;
+
+    padding: clamp(px-to-rem(80), 11vw, px-to-rem(162)) clamp(px-to-rem(52), 7vw, px-to-rem(103.7)) clamp(px-to-rem(78), 11vw, px-to-rem(157)) clamp(px-to-rem(24), 3vw, px-to-rem(145));
 }
 
-.faq{
-    $font-size-abbreviation:px-to-rem(14);
-    $line-height-abbreviation:px-to-rem(24);
+.faq {
+    $font-size-abbreviation: px-to-rem(14);
+    $line-height-abbreviation: px-to-rem(24);
     $letter-spacing-abbreviation: px-to-rem(1.5);
 
     $self : '.faq';
 
-    @include flex-center(row, $align: flex-start, $gap:px-to-rem(176));
+    @include flex-center(row, $align: flex-start, $gap: clamp(px-to-rem(40), 8vw, px-to-rem(176)));
     flex-wrap: wrap;
 
-    &__intro{
-        @include flex-center(column,center,flex-start, px-to-rem(40));
-        max-width: 321px;
-       
+    @media (min-width: 768px) {
+        flex-wrap: nowrap;
     }
-    &__abbreviation{
+
+    &__intro {
+        @include flex-center(column, center, flex-start, px-to-rem(40));
+
+        flex: 0 0 clamp(160px, 18vw, 321px);
+        min-width: 0;
+
+        @media (max-width: 768px) {
+            flex: 1 1 100%;
+            max-width: 100%;
+
+        }
+    }
+
+    &__abbreviation {
         color: $color-teal;
         font-size: $font-size-abbreviation;
         line-height: $line-height-abbreviation;
         letter-spacing: $letter-spacing-abbreviation;
     }
 
-    &__expansion{
+    &__expansion {
         width: 100%;
         color: $color-white;
         font-size: px-to-rem(38);
     }
 
-    &__button{
+    &__button {
         padding: px-to-rem(18) px-to-rem(48);
         border: 1px solid $color-white;
         border-radius: px-to-rem(28);
@@ -53,55 +65,61 @@ body{
         cursor: pointer;
     }
 
-    &__accordion{
-        width: px-to-rem(695);
-    }
+    &__accordion {
+        flex: 0 0 px-to-rem(695);
+        max-width: px-to-rem(695);
+        min-width: 0;
 
-    &__qa{   
-     width: 100%; 
-     border-bottom: 1px solid $color-margin;
-     padding: px-to-rem(24) 0;
-     font-weight: 400;
-
-      &--open {
-        #{$self}__icon {
-            transform: rotate(180deg);
+        @media (max-width: 768px) {
+            flex: 1 1 0;
+            max-width: 100%;
         }
     }
 
+    &__qa {
+        width: 100%;
+        border-bottom: 1px solid $color-margin;
+        padding: px-to-rem(24) 0;
+        font-weight: 400;
+
+        &--open {
+            #{$self}__icon {
+                transform: rotate(180deg);
+            }
+        }
+
     }
 
-    &__qa:first-child{
+    &__qa:first-child {
         padding-top: 0;
     }
 
-    &__question-container{
-          @include flex-center($justify:space-between);
-          cursor: pointer;
+    &__question-container {
+        @include flex-center($justify: space-between);
+        cursor: pointer;
 
-          #{$self}__icon{
+        #{$self}__icon {
             color: $color-teal;
             transition: transform 0.3s ease;
-          }
-        
+        }
+
     }
 
-    &__question{
+    &__question {
         color: $color-white;
         font-size: px-to-rem(20);
         line-height: px-to-rem(28);
-      
+
     }
 
-    &__answer{
+    &__answer {
         color: $color-faq-answer;
         font-size: px-to-rem(17);
         line-height: px-to-rem(28);
-        
+
     }
 }
 
-.is-hidden{
+.is-hidden {
     display: none;
 }
-

@@ -1,55 +1,53 @@
 @use 'reset';
-@use 'variables' as *; 
+@use 'variables' as *;
 @use 'mixins' as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-@function px-to-rem($px){
+@function px-to-rem($px) {
     @return $px/16*1rem;
 }
 
-.purchase-container{
-    @include padding(clamp(px-to-rem(51), 8vw, px-to-rem(103)),             clamp(px-to-rem(87), 13vw, px-to-rem(175)), 
-             clamp(px-to-rem(86), 12vw, px-to-rem(172)) , 
-             clamp(px-to-rem(92), 14vw, px-to-rem(185)));
-    @include flex-center(column,px-to-rem(64));
+.purchase-container {
+    @include padding(clamp(px-to-rem(51), 8vw, px-to-rem(103)), clamp(px-to-rem(87), 13vw, px-to-rem(175)), clamp(px-to-rem(86), 12vw, px-to-rem(172)), clamp(px-to-rem(92), 14vw, px-to-rem(185)));
+    @include flex-center(column, px-to-rem(64));
     background-color: $color-body;
     font-family: "Inter", sans-serif;
     max-height: px-to-rem(642);
 
 
-    &__header{
+    &__header {
         text-align: center;
     }
 
-    &__get-started{
-            color: $color-get-started;
-            text-transform: uppercase;
-            font-size: px-to-rem(14);
-            line-height: px-to-rem(24);
-            letter-spacing: px-to-rem(1.5);
-            font-weight: 400;        
-        }
+    &__get-started {
+        color: $color-get-started;
+        text-transform: uppercase;
+        font-size: px-to-rem(14);
+        line-height: px-to-rem(24);
+        letter-spacing: px-to-rem(1.5);
+        font-weight: 400;
+    }
 
-    &__title{
-            color: $color-title;
-            font-size: px-to-rem(38);
-            line-height: px-to-rem(48);
-            font-weight: 400;
-        }
+    &__title {
+        color: $color-title;
+        font-size: px-to-rem(38);
+        line-height: px-to-rem(48);
+        font-weight: 400;
+    }
 
-    &__channels{
+    &__channels {
         @include flex-center(row, px-to-rem(32));
     }
 
-    &__individual-channel{
+    &__individual-channel {
         max-width: 339px;
         background-color: $color-channel-container;
-        img{
+
+        img {
             width: 100%;
             aspect-ratio: 4/3;
             object-fit: contain;
         }
     }
 }
-

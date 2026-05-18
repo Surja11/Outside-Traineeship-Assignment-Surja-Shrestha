@@ -12,8 +12,7 @@ body {
   align-items: flex-start;
   background-color: #093944;
   font-family: Inter, sans-serif;
-  padding: 10.125rem 6.48125rem 9.8125rem 9.0625rem;
-  min-height: 100vh;
+  padding: clamp(5rem, 11vw, 10.125rem) clamp(3.25rem, 7vw, 6.48125rem) clamp(4.875rem, 11vw, 9.8125rem) clamp(1.5rem, 3vw, 9.0625rem);
 }
 
 .faq {
@@ -21,8 +20,13 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 11rem;
+  gap: clamp(2.5rem, 8vw, 11rem);
   flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .faq {
+    flex-wrap: nowrap;
+  }
 }
 .faq__intro {
   display: flex;
@@ -30,7 +34,14 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 2.5rem;
-  max-width: 321px;
+  flex: 0 0 clamp(160px, 18vw, 321px);
+  min-width: 0;
+}
+@media (max-width: 768px) {
+  .faq__intro {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
 .faq__abbreviation {
   color: #00A599;
@@ -52,7 +63,15 @@ body {
   cursor: pointer;
 }
 .faq__accordion {
-  width: 43.4375rem;
+  flex: 0 0 43.4375rem;
+  max-width: 43.4375rem;
+  min-width: 0;
+}
+@media (max-width: 768px) {
+  .faq__accordion {
+    flex: 1 1 0;
+    max-width: 100%;
+  }
 }
 .faq__qa {
   width: 100%;
