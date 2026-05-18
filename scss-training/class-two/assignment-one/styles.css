@@ -5,7 +5,7 @@
 }
 
 body {
-  padding: 5.25rem 12rem;
+  padding: clamp(1rem, 4vw, 5.25rem) clamp(1rem, 6vw, 12rem);
   background-color: #F3F8FF;
   font-family: "Inter", sans-serif;
 }
@@ -24,12 +24,15 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+  align-items: stretch;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   max-width: 320px;
+  flex: 1 1 320px;
+  min-width: 0;
   border-radius: 3rem;
   background-color: white;
   position: relative;

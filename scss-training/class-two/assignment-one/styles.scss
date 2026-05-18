@@ -3,7 +3,11 @@
 @use 'mixins' as *;
 
 body{
-    @include padding($body-padding-tb, $body-padding-lr);
+    // @include padding($body-padding-tb, $body-padding-lr);
+     @include padding(
+        clamp(1rem, 4vw, $body-padding-tb),
+        clamp(1rem, 6vw, $body-padding-lr)
+    );
     background-color: $body-bg;
     font-family: $body-font;
 }
@@ -21,6 +25,7 @@ main{
     @include flex-row;
     flex-wrap: wrap;
     gap: $card-gap;
+    align-items: stretch;
 }
 
 
@@ -28,6 +33,8 @@ main{
     display: flex;
     flex-direction: column;
     max-width: $card-max-width;
+    flex: 1 1 $card-max-width;
+    min-width: 0;
     border-radius: $card-radius;
     background-color: $card-bg;
     position: relative;
