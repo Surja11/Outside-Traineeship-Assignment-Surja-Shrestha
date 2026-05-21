@@ -1,0 +1,146 @@
+// import the font for using in body
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// setting the colors variables
+$bg-color: #f3f3f2;
+$secondary-color: #fd5e09;
+
+// resetting default padding and margin
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// setting the background color of the body, padding and font
+body {
+    background-color: $bg-color;
+    font-family: "Inter", sans-serif;
+    padding: 1rem 3rem;
+
+    // changing the padding on small screen sizes
+    @media (max-width: 480px) {
+        padding: 12px;
+    }
+
+}
+
+// setting the font-size for heading 1
+h1 {
+    font-size: 3rem;
+}
+
+// styles for form
+.form {
+
+    // keeping grid layout for form so that it can be arranged in two columns
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+
+
+
+    &__left-container {
+        grid-column: span 6;
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(6, 1fr);
+
+        @media (max-width: 480px) {
+            grid-column: span 12;
+            gap: 5%;
+        }
+    }
+
+
+    &__right-container {
+        grid-column: 7 / 13;
+
+        @media (max-width: 480px) {
+            grid-column: span 12;
+
+        }
+    }
+
+
+    // styles for the container of label and input
+    &__field {
+        margin-top: 1rem;
+
+        // modifier left
+        &--left {
+            grid-column: 1/4;
+        }
+
+        &--right {
+            grid-column: 4/7;
+        }
+    }
+
+    &__footer {
+        grid-column: span 6;
+    }
+
+    &__label {
+        position: absolute;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+
+        &--visible {
+            position: static;
+            height: auto;
+            width: auto;
+            overflow: visible;
+        }
+    }
+
+
+    &__input {
+        border: none;
+        border-bottom: 2px solid black;
+        background-color: transparent;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 1rem;
+
+        &--textarea {
+            border: 1px solid black;
+            border-radius: 8px;
+            height: 16rem;
+        }
+
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid black;
+
+        }
+
+        @media (max-width: 480px) {
+            font-size: 1rem;
+        }
+
+    }
+
+    &__link {
+        color: $secondary-color;
+        text-decoration: none;
+    }
+
+    &__button {
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 1.2rem;
+        color: white;
+        background-color: $secondary-color;
+        border: transparent;
+        cursor: pointer;
+    }
+}
+
+input[type="checkbox"]:focus {
+    outline: 2px solid black;
+}

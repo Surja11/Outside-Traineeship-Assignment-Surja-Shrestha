@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+   <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Contact us</h1>
+            <p>(*)Asterik denotes mandatory fields</p>
+        </header>
+
+        
+            <form class="form">
+                <div class="form__left-container">
+                <div class="form__field form__field--left">
+                <label for="first-name" class="form__label">First Name</label>
+                <input type="text"  id="first-name" class="form__input" placeholder="First name*" aria-required="true" required />
+                </div>
+                    
+                <div class="form__field form__field--right">
+                <label for="last-name" class="form__label" >Last Name</label>
+                <input type="text" id="last-name" class="form__input" placeholder="Last name*" aria-required="true" required/>
+                </div>
+
+                <div class="form__field form__field--left">
+                <label for="work-email" class="form__label">Work Email</label>
+                <input type="email"  id="work-email" class="form__input" placeholder="Work email*" aria-required="true" required/>
+                </div>
+
+                <div class="form__field form__field--right">
+                <label for="company" class="form__label" >Company</label>
+                <input type="text" id="company" class="form__input" placeholder="Company*" aria-required="true" required/>
+                </div>
+
+                <div class="form__field form__field--left">
+                <label for="job-title" class="form__label" >Job Title</label>
+                <input type="text" id="job-title" class="form__input" placeholder="Job Title*" aria-required="true" required/>
+                </div>
+
+                <div class="form__field form__field--right">
+                <label for="phone-number" class="form__label" >Phone Number(optional)</label>
+                <input type="text" id="phone-number" class="form__input" placeholder="Phone Number(optional)"/>
+                </div>
+                </div>
+
+                <div class="form__right-container">
+                 <div>
+                <label for="helpbox" class="form__label" >How can we help you?</label>
+                <textarea id="helpbox" class="form__input form__input--textarea" placeholder="How can we help you?"></textarea>
+                </div>
+                <br>
+                <p>You can also email us directly at <a href="#" class="form__link">sujit@outside.studio</a></p>
+
+                </div>
+
+                <div class="form__footer">
+                    <div class="form__field">
+                    <input type="checkbox" name="agree" id="agree" aria-required="true" required>
+                    <label for = "agree" class="form__label form__label--visible">I agree to use or processign of my personal information by Persistent Systems for the purpose of fulfilling this request and in accordance with <a href="#" class="form__link">privacy notice</a></label>
+                    </div>
+
+                    <div class="form__field">
+                    <input type="checkbox" name="subscribe" id="subscribe">
+                    <label for = "subscribe" class="form__label form__label--visible">Subscribe me to Persistent's latest thought leadership, blogs and updates </label>
+                    </div>
+
+                    <div class="form__field">
+                    <button class="form__button">Submit</button>
+                    </div>
+                </div>
+            </form>
+     
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
