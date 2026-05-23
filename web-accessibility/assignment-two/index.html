@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo-container">
+          <a href="#" aria-label="Go to homepage">
+            <img
+              src="images/logo.svg"
+              class="navbar__logo"
+              alt="website logo icon"
+            />
+          </a>
+        </div>
+
+        <button
+          class="navbar__icon-container"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="navbar-main"
+        >
+          <img
+            src="images/menu.svg"
+            class="navbar__icon navbar__icon--open"
+            alt="hamburger icon"
+          />
+          <img
+            src="images/cross.svg"
+            class="navbar__icon navbar__icon--close"
+            alt="cross icon"
+          />
+        </button>
+
+        <div class="navbar__main navbar__main--open" id="navbar-main">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#home" class="navbar__link">Home</a>
+            </li>
+
+            <li class="navbar__item">
+              <a href="#about" class="navbar__link">About Us</a>
+            </li>
+
+            <li class="navbar__item">
+              <a href="#what-we-build" class="navbar__link">What we build</a>
+            </li>
+
+            <li class="navbar__item navbar__item--has-dropdown">
+              <button class="navbar__dropdown-trigger" aria-expanded="false" aria-controls="dropdown-construction">
+                <span class="navbar__link">Construction </span>
+                <img src="images/Bottom.svg" alt="arrow-down icon" />
+              </button>
+              <div class="navbar__dropdown" id="dropdown-construction">
+                <ul class="navbar__dropdown-list">
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Pre-Construction
+                    </a>
+                  </li>
+
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Post-Construction
+                    </a>
+                  </li>
+
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Fab Shop
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar__item navbar__item--has-dropdown">
+              <button class="navbar__dropdown-trigger" aria-expanded="false" aria-controls="dropdown-service">
+                <span class="navbar__link">Service Department </span>
+                <img src="images/Bottom.svg" alt="arrow-down icon" />
+              </button>
+              <div class="navbar__dropdown" id="dropdown-service">
+                <ul class="navbar__dropdown-list">
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Consulting Services
+                    </a>
+                  </li>
+
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Implementation Services
+                    </a>
+                  </li>
+
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Support & Maintenance
+                    </a>
+                  </li>
+
+                  <li class="navbar__dropdown-item">
+                    <a href="#pre-construcion" class="navbar__link">
+                      Training and Optimization
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="navbar__item">
+              <a href="#contact" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="navbar__extra">
+          <a
+            href="#"
+            class="navbar__social"
+            aria-label="Visit our LinkedIn page"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/" alt="" />
+          </a>
+          <div class="navbar__contact">
+            <span>24/7 emergency contact</span>
+            <div>
+              <img src="images/phone-call.svg" alt="" aria-hidden="true" />
+              <a href="tel:3018162088" aria-label="Call us at 301 816 2088"
+                >(301) 816-2088</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
+</html>
