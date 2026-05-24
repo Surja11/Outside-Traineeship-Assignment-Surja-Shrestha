@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .svg-1 {
+            height: 20px;
+            width: 20px;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+
+            33% {
+                transform: translate(20px, -20px);
+                opacity: 0;
+            }
+
+            66% {
+                transform: translate(-20px, 20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(0px, 0px);
+                opacity: 1;
+            }
+        }
+
+        .svg-1.trigger {
+            animation: animate 0.7s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+
+    <span id="details">
+        <p>Press
+            <span>Inc.</span>
+            
+            <time datetime="05 May '26">05 May '26</time>
+
+            <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <rect x="2" y="2" width="8" height="1" fill="#74814D"></rect> <rect x="9" y="2" width="1" height="8" fill="#74814D"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64648 9.64648L8.64648 2.64648L9.35359 3.35359L2.35359 10.3536L1.64648 9.64648Z" fill="#74814D"></path>
+            </svg>
+        </p>
+    </span>
+
+    <script>
+        const detailContainer = document.getElementById('details');
+         const svg = document.querySelector('.svg-1');
+
+        function triggerAnimation() {
+            svg.classList.add('trigger');
+        }
+
+        detailContainer.addEventListener('mouseenter', triggerAnimation);
+        detailContainer.addEventListener('mouseleave', triggerAnimation);
+
+        svg.addEventListener('animationend', () => {
+            svg.classList.remove('trigger');
+        });
+    </script>
+
+</body>
+
+</html>
