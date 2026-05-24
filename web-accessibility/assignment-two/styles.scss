@@ -1,226 +1,371 @@
-@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-* {
+// resetting
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  padding: 19px 28px;
-  min-height: 100svh;
-  font-family: "Inter", sans-serif;
-  @media (min-width: 768px) {
-    padding: 22px 101.91px 22px 80px;
-    min-height: unset;
-    height: unset;
-  
+// setting variables
+$breakpoint: 768px;
+$font-primary: "Inter", sans-serif;
+$color-text: #000;
+$color-border: #dedede;
+$color-dropdown-bg: #fff;
+$color-hover: red;
+$color-skip-bg: rgb(93, 11, 11);
+$nav-font-size: 18px;
+$nav-gap: 40px; 
+
+// mixin for focus state for adding outline and outline-offset
+@mixin focus-box($offset: 5px, $bg-color: none) {
+  &:focus {
+    outline: 1px solid $color-text;
+    outline-offset: $offset;
+    background-color: $bg-color
   }
 }
 
-.navbar {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100%;
+body{
+  font-family: $font-primary;
+  color: $color-text;
+}
 
+.skip-button{
+  position: absolute;
+  top: -100px;
+  background-color: $color-skip-bg;
+  color: $color-border;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  margin: 50px;
+
+  &:focus{
+    top: 0;
+  }
+}
+
+
+// setting padding, height, font-family and color for the header
+header {
+  padding: 50px 28px 20px 28px;
+  height: 100svh;
+
+
+  @media (min-width: $breakpoint) {
+    padding: 100px 101.91px 22px 80px;
+    height: unset;
+  }
+}
+
+
+.navbar-utility{
+  margin-bottom: 20px;
+}
+.navbar-utility__list{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  list-style: none;
+
+  a{
+    text-decoration: none;
+    color: $color-text;
+      @include focus-box;
+  }
+}
+
+// styles for navbar, aligning items to flex-start so that it doesnot shift when submenu is expanded
+.navbar {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  border-top: 1px solid $color-text;
+  padding-top: 20px;
+
+
+  @media (min-width: $breakpoint) {
+    justify-content: space-between;
+    align-content: center;
+    height: unset;
+  }
+
+// setting max-width for logo container
   &__logo-container {
     max-width: 85px;
+    @include focus-box;
 
-    @media (min-width: 768px) {
+    @media (min-width: $breakpoint) {
       max-width: 119.81px;
     }
   }
 
+  &__logo {
+    width: 100%;
+    display: block;
+
+    @include focus-box;
+
+  }
+
+  // styles for icon-container which contains hamburger icon
   &__icon-container {
-    @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    top: 114px;
+    right: 39px;
+    cursor: pointer;
+    @include focus-box;
+
+    @media (min-width: $breakpoint) {
       display: none;
     }
-  }
 
-  &__icon-container[aria-expanded="true"] {
-    .navbar__icon--open  { display: none; }
-    .navbar__icon--close { display: block; }
-  }
-
-  &__main {
-    padding-top: 4.5625rem;
-    line-height: 150%;
-    width: 100%;
-    font-size: 18px;
-    display: none;
-    cursor: pointer;
-
-    &--open {
-      display: block;
-    }
-
-    @media (min-width: 768px) {
-      order: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      width: auto;
-      padding: 0;
-    }
-
-  
-  }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-      gap: 40px;
-      line-height: 150%;
-      margin-top: 11.1px;
-    }
-  }
-
-  &__item {
-    list-style-type: none;
-    padding: 24px 0;
-    border-bottom: 1px solid #dedede;
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    @media (min-width: 768px) {
-      border-bottom: none;
-      padding: 0;
-
-      &--has-dropdown {
-        position: relative;
+    &[aria-expanded="true"] {
+      .navbar__icon--open  { 
+        display: none; 
+      }
+      .navbar__icon--close { 
+        display: block; 
       }
     }
   }
 
+  &__icon {
+    width: 21px;
+    height: 14px;
+    display: block;
+
+    &--close { display: none; }
+  }
+
+  // main navbar elements
+  &__main {
+    width: 100%;
+    display: none;
+
+    &--open {
+      display: block;
+      padding-top: 4.5625rem; 
+    }
+
+    @media (min-width: $breakpoint) {
+      display: flex;
+      align-items: center;
+      width: auto;
+      padding-top: 11.1px;
+    }
+  }
+
+// styles for lists inside the main havbar, assigning display flex to them.
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: $nav-font-size;
+    font-weight: 500;
+    line-height: 150%;
+
+    @media (min-width: $breakpoint) {
+      flex-direction: row;
+      align-items: center;
+      gap: $nav-gap;
+    }
+  }
+
+//styles for individual list items
+  &__item {
+    padding: 24px 0;
+    border-bottom: 1px solid $color-border;
+
+    @media (min-width: $breakpoint) {
+      padding: 0;
+      border-bottom: none;
+      position: relative;
+    }
+  }
+
+// styles for links in the list
+  &__link {
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-text;
+    @include focus-box;
+
+    &:hover { 
+      color: $color-hover;
+    }
+  }
+
+//styles for dropdown button
   &__dropdown-trigger {
 
     border: none;
     background-color: transparent;
-    font-size: 18px;
-    font-family: inherit;  
-    font-weight: inherit; 
+    font-size: $nav-font-size;
+    font-family: inherit;
+    font-weight: inherit;
+    color: $color-text;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
     cursor: pointer;
-  
-  }
+    text-align: left;
+    @include focus-box;
 
-  &__link{
-    font-weight: 500;
-  }
-
-  &__dropdown {
-    display: none;
-    font-weight: 400;
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      padding: 12px 44px;
-
-      li {
-        list-style-type: none;
-        padding: 12px 0;
-
-        a {
-          text-decoration: none;
-          color: black;
-        }
-      }
+    // when we have aria-expanded true,  the down arrow is rotated to make upward facing
+    &[aria-expanded="true"] img {
+      transform: rotate(180deg);
     }
 
-    &--open {
+    img {
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+  }
+
+//  styles for dropdown box
+  &__dropdown {
+    display: none;
+    font-weight:400 ;
+    padding: 8px 0 0 16px;
+  
+    // we add this class through JS, when clicked on dropdown
+    &--open { 
+      display: block;
+     }
+
+    @media (min-width: $breakpoint) {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      z-index: 100;
+      min-width: 220px;
+      padding: 8px 0;
+      background-color: $color-dropdown-bg;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      box-shadow:0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &__dropdown-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  &__dropdown-item {
+    padding: 10px 16px;
+    font-weight: 400;
+  }
+
+  &__dropdown-link {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: $color-text;
+    font-weight: 400;
+    font-size: 16px;
+  
+    @include focus-box($offset:2px); 
+  
+  }
+ 
+  // style for extra, which is social and contact contaainer
+  &__extra {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2rem;
+
+    @media (min-width: $breakpoint) {
+      width: auto;
+      margin-top: 0;
+      gap: 24px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    @include focus-box;
+
+    img {
+      width: 24px;
+      height: 24px;
       display: block;
     }
 
-    @media (min-width: 768px) {
-      padding: 16px;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      width: 254px;
-      // width: 100%;
-      position: absolute;
-
-      background-color: pink;
-
-      ul {
-        // flex-direction: column;
-        padding: 0;
-        gap: 12px;
-      }
-
-      li {
-        padding: 0;
-      }
-    }
-  }
-
-  .navbar__logo {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .navbar__icon {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    top: 22px;
-    right: 28px;
-
-    &--hidden {
+    @media (min-width: $breakpoint) {
       display: none;
     }
   }
 
-  &__extra{
-    // position: absolute;
-    // bottom: 19px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;   
-    width: 100%;
-    span{
-      font-size: 10px;
-      letter-spacing: 3%;
-      text-transform: uppercase;
-    }
-
-  @media (min-width: 768px) {
-    margin-top: 0;
-    width: auto;
-  }
-  }
-
-  &__social{
-    @media (min-width: 768px) {
-      display: none;
-    }
-  
-  }
-
-  &__contact{
-    font-weight: 500;
+  &__contact {
     display: flex;
     flex-direction: column;
+    gap: 4px;
+
+    span {
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+      }
+
+      a {
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        color: $color-text;
+        @include focus-box($offset:3px);
+
+        &:hover { 
+          color:$color-hover; 
+        }
+      }
+    }
   }
-&:focus{
-  border: 1px solid black;
-  padding: 9px;
-
-
 }
+
+// setting the styles of main content of our page
+main{
+  padding: 80px;
+}
+
+.btn-main{
+  background-color: $color-skip-bg;
+  color: white;
+  font-size: 1.2rem;
+  padding: 20px 25px;
+
+  // passing bg-color as argument so that on focus, the background changes to provided color
+  @include focus-box($bg-color: rgb(235, 151, 151));
   
 }
