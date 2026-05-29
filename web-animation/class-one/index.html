@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .svg-1 {
+        .svg-1,
+        .svg-2 {
             height: 20px;
             width: 20px;
         }
 
-        @keyframes animate {
+        @keyframes animateSide {
             0% {
                 transform: translate(0px, 0px);
                 opacity: 1;
@@ -33,8 +34,34 @@
             }
         }
 
-        .svg-1.trigger {
-            animation: animate 0.7s ease-in;
+        @keyframes animateDown {
+            0% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            51% {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        .svg-1-trigger {
+            animation: animateSide 0.7s ease-in;
+        }
+
+        .svg-2-trigger {
+            animation: animateDown 0.7s ease-in;
         }
     </style>
 </head>
@@ -44,29 +71,58 @@
     <span id="details">
         <p>Press
             <span>Inc.</span>
-            
             <time datetime="05 May '26">05 May '26</time>
-
-            <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"> <rect x="2" y="2" width="8" height="1" fill="#74814D"></rect> <rect x="9" y="2" width="1" height="8" fill="#74814D"></rect>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64648 9.64648L8.64648 2.64648L9.35359 3.35359L2.35359 10.3536L1.64648 9.64648Z" fill="#74814D"></path>
+            <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none">
+                <rect x="2" y="2" width="8" height="1" fill="#74814D"></rect>
+                <rect x="9" y="2" width="1" height="8" fill="#74814D"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.64648 9.64648L8.64648 2.64648L9.35359 3.35359L2.35359 10.3536L1.64648 9.64648Z"
+                    fill="#74814D"></path>
             </svg>
         </p>
     </span>
 
-    <script>
-        const detailContainer = document.getElementById('details');
-         const svg = document.querySelector('.svg-1');
+    <span id="see-more">
+        <span>See More</span>
+        <svg class="svg-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+            <path d="m11.657 6-5.6568 5.6568-0.7071-0.7071 5.6568-5.6568 0.7071 0.70711z" fill="#1E1E1E"></path>
+            <path d="m6.7071 10.95-0.70711 0.7071-5.6568-5.6568 0.70711-0.70711 5.6568 5.6568z" fill="#1E1E1E"></path>
+            <path d="m5.5 1h1v10h-1v-10z" fill="#1E1E1E"></path>
+        </svg>
+    </span>
 
-        function triggerAnimation() {
-            svg.classList.add('trigger');
+    <script>
+        // get the containers
+        const detailContainer = document.getElementById('details');
+        const seeMoreContainer = document.getElementById('see-more');
+
+
+        // get the icons
+        const svg1 = document.querySelector('.svg-1');
+        const svg2 = document.querySelector('.svg-2');
+
+
+        // function that adds animation class to the svg
+        function triggerAnimation(svg, className) {
+            svg.classList.add(className);
         }
 
-        detailContainer.addEventListener('mouseenter', triggerAnimation);
-        detailContainer.addEventListener('mouseleave', triggerAnimation);
+        // function that removes animation class when animation ends
+        function setupAnimationCleanup(svg, className) {
+            svg.addEventListener('animationend', () => {
+                svg.classList.remove(className);
+            });
+        }
 
-        svg.addEventListener('animationend', () => {
-            svg.classList.remove('trigger');
-        });
+        // adding mouseenter and mouse leave anumation
+        detailContainer.addEventListener('mouseenter', () => triggerAnimation(svg1, 'svg-1-trigger'));
+        detailContainer.addEventListener('mouseleave', () => triggerAnimation(svg1, 'svg-1-trigger'));
+        seeMoreContainer.addEventListener('mouseenter', () => triggerAnimation(svg2, 'svg-2-trigger'));
+        seeMoreContainer.addEventListener('mouseleave', () => triggerAnimation(svg2, 'svg-2-trigger'));
+
+        // cleaning up animation 
+        setupAnimationCleanup(svg1, 'svg-1-trigger');
+        setupAnimationCleanup(svg2, 'svg-2-trigger');
     </script>
 
 </body>
