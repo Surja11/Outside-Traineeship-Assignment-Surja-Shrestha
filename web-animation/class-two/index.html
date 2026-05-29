@@ -1,266 +1,180 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation</title>
-    <style>
-      body {
-        padding: 100px 40px;
-      }
 
-      .box-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        margin: 50px;
-        place-items: center;
-        height: 200px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
 
-      .box {
-        height: 20px;
-        width: 20px;
-        background-color: greenyellow;
-        transition: transform 0.3s linear;
-      }
+<body>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
 
-      .box-animation {
-        transform-origin: bottom;
-        transform: scale(6);
-      }
-    </style>
-  </head>
+  <div class="text-container">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
+      id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
+      amet pariatur animi nam vel error accusamus illum omnis tenetur
+      voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
+      alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
+      libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
+      suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
+      quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
+      repudiandae repellendus, corporis provident officia culpa fugiat aliquam
+      accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
+      labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
+      doloribus recusandae atque. Fugiat dolore dignissimos distinctio
+      molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
+      Nostrum, optio porro eos vero, minima amet vel delectus non earum
+      sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
+      unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
+      commodi numquam? Reprehenderit!
+    </p>
+    <p>
+      Quo deleniti harum error provident temporibus officiis, eum repellendus,
+      laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
+      consequatur excepturi quod tenetur neque eos consequuntur perferendis.
+      Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
+      doloremque delectus ut aliquam exercitationem maxime, reiciendis,
+      debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
+      quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
+      adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
+      asperiores! In voluptates necessitatibus vitae, totam molestias, facere
+      consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
+      unde. Impedit reprehenderit esse animi blanditiis commodi facere,
+      ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
+      harum minus necessitatibus quibusdam maxime labore beatae optio
+      consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
+      voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
+      Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
+      libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
+      inventore.
+    </p>
+  </div>
 
-  <body>
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
 
-    <div class="text-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
-        id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
-        amet pariatur animi nam vel error accusamus illum omnis tenetur
-        voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
-        alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
-        libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
-        suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
-        quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
-        repudiandae repellendus, corporis provident officia culpa fugiat aliquam
-        accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
-        labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
-        doloribus recusandae atque. Fugiat dolore dignissimos distinctio
-        molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
-        Nostrum, optio porro eos vero, minima amet vel delectus non earum
-        sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
-        unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
-        commodi numquam? Reprehenderit!
-      </p>
-      <p>
-        Quo deleniti harum error provident temporibus officiis, eum repellendus,
-        laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
-        consequatur excepturi quod tenetur neque eos consequuntur perferendis.
-        Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
-        doloremque delectus ut aliquam exercitationem maxime, reiciendis,
-        debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
-        quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
-        adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
-        asperiores! In voluptates necessitatibus vitae, totam molestias, facere
-        consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
-        unde. Impedit reprehenderit esse animi blanditiis commodi facere,
-        ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
-        harum minus necessitatibus quibusdam maxime labore beatae optio
-        consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
-        voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
-        Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
-        libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
-        inventore.
-      </p>
-    </div>
+  <div class="text-container">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
+      id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
+      amet pariatur animi nam vel error accusamus illum omnis tenetur
+      voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
+      alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
+      libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
+      suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
+      quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
+      repudiandae repellendus, corporis provident officia culpa fugiat aliquam
+      accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
+      labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
+      doloribus recusandae atque. Fugiat dolore dignissimos distinctio
+      molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
+      Nostrum, optio porro eos vero, minima amet vel delectus non earum
+      sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
+      unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
+      commodi numquam? Reprehenderit!
+    </p>
+    <p>
+      Quo deleniti harum error provident temporibus officiis, eum repellendus,
+      laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
+      consequatur excepturi quod tenetur neque eos consequuntur perferendis.
+      Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
+      doloremque delectus ut aliquam exercitationem maxime, reiciendis,
+      debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
+      quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
+      adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
+      asperiores! In voluptates necessitatibus vitae, totam molestias, facere
+      consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
+      unde. Impedit reprehenderit esse animi blanditiis commodi facere,
+      ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
+      harum minus necessitatibus quibusdam maxime labore beatae optio
+      consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
+      voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
+      Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
+      libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
+      inventore.
+    </p>
+  </div>
 
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="box-container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+  <div class="text-container">
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
+      id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
+      amet pariatur animi nam vel error accusamus illum omnis tenetur
+      voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
+      alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
+      libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
+      suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
+      quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
+      repudiandae repellendus, corporis provident officia culpa fugiat aliquam
+      accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
+      labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
+      doloribus recusandae atque. Fugiat dolore dignissimos distinctio
+      molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
+      Nostrum, optio porro eos vero, minima amet vel delectus non earum
+      sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
+      unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
+      commodi numquam? Reprehenderit!
+    </p>
+    <p>
+      Quo deleniti harum error provident temporibus officiis, eum repellendus,
+      laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
+      consequatur excepturi quod tenetur neque eos consequuntur perferendis.
+      Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
+      doloremque delectus ut aliquam exercitationem maxime, reiciendis,
+      debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
+      quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
+      adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
+      asperiores! In voluptates necessitatibus vitae, totam molestias, facere
+      consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
+      unde. Impedit reprehenderit esse animi blanditiis commodi facere,
+      ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
+      harum minus necessitatibus quibusdam maxime labore beatae optio
+      consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
+      voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
+      Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
+      libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
+      inventore.
+    </p>
+  </div>
 
-    <div class="text-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
-        id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
-        amet pariatur animi nam vel error accusamus illum omnis tenetur
-        voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
-        alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
-        libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
-        suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
-        quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
-        repudiandae repellendus, corporis provident officia culpa fugiat aliquam
-        accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
-        labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
-        doloribus recusandae atque. Fugiat dolore dignissimos distinctio
-        molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
-        Nostrum, optio porro eos vero, minima amet vel delectus non earum
-        sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
-        unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
-        commodi numquam? Reprehenderit!
-      </p>
-      <p>
-        Quo deleniti harum error provident temporibus officiis, eum repellendus,
-        laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
-        consequatur excepturi quod tenetur neque eos consequuntur perferendis.
-        Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
-        doloremque delectus ut aliquam exercitationem maxime, reiciendis,
-        debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
-        quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
-        adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
-        asperiores! In voluptates necessitatibus vitae, totam molestias, facere
-        consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
-        unde. Impedit reprehenderit esse animi blanditiis commodi facere,
-        ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
-        harum minus necessitatibus quibusdam maxime labore beatae optio
-        consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
-        voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
-        Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
-        libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
-        inventore.
-      </p>
-    </div>
+  <script src="./script.js" defer>
+  </script>
+</body>
 
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-    <div class="box-container">
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-    </div>
-    <div class="text-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque possimus
-        id doloribus perferendis voluptatem, fugit, repellat veritatis commodi
-        amet pariatur animi nam vel error accusamus illum omnis tenetur
-        voluptas. A! Ex mollitia doloribus quidem quam harum sapiente, error
-        alias facilis? Dolorum possimus facere incidunt velit aliquam sequi, ex
-        libero officiis ea? Error laborum perferendis itaque aliquam quasi illum
-        suscipit fugiat! Officia neque aut veritatis quidem atque? Temporibus
-        quisquam voluptatum in alias suscipit omnis neque quibusdam. Magni
-        repudiandae repellendus, corporis provident officia culpa fugiat aliquam
-        accusantium quasi soluta id iure aspernatur? Id delectus dignissimos
-        labore sed aliquid cumque natus nulla magni velit, culpa esse excepturi
-        doloribus recusandae atque. Fugiat dolore dignissimos distinctio
-        molestias incidunt, quo unde vero voluptatum esse quos blanditiis.
-        Nostrum, optio porro eos vero, minima amet vel delectus non earum
-        sapiente, necessitatibus quibusdam recusandae sint rem sed blanditiis
-        unde possimus quia eum perspiciatis voluptates veritatis? Impedit,
-        commodi numquam? Reprehenderit!
-      </p>
-      <p>
-        Quo deleniti harum error provident temporibus officiis, eum repellendus,
-        laborum quis animi eveniet exercitationem, obcaecati ipsum facere totam
-        consequatur excepturi quod tenetur neque eos consequuntur perferendis.
-        Ad aliquid ullam nobis. Sed obcaecati libero rem voluptatum aut
-        doloremque delectus ut aliquam exercitationem maxime, reiciendis,
-        debitis tempora alias nihil sint commodi praesentium! Vero fugit impedit
-        quasi, soluta provident fugiat laboriosam ad corrupti! Fugiat, incidunt,
-        adipisci neque aspernatur vel modi ab non vitae nam maiores, magni sint
-        asperiores! In voluptates necessitatibus vitae, totam molestias, facere
-        consectetur, reiciendis fuga laudantium perspiciatis aliquid. Quos,
-        unde. Impedit reprehenderit esse animi blanditiis commodi facere,
-        ducimus fugiat corrupti? Repellendus itaque aperiam dolores est deserunt
-        harum minus necessitatibus quibusdam maxime labore beatae optio
-        consectetur dicta, fugiat expedita, obcaecati libero. Soluta at
-        voluptates esse ipsam porro dolore, aliquid cumque aspernatur omnis.
-        Omnis molestias eaque voluptatem molestiae consequatur? Nam iste ex
-        libero earum consequuntur nulla corrupti nihil quam eius. Tempora,
-        inventore.
-      </p>
-    </div>
-
-    <script>
-    // selecting all the boxContainers which contains boxes to be animated at once.
-      const boxContainers = Array.from(document.querySelectorAll(".box-container"));
-
-    
-      // queue that makes sure animation happens one container at a time
-      let transformedQueue = [];
-      // flag to make sure only animation on multiple box container donot happen at once
-      let isAnimating = false;
-
-      function checkQueue() {
-        if (isAnimating || transformedQueue.length === 0) return;
-
-        isAnimating = true;
-        const containerIndex = transformedQueue.shift();
-        const container = boxContainers[containerIndex];
-
-        if (container.dataset.animated === "true") {
-          isAnimating = false;
-          processQueue();
-          return;
-        }
-
-        container.dataset.animated = "true";
-        const boxes = Array.from(container.querySelectorAll(".box"));
-        boxes.forEach((box) => box.classList.add("box-animation"));
-
-        const lastBox = boxes[boxes.length - 1];
-        lastBox.addEventListener(
-          "transitionend",
-          (e) => {
-            if (e.propertyName !== "transform") return;
-            isAnimating = false;
-            checkQueue();
-          },
-          { once: true },
-        );
-      }
-
-
-    //   intersection observer that checks if the boxContainer arrived in the viewport
-      const observer = new IntersectionObserver(
-        (entries) => {entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const index = boxContainers.indexOf(entry.target);
-
-              // Add to queue if not already there or animated
-              if (
-                !transformedQueue.includes(index) &&
-                entry.target.dataset.animated !== "true"
-              ) {
-                transformedQueue.push(index);
-                transformedQueue.sort((a, b) => a - b); // sorting the queue
-              }
-
-              checkQueue();
-            }
-          });
-        },
-        { root: null, rootMargin: "0px", threshold: 0 },
-      );
-
-    //   observing each box containers
-      boxContainers.forEach((boxContainer) => observer.observe(boxContainer));
-
-    </script>
-  </body>
 </html>
