@@ -6,10 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .icon-container{
+            overflow: hidden;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+        }
         .svg-1,
         .svg-2 {
             height: 20px;
             width: 20px;
+        
         }
 
         @keyframes animateSide {
@@ -69,9 +76,10 @@
 <body>
 
     <span id="details">
-        <p>Press
+        <span>Press</span>
             <span>Inc.</span>
             <time datetime="05 May '26">05 May '26</time>
+            <span class="icon-container">
             <svg class="svg-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none">
                 <rect x="2" y="2" width="8" height="1" fill="#74814D"></rect>
                 <rect x="9" y="2" width="1" height="8" fill="#74814D"></rect>
@@ -79,16 +87,20 @@
                     d="M1.64648 9.64648L8.64648 2.64648L9.35359 3.35359L2.35359 10.3536L1.64648 9.64648Z"
                     fill="#74814D"></path>
             </svg>
-        </p>
+            </span>
+        
     </span>
 
+    <br><br>
     <span id="see-more">
         <span>See More</span>
+        <span class="icon-container">
         <svg class="svg-2" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
             <path d="m11.657 6-5.6568 5.6568-0.7071-0.7071 5.6568-5.6568 0.7071 0.70711z" fill="#1E1E1E"></path>
             <path d="m6.7071 10.95-0.70711 0.7071-5.6568-5.6568 0.70711-0.70711 5.6568 5.6568z" fill="#1E1E1E"></path>
             <path d="m5.5 1h1v10h-1v-10z" fill="#1E1E1E"></path>
         </svg>
+        </span>
     </span>
 
     <script>
