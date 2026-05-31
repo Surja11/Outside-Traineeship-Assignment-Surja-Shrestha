@@ -7881,6 +7881,18 @@ textarea.form-control-lg {
   top: 0 !important;
 }
 
+.top-10 {
+  top: 10% !important;
+}
+
+.top-20 {
+  top: 20% !important;
+}
+
+.top-25 {
+  top: 25% !important;
+}
+
 .top-50 {
   top: 50% !important;
 }
@@ -7891,6 +7903,18 @@ textarea.form-control-lg {
 
 .bottom-0 {
   bottom: 0 !important;
+}
+
+.bottom-10 {
+  bottom: 10% !important;
+}
+
+.bottom-20 {
+  bottom: 20% !important;
+}
+
+.bottom-25 {
+  bottom: 25% !important;
 }
 
 .bottom-50 {
@@ -7905,6 +7929,18 @@ textarea.form-control-lg {
   left: 0 !important;
 }
 
+.start-10 {
+  left: 10% !important;
+}
+
+.start-20 {
+  left: 20% !important;
+}
+
+.start-25 {
+  left: 25% !important;
+}
+
 .start-50 {
   left: 50% !important;
 }
@@ -7915,6 +7951,18 @@ textarea.form-control-lg {
 
 .end-0 {
   right: 0 !important;
+}
+
+.end-10 {
+  right: 10% !important;
+}
+
+.end-20 {
+  right: 20% !important;
+}
+
+.end-25 {
+  right: 25% !important;
 }
 
 .end-50 {
@@ -9623,6 +9671,14 @@ textarea.form-control-lg {
 
 .fs-22 {
   font-size: calc(1.2625rem + 0.15vw) !important;
+}
+
+.fs-30 {
+  font-size: calc(1.3125rem + 0.75vw) !important;
+}
+
+.fs-38 {
+  font-size: calc(1.3625rem + 1.35vw) !important;
 }
 
 .fst-italic {
@@ -16203,6 +16259,12 @@ textarea.form-control-lg {
   }
   .fs-22 {
     font-size: 1.375rem !important;
+  }
+  .fs-30 {
+    font-size: 1.875rem !important;
+  }
+  .fs-38 {
+    font-size: 2.375rem !important;
   }
 }
 @media print {
