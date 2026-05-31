@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+  
+  "build": "sass src/main.scss src/main.css",
+  "watch": "sass --watch src/main.scss:src/main.css"
+
   },
   "keywords": [],
   "author": "",
@@ -12,5 +16,9 @@
   "type": "commonjs",
   "dependencies": {
     "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "sass": "^1.100.0"
   }
+
 }

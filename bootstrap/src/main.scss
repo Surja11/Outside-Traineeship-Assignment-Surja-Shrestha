@@ -1,3 +1,30 @@
+$secondary: #ffffff;
+$btn-secondary-color: #121313;
+$btn-secondary-bg: #ffffff;
+$btn-secondary-border-color: #121313;
+$btn-border-width: 2px;
 
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss"
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+.btn-secondary {
+  @include button-variant(
+    #ffffff,  
+    #121313
+)}
+
+h1, .h1 {
+  letter-spacing: -0.01em; 
+}
+
+h2, .h2{
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.25rem;     
+  font-weight: 400;
+  line-height: 1.5;      
+  color: #121313;
+}
