@@ -13,511 +13,454 @@
     rel="stylesheet">
 
   <script src="./bootstrap.bundle.min.js"></script>
-  <style>
-    body {
-      font-family: "Poppins", sans-serif;
-    }
 
-    .hero {
-      background-image: url('./images/bootstrap-hero.png');
-      background-size: cover;
-      background-position: center;
-      min-height: 600px;
-    }
-
-    .logo-container {
-      width: 135px;
-      height: 32px;
-    }
-
-    .label-section__highlight{
-      background-color: #98CB97;
-    }
-    .overview-carousel {
-      background-image: url('./images/overview_carousel.png');
-    }
-
-    .w-70 {
-      width: 70%;
-    }
-
-    .large-title {
-      font-size: 7.5rem;
-      line-height: 8.375rem;
-      font-weight: 500;
-      letter-spacing: -1%;
-      color: #F3B30E;
-    }
-
-    .carousel-item__thinking-bubble{
-      background-image: url(./images/Background_container.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      width: 297px;
-
-    }
-
-    .accordion-button::after {
-      background-image: url('./images/plus.png');
-      background-size: contain;
-      transition: transform 0.3s ease;
-    }
-
-    .accordion-button:not(.collapsed)::after {
-      background-image: url('./images/plus.png');
-      transform: rotate(45deg);
-    }
-
-    .accordion-button:focus {
-      box-shadow: none;
-    }
-
-    .accordion-button:not(.collapsed) {
-      background-color: transparent !important;
-      color: white;
-      box-shadow: none;
-    }
-
-    .card-stat {
-      max-width: 390px;
-      width: 100%
-    }
-
-    .card-shadow {
-      box-shadow: 0 10px 20px 16px rgba(0, 0, 0, 0.08);
-    }
-
-    .text-light-gray{
-      color: #B3B7B9;
-    }
-  </style>
 </head>
 
 <body>
-  <!-- <header>
-    <div class="nav d-flex gap-15 px-14 justfiy-content-between">
-      <div class="nav__links" >
-        <nav class="py-8 d-flex flex-row">
-          <div class="nav__logo-container">
-            <a href="#home">
-              <img src="./images/Section Logo.png" alt="Logo">
-            </a>
-          </div>
-          <ul class="d-flex list-unstyled gap-5">
-            <li>
-              <a href="">Platforms</a>
-            </li>
 
-            <li>
-              <a href="">Services</a>
-            </li>
-
-            <li>
-              <a href="">Events</a>
-            </li>
-
-            <li>
-              <a href="">Individuals</a>
-            </li>
-
-            <li>
-              <a href="">Resources</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="nav__buttons py-7">
-        <button class="btn btn-primary">Log In</button>
-        <button class="btn btn-secondary">Book a Demo</button>
-      </div>
-    </div>
-  </header> -->
-
-
+  <!-- header -->
   <header>
     <div class="nav d-flex justify-content-between align-items-center px-14 py-6">
-
       <div class="nav__links">
+
+        <!-- navbar -->
         <nav class="d-flex align-items-center gap-13">
+
+          <!-- logo -->
           <div class="nav__logo-container">
             <a href="#home">
               <img src="./images/Section Logo.png" alt="Logo">
             </a>
           </div>
+
+          <!-- primary-menu -->
           <ul class="d-flex list-unstyled gap-6 mb-0">
             <li>
-              <a href="" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Platforms</a>
+              <a href="#platform" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none active">Platforms</a>
             </li>
             <li>
-              <a href="" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Services</a>
+              <a href="#services" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Services</a>
             </li>
             <li>
-              <a href="" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Events</a>
+              <a href="#events" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Events
+
+              </a>
             </li>
             <li>
-              <a href="" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Individuals</a>
+              <a href="#individuals" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Individuals
+                <span class="p-2">
+                  <img src="./images/Bottom.png">
+                </span>
+              </a>
             </li>
             <li>
-              <a href="" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Resources</a>
+              <a href="#resources" class="pt-1 pb-1 pr-1 pl-3 text-decoration-none">Resources
+                <span class="p-2">
+                  <img src="./images/Bottom.png">
+                </span>
+              </a>
             </li>
           </ul>
         </nav>
       </div>
 
+      <!-- CTA -->
       <div class="nav__buttons d-flex gap-4">
+        <!-- btn btn-primary and btn-secondary has been changed to reflect the theme of website -->
         <button class="btn btn-primary">Log In</button>
         <button class="btn btn-secondary">Book a Demo</button>
       </div>
-
     </div>
   </header>
 
-  <section class="hero d-flex align-items-center px-14 py-15">
-    <div class="container-fluid px-0">
-      <div class="row g-4">
 
-        <div class="col-5">
-          <div class="hero__content py-15">
+  <main>
 
-            <h1 class="pb-10">Turn every employee into an AI innovator</h1>
+    <!-- hero section -->
+    <!-- assigning padding and margin as per requirement of design -->
+    <section class="hero d-flex align-items-center px-14 py-15" id="platform">
 
-            <p class="pb-10">AI coaching personalized to every individual - so your whole workforce finds real value,
-              not just the early adopters.</p>
+      <!-- using grid of bootstrap -->
+      <!-- since container comes with default padding, resetting it with 0 -->
+      <div class="container-fluid px-0">
 
-            <div class="d-flex gap-4">
-              <button class="btn btn-primary">Request Demo</button>
-              <button class="btn btn-secondary">Try the Coach</button>
+        <!-- defining gutter with g-4 which equals to 16px -->
+        <div class="row g-4">
+
+          <!-- spanning 5 columns -->
+          <div class="col-5">
+
+            <!-- div for hero content which is text -->
+            <div class="hero__content py-15">
+
+              <h1 class="pb-10">Turn every employee into an AI innovator</h1>
+
+              <p class="pb-10">AI coaching personalized to every individual - so your whole workforce finds real value,
+                not just the early adopters.</p>
+
+              <div class="d-flex gap-4">
+                <button class="btn btn-primary">Request Demo</button>
+                <button class="btn btn-secondary">Try the Coach</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- section for trusted-by  -->
+    <section class="trusted-by d-flex align-items-center gap-13 justfiy-content-between px-14 py-10">
+
+      <h3 class="">Trusted By</h3>
+
+      <!-- here assigning gap-12 which equals to 64  instead of 65.5 since we have spacers in multiple of 4-->
+      <div class="trusted-by__logos d-flex align-items-center gap-12">
+        <div class="logo-container d-flex align-items-center justify-content-center">
+          <img src="./images/Moderna.png" alt="Moderna" class="mw-100 h-auto">
+        </div>
+        <div class="logo-container d-flex align-items-center justify-content-center">
+          <img src="./images/Doordash.png" alt="Doordash" class="mw-100 h-auto">
+        </div>
+        <div class="logo-container d-flex align-items-center justify-content-center">
+          <img src="./images/Google.png" alt="Google" class="mw-100 h-auto">
+        </div>
+        <div class="logo-container d-flex align-items-center justify-content-center">
+          <img src="./images/Uber.png" alt="Uber" class="mw-100 h-auto">
+        </div>
+        <div class="logo-container d-flex align-items-center justify-content-center">
+          <img src="./images/user testing.png" alt="User Testing" class="mw-100 h-auto">
+        </div>
+      </div>
+      </div>
+
+    </section>
+
+
+    <!-- carousel -->
+    <section class="overview-carousel pt-9">
+
+      <div class="label-section w-100 text-center mb-8">
+        <h6 class="fs-30 mb-4">Section HQ</h6>
+        <span class="label-section__highlight fs-18 py-2 px-4">Use Case Coach</span>
+        <h2 class="mt-4">Discover and share hyper-relevant AI use cases</h2>
+      </div>
+
+      <div class="d-flex justify-content-center">
+
+        <!-- using carousel component fo bootstrap for carousel -->
+        <div id="carouselExampleIndicators" class="carousel slide w-70 mb-10" data-bs-ride="carousel"
+          data-bs-interval="3000">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="First slide">
+
+              <!-- thinking bubble inside carousel slide, that is positioned relative to the parent div -->
+              <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
+                <p class="p-2 fs-38">Bring the goal. i'll bring the prompts.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="Second slide">
+              <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
+                <p class="p-2 fs-38">Bring the goal. i'll bring the prompts.</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="Third slide">
+              <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
+                <p class="p-2 fs-38">Bring the goal. i'll bring the prompts..</p>
+              </div>
             </div>
 
           </div>
-        </div>
 
-      </div>
-    </div>
-  </section>
-
-  <section class="trusted-by d-flex align-items-center gap-13 justfiy-content-between px-14 py-10">
-
-    <h3 class="">Trusted By</h3>
-    <div class="trusted-by__logos d-flex align-items-center gap-12">
-      <div class="logo-container d-flex align-items-center justify-content-center">
-        <img src="./images/Moderna.png" alt="Moderna" class="mw-100 h-auto">
-      </div>
-      <div class="logo-container d-flex align-items-center justify-content-center">
-        <img src="./images/Doordash.png" alt="Doordash" class="mw-100 h-auto">
-      </div>
-      <div class="logo-container d-flex align-items-center justify-content-center">
-        <img src="./images/Google.png" alt="Google" class="mw-100 h-auto">
-      </div>
-      <div class="logo-container d-flex align-items-center justify-content-center">
-        <img src="./images/Uber.png" alt="Uber" class="mw-100 h-auto">
-      </div>
-      <div class="logo-container d-flex align-items-center justify-content-center">
-        <img src="./images/user testing.png" alt="User Testing" class="mw-100 h-auto">
-      </div>
-    </div>
-    </div>
-
-  </section>
-  <section class="overview-carousel pt-9">
-
-    <div class="label-section w-100 text-center mb-8">
-      <h6 class="fs-30 mb-4">Section HQ</h6>
-      <span class="label-section__highlight fs-18 py-2 px-4">Use Case Coach</span>
-      <h2 class="mt-4">Discover and share hyper-relevant AI use cases</h2>
-    </div>
-
-    <div class="d-flex justify-content-center">
-  <div id="carouselExampleIndicators" class="carousel slide w-70 mb-10" data-bs-ride="carousel" data-bs-interval="3000">
-
-    <div class="carousel-inner">
-
-      <div class="carousel-item active">
-        <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="First slide">
-        <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
-          <p class="p-2 fs-38">Bring the goal. i'll bring the prompts.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="Second slide">
-        <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
-          <p class="p-2 fs-38">Bring the goal. i'll bring the prompts.</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img class="d-block w-100 opacity-50" src="./images/carousel.png" alt="Third slide">
-        <div class="carousel-item__thinking-bubble position-absolute top-10 end-10 mt-4 me-4">
-          <p class="p-2 fs-38">Bring the goal. i'll bring the prompts..</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="carousel-indicators position-relative mt-4">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-
-  </div>
-</div>
-    </div>
-
-  </section>
-
-
-  <section class="pb-10 pt-12 px-14 bg-secondary">
-
-    <div class="text-center">
-      <p class="mb-2 fs-5">Reported outcomes</p>
-      <h2>Faster proficiency. More frequent, high-value use.</h2>
-      <img src="./images/Divider.png" alt="diviger">
-    </div>
-
-
-    <div class="row w-100 d-flex justify-content-evenly my-12 py-10">
-      <div class="col-3 text-card py-4 px-8 card-stat">
-        <div class="card border-0 bg-secondary h-100 text-center px-6 py-8 card-shadow">
-          <h2 class="display-5">1 hour</h2>
-          <p class="mb-0"><strong>to AI proficiency</strong> vs. 3+ hours for traditional courses</p>
-        </div>
-      </div>
-      <div class="col-3 text-card py-4 px-8 card-stat">
-        <div class="card border-0 bg-secondary h-100 text-center py-8 px-6 card-shadow">
-          <h2 class="display-5">2x</h2>
-          <p class="mb-0"><strong>AI usage rates,</strong> among employees who are coached by Section</p>
-        </div>
-      </div>
-      <div class="col-3 text-card py-4 px-8 card-stat">
-        <div class="card border-0 bg-secondary h-100 text-center py-8 px-6 card-shadow">
-          <h2 class="display-5">Three</h2>
-          <p class="mb-0"><strong>Use cases per employee,</strong> generated through the platform</p>
-
+          <div class="carousel-indicators position-relative mt-4">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
 
         </div>
       </div>
-    </div>
+      </div>
 
-    <div class="my-10">
-      <div class="text-center mb-10">
-        <p class="mb-2">Explore</p>
-        <h2>More from Section</h2>
+    </section>
+
+
+    <!-- card coontianer section -->
+    <section class="pb-10 pt-12 px-14 bg-secondary">
+
+      <div class="text-center">
+        <p class="mb-2 fs-5">Reported outcomes</p>
+        <h2>Faster proficiency. More frequent, high-value use.</h2>
         <img src="./images/Divider.png" alt="diviger">
       </div>
 
-      <div class="row g-4 py-12">
-        <div class="col-4">
-          <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
-            <span class=" mb-4 align-self-center"> <img src="./images/blue.png" alt="see section hq"></span>
-            <p class="fs-6 lh-sm fw-normal text-center">The AI Enablement Command Center. Unifies proficiency, usage,
-              and org data with prescriptive actions.</p>
-            <a href="#" class="text-decoration-underline align-self-center">Learn More</a>
+
+      <!-- card container  using flex to adjust them-->
+      <div class="row w-100 d-flex justify-content-evenly my-12 py-10">
+        <div class="text-card py-4 px-8 card-stat">
+          <div class="card border-0 bg-secondary h-100 text-center px-6 py-8 card-shadow">
+            <h2 class="display-5">1 hour</h2>
+            <p class="mb-0"><strong>to AI proficiency</strong> vs. 3+ hours for traditional courses</p>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
-            <span class=" mb-4 align-self-center"> <img src="./images/pink.png" alt="Explore AI benchmarking"></span>
-            <p class="fs-6 lh-sm fw-normal text-center">A time-boxed diagnostic that baselines proficiency and adoption,
-              and delivers a clear, visual report.</p>
-            <a href="#" class="text-decoration-underline align-self-center">Learn more</a>
+        <div class="text-card py-4 px-8 card-stat">
+          <div class="card border-0 bg-secondary h-100 text-center py-8 px-6 card-shadow">
+            <h2 class="display-5">2x</h2>
+            <p class="mb-0"><strong>AI usage rates,</strong> among employees who are coached by Section</p>
           </div>
         </div>
-        <div class="col-4">
-          <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
-            <span class="mb-4 align-self-center">
-              <img src="./images/white.png" alt="explore advisory services">
-            </span>
-            <p class="fs-6 lh-sm fw-normal text-center">Advisory support for AI operating model, governance, enablement,
-              and playbook execution.</p>
-            <a href="#" class="text-decoration-underline align-self-center">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="accordion-container bg-primary py-10 px-14">
-    <h2 class="large-title mb-8">FAQs</h2>
-
-    <div class="accordion accordion-flush" id="accordionPanelsStayOpenExample">
+        <div class="text-card py-4 px-8 card-stat">
+          <div class="card border-0 bg-secondary h-100 text-center py-8 px-6 card-shadow">
+            <h2 class="display-5">Three</h2>
+            <p class="mb-0"><strong>Use cases per employee,</strong> generated through the platform</p>
 
 
-      <div class="accordion-item bg-transparent border-0  border-light p-4 border-top">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
-            Can you prove ROI?
-          </button>
-        </h2>
-        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
-            What's "proficiency," exactly?
-          </button>
-        </h2>
-        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
-            How do you integrate with our AI tools and HR systems?
-          </button>
-        </h2>
-        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
-            Is cross-company benchmarking included?
-          </button>
-        </h2>
-        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
-            Is this redundant with vendor usage analytics (Copilot, ChatGPT, etc.)?
-          </button>
-        </h2>
-        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
           </div>
         </div>
       </div>
 
 
-      <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
-        <h2 class="accordion-header">
-          <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
-            data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
-            What's included in HQ vs services? </button>
-        </h2>
-        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionPanelsStayOpenExample">
-          <div class="accordion-body text-white px-0 lh-sm fs-18">
-            Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
-            ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
-            consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
-            ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+      <!-- another card-container box -->
+      <div class="my-10">
+        <div class="text-center mb-10">
+          <p class="mb-2">Explore</p>
+          <h2>More from Section</h2>
+          <img src="./images/Divider.png" alt="diviger">
+        </div>
+
+        <div class="row g-4 py-12">
+          <div class="col-4">
+            <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
+              <span class=" mb-4 align-self-center"> <img src="./images/blue.png" alt="see section hq"></span>
+              <p class="fs-6 lh-sm fw-normal text-center">The AI Enablement Command Center. Unifies proficiency, usage,
+                and org data with prescriptive actions.</p>
+              <a href="#" class="text-decoration-underline align-self-center">Learn More</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
+              <span class=" mb-4 align-self-center"> <img src="./images/pink.png" alt="Explore AI benchmarking"></span>
+              <p class="fs-6 lh-sm fw-normal text-center">A time-boxed diagnostic that baselines proficiency and
+                adoption,
+                and delivers a clear, visual report.</p>
+              <a href="#" class="text-decoration-underline align-self-center">Learn more</a>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card border-0 bg-secondary px-6 py-8 card-shadow">
+              <span class="mb-4 align-self-center">
+                <img src="./images/white.png" alt="explore advisory services">
+              </span>
+              <p class="fs-6 lh-sm fw-normal text-center">Advisory support for AI operating model, governance,
+                enablement,
+                and playbook execution.</p>
+              <a href="#" class="text-decoration-underline align-self-center">Learn more</a>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!-- accordion section that is taken from bootstrap -->
+    <section class="accordion-container bg-primary py-10 px-14">
+      <h2 class="large-title mb-8">FAQs</h2>
+
+      <!-- using accordion flush that does not give borders -->
+      <div class="accordion accordion-flush" id="accordionFAQ">
+
+
+        <div class="accordion-item bg-transparent border-0  border-light p-4 border-top">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+              Can you prove ROI?
+            </button>
+          </h2>
+
+          <!-- always showing the first answer -->
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+              What's "proficiency," exactly?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+              How do you integrate with our AI tools and HR systems?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+              Is cross-company benchmarking included?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false">
+              Is this redundant with vendor usage analytics (Copilot, ChatGPT, etc.)?
+            </button>
+          </h2>
+          <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+
+
+        <div class="accordion-item bg-transparent border-0 border-top border-light p-4">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-transparent text-white fw-medium collapsed fs-22 py-5 px-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false">
+              What's included in HQ vs services? </button>
+          </h2>
+          <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+            <div class="accordion-body text-white px-0 lh-sm fs-18">
+              Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla. Orci, dictumst nec aliquet id
+              ullamcorper venenatis. Fermentum sulla craspor ttitore ismod nulla. Elit adipiscing proin quis est
+              consectetur. Felis ultricies nisi, quis malesuada sem odio. Potentiмnibh natoque amet amet, tincidunt
+              ultricies et. Et nam rhoncus sit nullam diam tincidunt condimentum nullam.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer section -->
+  <footer class="bg-primary text-secondary px-14 py-15 pb-10 border-top border-secondary">
+
+    <!-- using grid to display the lists -->
+    <div class="row g-4 mb-12">
+
+      <!-- spans 2 col -->
+      <div class="col-2">
+        <h5 class="text-secondary fs-22 mb-4">Section</h5>
+        <p class="text-light-gray fs-18">Turning AI investment into behavior change and measurable ROI.</p>
+      </div>
+
+      <!-- spans 2 column after leaving offset of 2 column -->
+      <div class="col-2 offset-2">
+        <p class="text-uppercase text-light-gray mb-4 small">Platform</p>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Section HQ</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Section Coach</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Book a demo</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Events</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Memberships</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-2">
+        <p class="text-uppercase text-light-gray mb-4 small">Services</p>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">AI Planning and Benchmarking</a>
+          </li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Leadership Workshops</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">AI Strategic Consulting</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Leaders Bootcamp</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-2">
+        <p class="text-uppercase text-light-gray mb-4 small">Resources</p>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Blog</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Reports</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Playbooks</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">About us</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Upcoming courses</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <p class="text-uppercase text-light-gray mb-4 small">Legal</p>
+        <ul class="list-unstyled">
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Privacy Policy</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Terms of Service</a></li>
+          <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Security</a></li>
+        </ul>
+      </div>
+
     </div>
-  </section>
 
-<footer class="bg-primary text-secondary px-14 py-15 pb-10 border-top border-secondary">
 
-  <div class="row g-4 mb-12">
-    
-
-    <div class="col-2">
-      <h5 class="text-secondary fs-22 mb-4">Section</h5>
-      <p class="text-light-gray fs-18">Turning AI investment into behavior change and measurable ROI.</p>
+    <div class="row border-top border-secondary py-6 fs-18">
+      <div class="col-6">
+        <p class="text-light-gray mb-0 fs-18">&copy; 2026 Section AI. All rights reserved</p>
+      </div>
+      <div class="col-6 d-flex justify-content-end gap-4">
+        <a href="#" class="text-light-gray text-decoration-none fs-18 ">LinkedIn</a>
+        <a href="#" class="text-light-gray text-decoration-none fs-18">Twitter</a>
+        <a href="#" class="text-light-gray text-decoration-none fs-18">YouTube</a>
+      </div>
     </div>
 
-
-
-    <div class="col-2 offset-2">
-      <p class="text-uppercase text-light-gray mb-4 small">Platform</p>
-      <ul class="list-unstyled">
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Section HQ</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Section Coach</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Book a demo</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Events</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Memberships</a></li>
-      </ul>
-    </div>
-
-
-    <div class="col-2">
-      <p class="text-uppercase text-light-gray mb-4 small">Services</p>
-      <ul class="list-unstyled">
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">AI Planning and Benchmarking</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Leadership Workshops</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">AI Strategic Consulting</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Leaders Bootcamp</a></li>
-      </ul>
-    </div>
-
- 
-    <div class="col-2">
-      <p class="text-uppercase text-light-gray mb-4 small">Resources</p>
-      <ul class="list-unstyled">
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Blog</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Reports</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Playbooks</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">About us</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Upcoming courses</a></li>
-      </ul>
-    </div>
-
-    <div class="col-2">
-      <p class="text-uppercase text-light-gray mb-4 small">Legal</p>
-      <ul class="list-unstyled">
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Privacy Policy</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Terms of Service</a></li>
-        <li class="mb-3"><a href="#" class="text-light-gray text-decoration-none">Security</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-
-  <div class="row border-top border-secondary py-6 fs-18">
-    <div class="col-6">
-      <p class="text-light-gray mb-0 fs-18">&copy; 2026 Section AI. All rights reserved</p>
-    </div>
-    <div class="col-6 d-flex justify-content-end gap-4">
-      <a href="#" class="text-light-gray text-decoration-none fs-18 ">LinkedIn</a>
-      <a href="#" class="text-light-gray text-decoration-none fs-18">Twitter</a>
-      <a href="#" class="text-light-gray text-decoration-none fs-18">YouTube</a>
-    </div>
-  </div>
-
-</footer>
+  </footer>
 </body>
 
 </html>

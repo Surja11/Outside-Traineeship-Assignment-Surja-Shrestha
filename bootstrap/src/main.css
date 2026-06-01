@@ -16334,4 +16334,86 @@ p {
   color: #121313;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a.active {
+  background-color: #F3F2F1;
+  padding: 0.25rem;
+}
+
+.hero {
+  background-image: url("./images/bootstrap-hero.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 600px;
+}
+
+.logo-container {
+  width: 135px;
+  height: 32px;
+}
+
+.label-section__highlight {
+  background-color: #98CB97;
+}
+
+.overview-carousel {
+  background-image: url("./images/overview_carousel.png");
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.large-title {
+  font-size: 7.5rem;
+  line-height: 8.375rem;
+  font-weight: 500;
+  letter-spacing: -1%;
+  color: #F3B30E;
+}
+
+.carousel-item__thinking-bubble {
+  background-image: url(./images/Background_container.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 297px;
+}
+
+.accordion-button::after {
+  background-image: url("./images/plus.png");
+  background-size: contain;
+  transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("./images/plus.png");
+  transform: rotate(45deg);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent !important;
+  color: white;
+  box-shadow: none;
+}
+
+.card-stat {
+  max-width: 390px;
+  width: 100%;
+}
+
+.card-shadow {
+  box-shadow: 0 10px 20px 16px rgba(0, 0, 0, 0.08);
+}
+
+.text-light-gray {
+  color: #B3B7B9;
+}
+
 /*# sourceMappingURL=main.css.map */
