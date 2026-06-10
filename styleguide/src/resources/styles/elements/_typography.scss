@@ -1,0 +1,37 @@
+h1 {
+    @include text-style("h1");
+}
+
+h1.font-italic,
+.u-text--h1-italic {
+    @include text-style("h1-italic");
+}
+
+h2 {
+    @include text-style("h2");
+}
+
+h3 {
+    @include text-style("h3-semi");
+}
+
+h3.font-italic,
+.u-text--h3-italic {
+    @include text-style("h3-italic");
+}
+
+.u-text--special-xl {
+    @include text-style("special-xl");
+}
+
+.u-text--body-small {
+    @include text-style("body-small");
+}
+
+.u-text--body-small-semi {
+    @include text-style("body-small-semi");
+}
+
+.u-text--body-xs {
+    @include text-style("body-xs");
+}

@@ -1,0 +1,13 @@
+$brand-orange: #FF6443;
+$pure-black:  #000000;
+$pure-white:  #FFFFFF;
+
+$primary: $brand-orange;
+$dark:    $pure-black;
+$light:   $pure-white;
+
+$theme-colors: (
+  "primary": $primary,
+  "dark":    $dark,
+  "light":   $light
+);

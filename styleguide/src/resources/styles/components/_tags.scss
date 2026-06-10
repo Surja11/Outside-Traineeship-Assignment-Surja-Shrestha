@@ -1,0 +1,20 @@
+// components/_tags.scss
+
+.c-tag {
+  display: inline-block;
+  font-family: map-get($mono-tag-text, font);
+  font-weight: map-get($mono-tag-text, weight);
+  font-size: map-get($mono-tag-text, size);
+  letter-spacing: map-get($mono-tag-text, letter-spacing);
+  text-transform: map-get($mono-tag-text, case);
+
+  padding: 2px 8px;
+  border: 1px solid $brand-black;
+  border-radius: 2px;
+
+  &--selected {
+    background-color: $brand-orange;
+    border-color: $brand-orange;
+    color: $brand-white;
+  }
+}
