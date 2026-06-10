@@ -1,0 +1,30 @@
+// tools/_mixins.scss
+// @use '../settings/typography' as *;
+
+
+// @import 'bootstrap/scss/mixins';
+// @import 'bootstrap/scss/variables';
+
+@mixin text-style($key) {
+  $style: map-get($text-styles, $key);
+
+  font-family: $font-family-base;
+  font-weight: map-get($style, weight);
+  font-style: map-get($style, style);
+  font-size: map-get($style, desktop);
+  letter-spacing: map-get($style, letter-spacing);
+
+  @if map-has-key($style, line-height-desktop) {
+    line-height: map-get($style, line-height-desktop);
+  } @else {
+    line-height: normal;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: map-get($style, mobile);
+
+    @if map-has-key($style, line-height-mobile) {
+      line-height: map-get($style, line-height-mobile);
+    }
+  }
+}

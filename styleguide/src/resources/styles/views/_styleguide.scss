@@ -1,46 +1,125 @@
 // views/_styleguide.scss
 
-.v-styleguide {
+.m-styleguide {
 
-  &__section {
-    margin-bottom: 64px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+.m-styleguide__header {
+  margin-bottom: 60px;
+
+  hr {
+    border: none;
+    border-top: 1px solid $pure-black;
   }
+}
 
-  &__row {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+.m-styleguide__section {
+  margin-bottom: 60px;
+}
 
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-    }
+// .v-styleguide__section-title {
+//   font-size: 32px;
+//   font-weight: 600;
+//   margin-bottom: 40px;
+// }
+
+
+.m-styleguide__color-container {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  ;
+}
+
+.m-styleguide__color-box {
+  width: 300px;
+  height: 200px;
+  border-radius: 5%;
+  margin-bottom: 12px;
+  border: 1px solid lightgrey;
+}
+
+
+.m-styleguide__color{
+  width:100%;
+  height:75%;
+}
+
+.m-styleguide__row {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #e5e5e5;
+
+  &:last-child {
+    border-bottom: none;
   }
+}
 
-  &__swatches {
-    display: flex;
-    gap: 24px;
-  }
+.m-styleguide__card {
+  min-width: 260px;
+  flex-shrink: 0;
+}
 
-  &__swatch {
-    text-align: center;
-  }
+.m-styleguide__label {
+ 
+  margin-bottom: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
 
-  &__swatch-circle {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 8px;
-  }
+.m-styleguide__class-name {
 
-  &__demo-box {
-    background-color: #f0f0f0; // matches the gray demo backgrounds in your figma
-    padding: 24px;
-    flex: 1;
-  }
+  font-size: 14px;
+  font-weight: 400;
+}
 
-  &__component-bar {
-    background-color: $brand-black;
-    color: $brand-white;
-    padding: 32px 24px;
-  }
+.m-styleguide__meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+.m-styleguide__meta-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.m-styleguide__display {
+  display: block;
+  font-size: 14px;
+  color: $pure-black;
+}
+
+.m-styleguide__display {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+
+.m-styleguide__component-bar {
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.m-styleguide__component-label {
+  margin-bottom: 24px;
+  color: #666;
+}
+
+.m-styleguide__component-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }

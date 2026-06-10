@@ -9,12 +9,12 @@
   text-transform: map-get($mono-tag-text, case);
 
   padding: 2px 8px;
-  border: 1px solid $brand-black;
+  border: 1px solid $pure-black;
   border-radius: 2px;
 
   &--selected {
     background-color: $brand-orange;
     border-color: $brand-orange;
-    color: $brand-white;
+    color: $pure-white;
   }
 }

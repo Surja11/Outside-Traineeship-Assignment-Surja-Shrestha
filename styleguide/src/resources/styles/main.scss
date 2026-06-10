@@ -1,1 +1,13 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+@import './settings/colors';
+@import './settings/typography';
+
+
+@import 'bootstrap/scss/bootstrap';
+
+
+@import './tools/mixins';
+@import './elements/typography';
+@import './components/button';
+@import './components/tags';
+@import './views/styleguide';

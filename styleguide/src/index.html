@@ -1,84 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styleguide</title>
-    <link rel="stylesheet" href="./resources/styles/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styleguide</title>
+  <script type="module" src="/main.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="bg-primary">Styleguide</h1>
+
+  <section class="m-styleguide">
+
+    <header class="m-styleguide__header">
+      <h1 class="u-text--h1-italic">Styleguide</h1>
+      <hr>
     </header>
 
-    <section class="v-styleguide">
-
-  <!-- COLORS -->
-  <div class="v-styleguide__section">
-    <h2>Colors</h2>
-    <div class="v-styleguide__swatches">
-      <div class="v-styleguide__swatch">
-        <div class="v-styleguide__swatch-circle" style="background:#FF6443"></div>
-        <p class="u-text--body-small">Brand orange<br>HEX #FF6443</p>
-      </div>
-      <div class="v-styleguide__swatch">
-        <div class="v-styleguide__swatch-circle" style="background:#000000"></div>
-        <p class="u-text--body-small">Pure black<br>HEX #000000</p>
-      </div>
-      <div class="v-styleguide__swatch">
-        <div class="v-styleguide__swatch-circle" style="background:#FFFFFF; border:1px solid #ddd;"></div>
-        <p class="u-text--body-small">Pure white<br>HEX #FFFFFF</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- TYPOGRAPHY -->
-  <div class="v-styleguide__section">
-    <h2>Typography</h2>
-
-    <div class="v-styleguide__row">
-      <h1>The quick brown fox jumps over the lazy dog.</h1>
-      <h1 class="font-italic">The quick brown fox jumps over the lazy dog.</h1>
-    </div>
-
-    <div class="v-styleguide__row">
-      <h2>The quick brown fox jumps over the lazy dog.</h2>
-    </div>
-
-    <div class="v-styleguide__row">
-      <h3>The quick brown fox jumps over the lazy dog.</h3>
-      <h3 class="font-italic">The quick brown fox jumps over the lazy dog.</h3>
-    </div>
-
-    <div class="v-styleguide__row">
-      <p class="u-text--special-xl">brown fox jumps over the</p>
-    </div>
-
-    <div class="v-styleguide__row">
-      <p class="u-text--body-small">The quick brown fox jumps over the lazy dog.</p>
-      <p class="u-text--body-small-semi">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-
-    <div class="v-styleguide__row">
-      <p class="u-text--body-xs">The quick brown fox jumps over the lazy dog.</p>
-    </div>
-  </div>
-
-  <!-- COMPONENTS -->
-  <div class="v-styleguide__section">
-    <h2>Components</h2>
-
-    <div class="v-styleguide__component-bar">
-      <p class="u-text--body-small u-mb-2">Components — desktop</p>
-      <div class="v-styleguide__row">
-        <button class="c-btn">Button</button>
-        <button class="c-btn c-btn--primary">Button</button>
-        <span class="c-tag">Tag</span>
-        <span class="c-tag c-tag--selected">Tag — selected</span>
+    <!-- COLORS -->
+    <div class="m-styleguide__section">
+      <h2 class="m-styleguide__section-title">Colors</h2>
+      <div class="m-styleguide__color-container">
+        <div class="m-styleguide__color-box">
+          <div class="m-styleguide__color bg-primary"></div>
+          <p class="u-text--body-small">Brand orange<br>HEX #FF6443</p>
+        </div>
+        <div class="m-styleguide__color-box">
+          <div class="m-styleguide__color bg-dark"></div>
+          <p class="u-text--body-small">Pure black<br>HEX #000000</p>
+        </div>
+        <div class="m-styleguide__color-box">
+          <div class="m-styleguide__color" style="background:#FFFFFF; border:1px solid #ddd;"></div>
+          <p class="u-text--body-small">Pure white<br>HEX #FFFFFF</p>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+    <!-- TYPOGRAPHY -->
+    <div class="m-styleguide__section">
+      <h2 class="m-styleguide__section-title">Typography</h2>
+
+      <!-- H1 Desktop -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D H1 <span class="m-styleguide__class-name">.h1-desktop</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">48px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h1>The quick brown fox jumps over the lazy dog.</h1>
+        </div>
+      </div>
+
+      <!-- H1 Mobile -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Mobile/M H1 <span class="m-styleguide__class-name">.h1-mobile</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">34px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">100%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h1 style="font-size:34px; line-height:100%;">The quick brown fox jumps over the lazy dog.</h1>
+        </div>
+      </div>
+
+      <!-- H1 Italic -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">D H1 Italic <span class="m-styleguide__class-name">.h1-italic</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">42px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h1 class="font-italic">The quick brown fox jumps over the lazy dog.</h1>
+        </div>
+      </div>
+
+      <!-- H2 -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D H2 <span class="m-styleguide__class-name">.h2-desktop</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">42px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h2>The quick brown fox jumps over the lazy dog.</h2>
+        </div>
+      </div>
+
+      <!-- H3 -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D H3 <span class="m-styleguide__class-name">.h3-semi</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">26px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h3>The quick brown fox jumps over the lazy dog.</h3>
+        </div>
+      </div>
+
+      <!-- H3 Italic -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">D H3 Italic <span class="m-styleguide__class-name">.h3-italic</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">26px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <h3 class="font-italic">The quick brown fox jumps over the lazy dog.</h3>
+        </div>
+      </div>
+
+      <!-- Special XL -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Special XL <span class="m-styleguide__class-name">.u-text--special-xl</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">80px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">90%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--special-xl">The quick brown fox.</p>
+        </div>
+      </div>
+
+
+ 
+      <!-- Desktop Number -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D Number <span class="m-styleguide__class-name">.u-text--number</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-5%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">80px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--number">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Mobile Number -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Mobile/M Number <span class="m-styleguide__class-name">.u-text--number</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-5%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">60px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--number" style="font-size:60px;">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Desktop Intro -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D Intro <span class="m-styleguide__class-name">.u-text--intro</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">36px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--intro">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Mobile Intro -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Mobile/M Intro <span class="m-styleguide__class-name">.u-text--intro</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">20px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">120%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--intro" style="font-size:20px; line-height:120%;">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Desktop Body -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D Body <span class="m-styleguide__class-name">.u-text--body</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">18px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Mobile Body -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Mobile/M Body <span class="m-styleguide__class-name">.u-text--body</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">16px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">125%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body" style="font-size:16px; line-height:125%;">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Desktop Body Semi -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Desktop/D Body Semi <span class="m-styleguide__class-name">.u-text--body-semi</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">18px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Automatic</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body-semi">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+ 
+      <!-- Mobile Body Semi -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Mobile/M Body Semi <span class="m-styleguide__class-name">.u-text--body-semi</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Text Decoration</span><span class="m-styleguide__meta-value">None</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">16px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Paragraph Spacing</span><span class="m-styleguide__meta-value">0px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body-semi" style="font-size:16px;">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+
+      <!-- Body Small -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Body Small <span class="m-styleguide__class-name">.u-text--body-small</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">14px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body-small">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+
+      <!-- Body Small Semi -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Body Small Semi <span class="m-styleguide__class-name">.u-text--body-small-semi</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Semibold</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">14px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body-small-semi">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+
+      <!-- Body XS -->
+      <div class="m-styleguide__row">
+        <div class="m-styleguide__card">
+          <p class="m-styleguide__label">Body XS <span class="m-styleguide__class-name">.u-text--body-xs</span></p>
+          <div class="m-styleguide__meta">
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Font</span><span class="m-styleguide__meta-value">Switzer</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Letter Spacing</span><span class="m-styleguide__meta-value">-1%</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Weight</span><span class="m-styleguide__meta-value">Regular</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Size</span><span class="m-styleguide__meta-value">12px</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Line Height</span><span class="m-styleguide__meta-value">Normal</span></div>
+            <div><span class="m-styleguide__meta-label u-text--body-small-semi">Case</span><span class="m-styleguide__meta-value">Original</span></div>
+          </div>
+        </div>
+        <div class="m-styleguide__display">
+          <p class="u-text--body-xs">The quick brown fox jumps over the lazy dog.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COMPONENTS -->
+    <div class="m-styleguide__section">
+      <h2 class="m-styleguide__section-title">Components</h2>
+      <div class="m-styleguide__component-bar">
+        <p class="u-text--body-small m-styleguide__component-label">Components — desktop</p>
+        <div class="m-styleguide__component-row">
+          <button class="c-btn">Button</button>
+          <button class="c-btn c-btn--primary">Button</button>
+          <span class="c-tag">Tag</span>
+          <span class="c-tag c-tag--selected">Tag — selected</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script type="module" src="/main.js"></script>
 </body>
 </html>
