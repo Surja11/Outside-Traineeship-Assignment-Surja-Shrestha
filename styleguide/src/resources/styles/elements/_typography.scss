@@ -26,6 +26,21 @@ h3.font-italic,
     @include text-style("special-xl");
 }
 
+.u-text--number{
+    @include text-style("number");
+}
+
+.u-text--intro{
+    @include text-style("intro");
+}
+
+.u-text--body{
+    @include text-style("body");
+}
+
+.u-text--body-semi{
+    @include text-style("body-semi");
+}
 .u-text--body-small {
     @include text-style("body-small");
 }
